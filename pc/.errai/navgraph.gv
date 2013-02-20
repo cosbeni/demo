@@ -1,0 +1,5 @@
+digraph Navigation {
+"UserManagement"
+"DashBoard" [penwidth=3]
+"GroupManagement"
+}

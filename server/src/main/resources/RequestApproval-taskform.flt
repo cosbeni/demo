@@ -1,0 +1,20 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h2>承認申請</h2>
+<hr>
+ユーザ名: ${userId} <br/>
+説明: ${description} <br/>
+日付: ${date?date} ${date?time} <br/>
+結果: ${result} <br/>
+コメント: ${comment}
+<form action="complete" method="POST" enctype="multipart/form-data">
+この内容で承認しますか？<BR/>
+<input type="submit" name="outcome" value="Approve">
+<input type="submit" name="outcome" value="Deny">
+</form>
+</body>
+</html>

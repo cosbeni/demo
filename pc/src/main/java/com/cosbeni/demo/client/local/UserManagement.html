@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link href="/root/resource/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/root/resource/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/root/resource/bootstrap/css/docs.css" rel="stylesheet">
+<link href="/root/resource/custom/css/custom.css" rel="stylesheet">
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.ico">
+</head>
+<body class="cosbeni">
+	<div class="cosbeni-clear-both cosbeni-header navbar-fixed-top">
+		<div class="cosbeni-navbar-top">
+			<div id="Language"></div>
+			<ul class="nav nav-pills pull-right">
+				<li class="active"><a href="index.html">Demo</a></li>
+				<li><a href="bootstrap/getting-started.html">Bootstrap</a></li>
+			</ul>
+			<div class="cosbeni-logo"></div>
+		</div>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<div id="Menu" class="nav-collapse collapse"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="MainSpace">
+		<div data-field="UserManagement">
+			<header class="jumbotron subhead" id="overview">
+				<div class="container">
+					<h1>User</h1>
+					<p class="lead">Add, Update, Delete User object locally and sync with server using RESTful web service.</p>
+				</div>
+			</header>
+			<div class="container">
+				<div class="row">
+					<div class="span6">
+						<h4>Local Database</h4>
+						<div data-field="usersClientTable">User Client Table List</div>
+					</div>
+					<div class="span6">
+						<h4>Server Database</h4>
+						<div data-field="usersServerTable">User Server Table List</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span12">
+						<div data-field="info" class="alert fade in">
+							<button data-dismiss="alert" class="close" type="button">×</button>
+							<h4 data-field="infoMessage" class="alert"></h4>
+						</div>
+						<div data-field="alert" class="alert alert-block alert-error fade in">
+							<h4 data-field="alertMessage" class="alert-error"></h4>
+							<a data-field="deleteConfirm" class="btn btn-danger" href="#">Delete</a> <a data-field="deleteCancel" class="btn" href="#">Cancel</a>
+						</div>
+					</div>
+					<div class="span12" data-field="userBox">
+						<form class="form-horizontal">
+							<div class="row">
+								<div class="span6">
+									<div data-field="idBox" class="control-group">
+										<label data-field="idLabel" for="id" class="control-label">ID</label>
+										<div class="controls">
+											<label data-field="id" id="id" class="control-label"></label>
+										</div>
+									</div>
+									<div data-field="userNameBox" class="control-group">
+										<label data-field="userNameLabel" for="userName" class="control-label">User Name</label>
+										<div class="controls">
+											<input data-field="userName" id="userName" type="text" placeholder="User Name"> <span data-field="userNameMessage" class="help-inline"></span>
+										</div>
+									</div>
+									<div data-field="passwordBox" class="control-group">
+										<label data-field="passwordLabel" for="password" class="control-label">Passowrd</label>
+										<div class="controls">
+											<input data-field="password" id="password" type="password" placeholder="Password"> <span data-field="passwordMessage" class="help-inline"></span>
+										</div>
+									</div>
+									
+									<div data-field="firstNameBox" class="control-group">
+										<label data-field="firstNameLabel" for="firstName" class="control-label">First Name</label>
+										<div class="controls">
+											<input data-field="firstName" id="firstName" type="text" placeholder="First Name"> <span data-field="firstNameMessage" class="help-inline"></span>
+										</div>
+									</div>
+									<div data-field="lastNameBox" class="control-group">
+										<label data-field="lastNameLabel" for="address" class="control-label">Last Name</label>
+										<div class="controls">
+											<input data-field="lastName" id="lastName" type="text" placeholder="Last Name"> <span data-field="lastNameMessage" class="help-inline"></span>
+										</div>
+									</div>									
+								</div>
+								<div class="span6">
+									<div data-field="ridBox" class="control-group">
+										<label data-field="ridLabel" for="rid" class="control-label">RID</label>
+										<div class="controls">
+											<label data-field="rid" id="rid" class="control-label"></label>
+										</div>
+									</div>
+									<div data-field="emailBox" class="control-group">
+										<label data-field="emailLabel" for="email" class="control-label">Email</label>
+										<div class="controls">
+											<input data-field="email" id="email" type="text" placeholder="Email"> <span data-field="emailMessage" class="help-inline"></span>
+										</div>
+									</div>									
+									<div data-field="groupBox" class="control-group">
+										<label data-field="groupLabel" for="group" class="control-label">Group</label>
+										<div class="controls">
+											<select data-field="group" id="group">
+												<option value="1">Group 1</option>
+												<option value="2">Group 2</option>
+											</select>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<a data-field="add" class="btn" href="#">Add</a> <a data-field="update" class="btn" href="#">Update</a> <a data-field="delete" class="btn" href="#">Delete</a> <a data-field="cancel" class="btn" href="#">Cancel</a>
+										</div>
+									</div>									
+									<div class="control-group">
+										<div class="controls">
+											<a data-field="pushUser" class="btn" href="#">Local -> Server</a>
+											<a data-field="pullUser" class="btn" href="#">Server -> Local</a>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+										    <a data-field="pullGroup" class="btn" href="#">Server -> Local (Group Data)</a>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="file:///root/resource/jquery/jquery-1.8.3.min.js"></script>
+	<script src="file:///root/resource/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

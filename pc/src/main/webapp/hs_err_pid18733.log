@@ -1,0 +1,586 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f8904172a3b, pid=18733, tid=140226395662080
+#
+# JRE version: 6.0_24-b24
+# Java VM: OpenJDK 64-Bit Server VM (20.0-b12 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea6 1.11.5
+# Distribution: CentOS release 6.3 (Final), package rhel-1.50.1.11.5.el6_3-x86_64
+# Problematic frame:
+# V  [libjvm.so+0x58ba3b]  JVM_RaiseSignal+0x6f63b
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f8874003800):  JavaThread "Code server for demo from Mozilla/5.0 (X11; Linux x86_64; rv:10.0.10) Gecko/20121027 Firefox/10.0.10 on http://localhost:8080/demo/index.html?gwt.codesvr=127.0.0.1:56479#UserManagement @ F&dolmm.SLld)d<-" daemon [_thread_in_vm, id=24738, stack(0x00007f8900706000,0x00007f8900807000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x00000000bfed48e0, RDX=0x0000000000000000
+RSP=0x00007f8900803b20, RBP=0x00007f8900803bd0, RSI=0x00000000b5a8d2e0, RDI=0x00007f8874003800
+R8 =0x0000000000000fc6, R9 =0x0000000004000001, R10=0x0000000000000049, R11=0x0000000000000202
+R12=0x00007f88c04e9370, R13=0x00007f8874003800, R14=0x00007f88c04e9350, R15=0x00007f88c04e9368
+RIP=0x00007f8904172a3b, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f8900803b20)
+0x00007f8900803b20:   000000000000042b 00007f8900803b01
+0x00007f8900803b30:   00007f8874003800 00007f88c04e93c8
+0x00007f8900803b40:   00007f88c0b5c2c0 000000000000042b
+0x00007f8900803b50:   00007f88c04e9350 00007f88c04e9378
+0x00007f8900803b60:   00007f88c04e9368 00007f8874003800
+0x00007f8900803b70:   00007f8874003800 00007f8874006060
+0x00007f8900803b80:   00007f88c04e5f50 00007f8900803ed0
+0x00007f8900803b90:   0000000000000000 00000fbe00804580
+0x00007f8900803ba0:   00007f8874003800 00007f8874003800
+0x00007f8900803bb0:   00007f88a804fc50 00007f8900803ed0
+0x00007f8900803bc0:   00000000bfffe160 00007f89047b0178
+0x00007f8900803bd0:   00007f8900803d20 00007f89041730ec
+0x00007f8900803be0:   00007f8874003800 00007f8900803f28
+0x00007f8900803bf0:   00007f8900803f20 00007f8874003800
+0x00007f8900803c00:   00007f8900803f20 00007f8900803d80
+0x00007f8900803c10:   00007f88a0003820 00007f88a0003bf8
+0x00007f8900803c20:   00007f88a0003810 00007f8874003800
+0x00007f8900803c30:   00007f8900803ca0 00007f8874005b20
+0x00007f8900803c40:   00007f8900803cd0 00007f88f317f000
+0x00007f8900803c50:   01007f8900803c90 00007f8900803c80
+0x00007f8900803c60:   00007f8900803ce0 00000000880159d0
+0x00007f8900803c70:   0000000000000000 0000000000000000
+0x00007f8900803c80:   00007f88a8347750 00007f88a835e628
+0x00007f8900803c90:   00007f88a835e628 00007f89043d0df2
+0x00007f8900803ca0:   00007f8874003801 00007f8874006060
+0x00007f8900803cb0:   00007f88c04e5f50 00007f88c04e71e8
+0x00007f8900803cc0:   00007f88c04edf38 00007f8900804580
+0x00007f8900803cd0:   00007f88c04e9350 00007f8874003800
+0x00007f8900803ce0:   00007f88c04e71c8 00007f88c04e71d8
+0x00007f8900803cf0:   00007f8900803ea0 00007f8900803ed0
+0x00007f8900803d00:   00007f89047acd98 00007f8900803fb0
+0x00007f8900803d10:   00007f8900803fe0 00007f8874003800 
+
+Instructions: (pc=0x00007f8904172a3b)
+0x00007f8904172a1b:   18 0f 87 62 03 00 00 48 89 51 10 48 89 18 48 89
+0x00007f8904172a2b:   45 c0 49 8b 0f 8b 51 3c 85 d2 0f 85 c5 02 00 00
+0x00007f8904172a3b:   48 8b 00 8b 51 34 89 50 3c 49 8b 9d 00 01 00 00
+0x00007f8904172a4b:   bf 10 00 00 00 48 8b 43 08 48 89 45 b0 48 8b 53 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x00000000bfed48e0 is an oop
+
+[error occurred during error reporting (printing register info), id 0xe0000000]
+
+Stack: [0x00007f8900706000,0x00007f8900807000],  sp=0x00007f8900803b20,  free space=1014k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x58ba3b]  JVM_RaiseSignal+0x6f63b
+V  [libjvm.so+0x58c0ec]  JVM_RaiseSignal+0x6fcec
+V  [libjvm.so+0x58ce77]  JVM_RaiseSignal+0x70a77
+V  [libjvm.so+0x7a7211]  JVM_handle_linux_signal+0x1359b1
+V  [libjvm.so+0x563278]  JVM_RaiseSignal+0x46e78
+V  [libjvm.so+0x5236c7]  JVM_RaiseSignal+0x72c7
+C  [libinstrument.so+0x3a88]  Agent_OnLoad+0x11f8
+j  sun.instrument.InstrumentationImpl.redefineClasses0(J[Ljava/lang/instrument/ClassDefinition;)V+0
+j  sun.instrument.InstrumentationImpl.redefineClasses([Ljava/lang/instrument/ClassDefinition;)V+73
+j  com.zeroturnaround.javarebel.java5.e.a(Ljava/lang/instrument/ClassDefinition;)V+31
+j  com.zeroturnaround.javarebel.java5.e.a(Ljava/lang/Class;[B)V+76
+j  com.zeroturnaround.javarebel.DC.c(Ljava/lang/Class;[B)V+21
+j  com.zeroturnaround.javarebel.LQ.a(Ljava/lang/Class;Z)V+16
+j  com.zeroturnaround.javarebel.LQ.c(Ljava/lang/Class;)V+6
+j  com.zeroturnaround.javarebel.LQ.initClass()V+32
+j  org.jboss.errai.ioc.client.BootstrapperImpl.<clinit>()V+42
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x4b9e48]  AsyncGetCallTrace+0xa4d88
+V  [libjvm.so+0x4b8fa8]  AsyncGetCallTrace+0xa3ee8
+V  [libjvm.so+0x488d7f]  AsyncGetCallTrace+0x73cbf
+V  [libjvm.so+0x48befb]  AsyncGetCallTrace+0x76e3b
+V  [libjvm.so+0x48c58a]  AsyncGetCallTrace+0x774ca
+V  [libjvm.so+0x502c30]  JVM_DisableCompiler+0xa0
+V  [libjvm.so+0x516fba]  JVM_FindClassFromClassLoader+0x21a
+C  [libjava.so+0x10d6c]  Java_java_lang_Class_forName0+0x11c
+J  java.lang.Class.forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+J  java.lang.Class.forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+j  com.google.gwt.dev.shell.ModuleSpace.rebindAndCreate(Ljava/lang/String;)Ljava/lang/Object;+88
+j  com.google.gwt.dev.shell.GWTBridgeImpl.create(Ljava/lang/Class;)Ljava/lang/Object;+10
+j  com.google.gwt.core.shared.GWT.create(Ljava/lang/Class;)Ljava/lang/Object;+20
+j  com.google.gwt.core.client.GWT.create(Ljava/lang/Class;)Ljava/lang/Object;+1
+j  org.jboss.errai.ioc.client.Container.bootstrapContainer()V+33
+j  org.jboss.errai.ioc.client.Container.onModuleLoad()V+1
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x4b9e48]  AsyncGetCallTrace+0xa4d88
+V  [libjvm.so+0x4b8fa8]  AsyncGetCallTrace+0xa3ee8
+V  [libjvm.so+0x6cac6f]  JVM_handle_linux_signal+0x5940f
+V  [libjvm.so+0x6cba99]  JVM_handle_linux_signal+0x5a239
+V  [libjvm.so+0x507ad4]  JVM_InvokeMethod+0x1b4
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.instrument.InstrumentationImpl.redefineClasses0(J[Ljava/lang/instrument/ClassDefinition;)V+0
+j  sun.instrument.InstrumentationImpl.redefineClasses([Ljava/lang/instrument/ClassDefinition;)V+73
+j  com.zeroturnaround.javarebel.java5.e.a(Ljava/lang/instrument/ClassDefinition;)V+31
+j  com.zeroturnaround.javarebel.java5.e.a(Ljava/lang/Class;[B)V+76
+j  com.zeroturnaround.javarebel.DC.c(Ljava/lang/Class;[B)V+21
+j  com.zeroturnaround.javarebel.LQ.a(Ljava/lang/Class;Z)V+16
+j  com.zeroturnaround.javarebel.LQ.c(Ljava/lang/Class;)V+6
+j  com.zeroturnaround.javarebel.LQ.initClass()V+32
+j  org.jboss.errai.ioc.client.BootstrapperImpl.<clinit>()V+42
+v  ~StubRoutines::call_stub
+J  java.lang.Class.forName0(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+J  java.lang.Class.forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+j  com.google.gwt.dev.shell.ModuleSpace.loadClassFromSourceName(Ljava/lang/String;)Ljava/lang/Class;+28
+j  com.google.gwt.dev.shell.ModuleSpace.rebindAndCreate(Ljava/lang/String;)Ljava/lang/Object;+88
+j  com.google.gwt.dev.shell.GWTBridgeImpl.create(Ljava/lang/Class;)Ljava/lang/Object;+10
+j  com.google.gwt.core.shared.GWT.create(Ljava/lang/Class;)Ljava/lang/Object;+20
+j  com.google.gwt.core.client.GWT.create(Ljava/lang/Class;)Ljava/lang/Object;+1
+j  org.jboss.errai.ioc.client.Container.bootstrapContainer()V+33
+j  org.jboss.errai.ioc.client.Container.onModuleLoad()V+1
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+J  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+j  com.google.gwt.dev.shell.ModuleSpace.onLoad(Lcom/google/gwt/core/ext/TreeLogger;)V+339
+j  com.google.gwt.dev.shell.OophmSessionHandler.loadModule(Lcom/google/gwt/dev/shell/BrowserChannelServer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[B)Lcom/google/gwt/core/ext/TreeLogger;+116
+j  com.google.gwt.dev.shell.BrowserChannelServer.processConnection()V+776
+j  com.google.gwt.dev.shell.BrowserChannelServer.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f88a819b800 JavaThread "pool-3-thread-16" [_thread_blocked, id=24783, stack(0x00007f88f2b52000,0x00007f88f2c53000)]
+  0x00007f88a80e6800 JavaThread "pool-3-thread-15" [_thread_blocked, id=24782, stack(0x00007f88f2950000,0x00007f88f2a51000)]
+=>0x00007f8874003800 JavaThread "Code server for demo from Mozilla/5.0 (X11; Linux x86_64; rv:10.0.10) Gecko/20121027 Firefox/10.0.10 on http://localhost:8080/demo/index.html?gwt.codesvr=127.0.0.1:56479#UserManagement @ F&dolmm.SLld)d<-" daemon [_thread_in_vm, id=24738, stack(0x00007f8900706000,0x00007f8900807000)]
+  0x00007f88fc505800 JavaThread "Code server listener" daemon [_thread_in_native, id=18772, stack(0x00007f88f284f000,0x00007f88f2950000)]
+  0x00007f88fc427000 JavaThread "pool-1-thread-1" [_thread_blocked, id=18770, stack(0x00007f88f2a51000,0x00007f88f2b52000)]
+  0x00007f88fc415800 JavaThread "Thread-8" daemon [_thread_blocked, id=18766, stack(0x00007f88f2c53000,0x00007f88f2d54000)]
+  0x00007f88fc4bf800 JavaThread "Thread-7" [_thread_in_native, id=18765, stack(0x00007f8900100000,0x00007f8900201000)]
+  0x00007f88fc599000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=18762, stack(0x00007f8900302000,0x00007f8900403000)]
+  0x00007f88fc597000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=18761, stack(0x00007f8900403000,0x00007f8900504000)]
+  0x00007f88fc594000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=18760, stack(0x00007f8900504000,0x00007f8900605000)]
+  0x00007f88fc590000 JavaThread "Thread-4" daemon [_thread_blocked, id=18759, stack(0x00007f8900605000,0x00007f8900706000)]
+  0x00007f88fc54d000 JavaThread "Thread-2" daemon [_thread_blocked, id=18757, stack(0x00007f8900807000,0x00007f8900908000)]
+  0x00007f88fc542800 JavaThread "Timer-0" daemon [_thread_blocked, id=18756, stack(0x00007f8900b0f000,0x00007f8900c10000)]
+  0x00007f88fc110800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=18751, stack(0x00007f890122d000,0x00007f890132e000)]
+  0x00007f88fc0f2800 JavaThread "Finalizer" daemon [_thread_blocked, id=18750, stack(0x00007f890132e000,0x00007f890142f000)]
+  0x00007f88fc0f1000 JavaThread "Reference Handler" daemon [_thread_blocked, id=18749, stack(0x00007f890142f000,0x00007f8901530000)]
+  0x00007f88fc013800 JavaThread "main" [_thread_blocked, id=18739, stack(0x00007f8903862000,0x00007f8903963000)]
+
+Other Threads:
+  0x00007f88fc0ea000 VMThread [stack: 0x00007f8901530000,0x00007f8901631000] [id=18748]
+  0x00007f88fc5a4000 WatcherThread [stack: 0x00007f8900201000,0x00007f8900302000] [id=18763]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 189056K, used 0K [0x00000000eaab0000, 0x00000000fa5d0000, 0x0000000100000000)
+  eden space 125440K, 0% used [0x00000000eaab0000,0x00000000eaab0000,0x00000000f2530000)
+  from space 63616K, 0% used [0x00000000f67b0000,0x00000000f67b0000,0x00000000fa5d0000)
+  to   space 65856K, 0% used [0x00000000f2530000,0x00000000f2530000,0x00000000f6580000)
+ PSOldGen        total 699072K, used 550923K [0x00000000c0000000, 0x00000000eaab0000, 0x00000000eaab0000)
+  object space 699072K, 78% used [0x00000000c0000000,0x00000000e1a02e68,0x00000000eaab0000)
+ PSPermGen       total 169984K, used 169976K [0x00000000b5a00000, 0x00000000c0000000, 0x00000000c0000000)
+  object space 169984K, 99% used [0x00000000b5a00000,0x00000000bfffe250,0x00000000c0000000)
+
+Code Cache  [0x00007f88f316f000, 0x00007f88f434f000, 0x00007f88f616f000)
+ total_blobs=3939 nmethods=3528 adapters=361 free_code_cache=32134400 largest_free_block=182656
+
+Dynamic libraries:
+00400000-00408000 r-xp 00000000 fd:00 1574991                            /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/bin/java
+00608000-00609000 rw-p 00008000 fd:00 1574991                            /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/bin/java
+00714000-009b5000 rw-p 00000000 00:00 0                                  [heap]
+b5a00000-c0000000 rw-p 00000000 00:00 0 
+c0000000-eaab0000 rw-p 00000000 00:00 0 
+eaab0000-fa5d0000 rw-p 00000000 00:00 0 
+fa5d0000-100000000 ---p 00000000 00:00 0 
+30ed400000-30ed420000 r-xp 00000000 fd:00 524290                         /lib64/ld-2.12.so
+30ed61f000-30ed620000 r--p 0001f000 fd:00 524290                         /lib64/ld-2.12.so
+30ed620000-30ed621000 rw-p 00020000 fd:00 524290                         /lib64/ld-2.12.so
+30ed621000-30ed622000 rw-p 00000000 00:00 0 
+30ed800000-30ed989000 r-xp 00000000 fd:00 524313                         /lib64/libc-2.12.so
+30ed989000-30edb89000 ---p 00189000 fd:00 524313                         /lib64/libc-2.12.so
+30edb89000-30edb8d000 r--p 00189000 fd:00 524313                         /lib64/libc-2.12.so
+30edb8d000-30edb8e000 rw-p 0018d000 fd:00 524313                         /lib64/libc-2.12.so
+30edb8e000-30edb93000 rw-p 00000000 00:00 0 
+30edc00000-30edc04000 r-xp 00000000 fd:00 1858096                        /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/jli/libjli.so
+30edc04000-30ede03000 ---p 00004000 fd:00 1858096                        /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/jli/libjli.so
+30ede03000-30ede04000 rw-p 00003000 fd:00 1858096                        /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/jli/libjli.so
+30ee000000-30ee002000 r-xp 00000000 fd:00 524579                         /lib64/libdl-2.12.so
+30ee002000-30ee202000 ---p 00002000 fd:00 524579                         /lib64/libdl-2.12.so
+30ee202000-30ee203000 r--p 00002000 fd:00 524579                         /lib64/libdl-2.12.so
+30ee203000-30ee204000 rw-p 00003000 fd:00 524579                         /lib64/libdl-2.12.so
+30ee400000-30ee417000 r-xp 00000000 fd:00 524556                         /lib64/libpthread-2.12.so
+30ee417000-30ee617000 ---p 00017000 fd:00 524556                         /lib64/libpthread-2.12.so
+30ee617000-30ee618000 r--p 00017000 fd:00 524556                         /lib64/libpthread-2.12.so
+30ee618000-30ee619000 rw-p 00018000 fd:00 524556                         /lib64/libpthread-2.12.so
+30ee619000-30ee61d000 rw-p 00000000 00:00 0 
+30ee800000-30ee815000 r-xp 00000000 fd:00 524574                         /lib64/libz.so.1.2.3
+30ee815000-30eea14000 ---p 00015000 fd:00 524574                         /lib64/libz.so.1.2.3
+30eea14000-30eea15000 r--p 00014000 fd:00 524574                         /lib64/libz.so.1.2.3
+30eea15000-30eea16000 rw-p 00015000 fd:00 524574                         /lib64/libz.so.1.2.3
+30eec00000-30eec07000 r-xp 00000000 fd:00 524557                         /lib64/librt-2.12.so
+30eec07000-30eee06000 ---p 00007000 fd:00 524557                         /lib64/librt-2.12.so
+30eee06000-30eee07000 r--p 00006000 fd:00 524557                         /lib64/librt-2.12.so
+30eee07000-30eee08000 rw-p 00007000 fd:00 524557                         /lib64/librt-2.12.so
+30ef800000-30ef816000 r-xp 00000000 fd:00 524587                         /lib64/libresolv-2.12.so
+30ef816000-30efa16000 ---p 00016000 fd:00 524587                         /lib64/libresolv-2.12.so
+30efa16000-30efa17000 r--p 00016000 fd:00 524587                         /lib64/libresolv-2.12.so
+30efa17000-30efa18000 rw-p 00017000 fd:00 524587                         /lib64/libresolv-2.12.so
+30efa18000-30efa1a000 rw-p 00000000 00:00 0 
+30f9800000-30f9816000 r-xp 00000000 fd:00 524619                         /lib64/libgcc_s-4.4.6-20120305.so.1
+30f9816000-30f9a15000 ---p 00016000 fd:00 524619                         /lib64/libgcc_s-4.4.6-20120305.so.1
+30f9a15000-30f9a16000 rw-p 00015000 fd:00 524619                         /lib64/libgcc_s-4.4.6-20120305.so.1
+30fa400000-30fa4e8000 r-xp 00000000 fd:00 1058057                        /usr/lib64/libstdc++.so.6.0.13
+30fa4e8000-30fa6e8000 ---p 000e8000 fd:00 1058057                        /usr/lib64/libstdc++.so.6.0.13
+30fa6e8000-30fa6ef000 r--p 000e8000 fd:00 1058057                        /usr/lib64/libstdc++.so.6.0.13
+30fa6ef000-30fa6f1000 rw-p 000ef000 fd:00 1058057                        /usr/lib64/libstdc++.so.6.0.13
+30fa6f1000-30fa706000 rw-p 00000000 00:00 0 
+3100c00000-3100c16000 r-xp 00000000 fd:00 527830                         /lib64/libnsl-2.12.so
+3100c16000-3100e15000 ---p 00016000 fd:00 527830                         /lib64/libnsl-2.12.so
+3100e15000-3100e16000 r--p 00015000 fd:00 527830                         /lib64/libnsl-2.12.so
+3100e16000-3100e17000 rw-p 00016000 fd:00 527830                         /lib64/libnsl-2.12.so
+3100e17000-3100e19000 rw-p 00000000 00:00 0 
+7f8864000000-7f8864075000 rw-p 00000000 00:00 0 
+7f8864075000-7f8868000000 ---p 00000000 00:00 0 
+7f886c000000-7f886fffe000 rw-p 00000000 00:00 0 
+7f886fffe000-7f8870000000 ---p 00000000 00:00 0 
+7f8874000000-7f8874021000 rw-p 00000000 00:00 0 
+7f8874021000-7f8878000000 ---p 00000000 00:00 0 
+7f8878000000-7f8878907000 rw-p 00000000 00:00 0 
+7f8878907000-7f887c000000 ---p 00000000 00:00 0 
+7f887c000000-7f887c0a4000 rw-p 00000000 00:00 0 
+7f887c0a4000-7f8880000000 ---p 00000000 00:00 0 
+7f8880000000-7f88806a0000 rw-p 00000000 00:00 0 
+7f88806a0000-7f8884000000 ---p 00000000 00:00 0 
+7f8884000000-7f8884021000 rw-p 00000000 00:00 0 
+7f8884021000-7f8888000000 ---p 00000000 00:00 0 
+7f8888000000-7f8888303000 rw-p 00000000 00:00 0 
+7f8888303000-7f888c000000 ---p 00000000 00:00 0 
+7f888c000000-7f888c021000 rw-p 00000000 00:00 0 
+7f888c021000-7f8890000000 ---p 00000000 00:00 0 
+7f8890000000-7f889002c000 rw-p 00000000 00:00 0 
+7f889002c000-7f8894000000 ---p 00000000 00:00 0 
+7f8894000000-7f8897ff7000 rw-p 00000000 00:00 0 
+7f8897ff7000-7f8898000000 ---p 00000000 00:00 0 
+7f8898000000-7f8898021000 rw-p 00000000 00:00 0 
+7f8898021000-7f889c000000 ---p 00000000 00:00 0 
+7f889c000000-7f889c021000 rw-p 00000000 00:00 0 
+7f889c021000-7f88a0000000 ---p 00000000 00:00 0 
+7f88a0000000-7f88a3ffb000 rw-p 00000000 00:00 0 
+7f88a3ffb000-7f88a4000000 ---p 00000000 00:00 0 
+7f88a4000000-7f88a4021000 rw-p 00000000 00:00 0 
+7f88a4021000-7f88a8000000 ---p 00000000 00:00 0 
+7f88a8000000-7f88a847d000 rw-p 00000000 00:00 0 
+7f88a847d000-7f88ac000000 ---p 00000000 00:00 0 
+7f88ac000000-7f88ac021000 rw-p 00000000 00:00 0 
+7f88ac021000-7f88b0000000 ---p 00000000 00:00 0 
+7f88b0000000-7f88b00ca000 rw-p 00000000 00:00 0 
+7f88b00ca000-7f88b4000000 ---p 00000000 00:00 0 
+7f88b4000000-7f88b4021000 rw-p 00000000 00:00 0 
+7f88b4021000-7f88b8000000 ---p 00000000 00:00 0 
+7f88b8000000-7f88b8021000 rw-p 00000000 00:00 0 
+7f88b8021000-7f88bc000000 ---p 00000000 00:00 0 
+7f88bc000000-7f88bc021000 rw-p 00000000 00:00 0 
+7f88bc021000-7f88c0000000 ---p 00000000 00:00 0 
+7f88c0000000-7f88c0bed000 rw-p 00000000 00:00 0 
+7f88c0bed000-7f88c4000000 ---p 00000000 00:00 0 
+7f88c4000000-7f88c4030000 rw-p 00000000 00:00 0 
+7f88c4030000-7f88c8000000 ---p 00000000 00:00 0 
+7f88cc000000-7f88cc021000 rw-p 00000000 00:00 0 
+7f88cc021000-7f88d0000000 ---p 00000000 00:00 0 
+7f88d4000000-7f88d4021000 rw-p 00000000 00:00 0 
+7f88d4021000-7f88d8000000 ---p 00000000 00:00 0 
+7f88dc000000-7f88dc024000 rw-p 00000000 00:00 0 
+7f88dc024000-7f88e0000000 ---p 00000000 00:00 0 
+7f88e4000000-7f88e4021000 rw-p 00000000 00:00 0 
+7f88e4021000-7f88e8000000 ---p 00000000 00:00 0 
+7f88e8000000-7f88e8021000 rw-p 00000000 00:00 0 
+7f88e8021000-7f88ec000000 ---p 00000000 00:00 0 
+7f88ec000000-7f88ec039000 rw-p 00000000 00:00 0 
+7f88ec039000-7f88f0000000 ---p 00000000 00:00 0 
+7f88f2445000-7f88f2448000 ---p 00000000 00:00 0 
+7f88f2448000-7f88f2546000 rw-p 00000000 00:00 0 
+7f88f2546000-7f88f254e000 r-xp 00000000 fd:00 1858226                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnio.so
+7f88f254e000-7f88f274d000 ---p 00008000 fd:00 1858226                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnio.so
+7f88f274d000-7f88f274e000 rw-p 00007000 fd:00 1858226                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnio.so
+7f88f274e000-7f88f2751000 ---p 00000000 00:00 0 
+7f88f2751000-7f88f284f000 rw-p 00000000 00:00 0 
+7f88f284f000-7f88f2852000 ---p 00000000 00:00 0 
+7f88f2852000-7f88f2950000 rw-p 00000000 00:00 0 
+7f88f2950000-7f88f2953000 ---p 00000000 00:00 0 
+7f88f2953000-7f88f2a51000 rw-p 00000000 00:00 0 
+7f88f2a51000-7f88f2a54000 ---p 00000000 00:00 0 
+7f88f2a54000-7f88f2b52000 rw-p 00000000 00:00 0 
+7f88f2b52000-7f88f2b55000 ---p 00000000 00:00 0 
+7f88f2b55000-7f88f2c53000 rw-p 00000000 00:00 0 
+7f88f2c53000-7f88f2c56000 ---p 00000000 00:00 0 
+7f88f2c56000-7f88f2d54000 rw-p 00000000 00:00 0 
+7f88f2d54000-7f88f2d59000 r-xp 00000000 fd:00 524581                     /lib64/libnss_dns-2.12.so
+7f88f2d59000-7f88f2f58000 ---p 00005000 fd:00 524581                     /lib64/libnss_dns-2.12.so
+7f88f2f58000-7f88f2f59000 r--p 00004000 fd:00 524581                     /lib64/libnss_dns-2.12.so
+7f88f2f59000-7f88f2f5a000 rw-p 00005000 fd:00 524581                     /lib64/libnss_dns-2.12.so
+7f88f2f5a000-7f88f2f6f000 r-xp 00000000 fd:00 1844410                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnet.so
+7f88f2f6f000-7f88f316e000 ---p 00015000 fd:00 1844410                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnet.so
+7f88f316e000-7f88f316f000 rw-p 00014000 fd:00 1844410                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libnet.so
+7f88f316f000-7f88f434f000 rwxp 00000000 00:00 0 
+7f88f434f000-7f88f616f000 rw-p 00000000 00:00 0 
+7f88f616f000-7f88fc000000 r--p 00000000 fd:00 1084790                    /usr/lib/locale/locale-archive
+7f88fc000000-7f88fc683000 rw-p 00000000 00:00 0 
+7f88fc683000-7f8900000000 ---p 00000000 00:00 0 
+7f89000f7000-7f89000f9000 r--s 00001000 fd:00 1970803                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/dnsns.jar
+7f89000f9000-7f89000fd000 r--s 00038000 fd:00 1975873                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/sunpkcs11.jar
+7f89000fd000-7f8900100000 r--s 00077000 fd:00 1975870                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/localedata.jar
+7f8900100000-7f8900103000 ---p 00000000 00:00 0 
+7f8900103000-7f8900201000 rw-p 00000000 00:00 0 
+7f8900201000-7f8900202000 ---p 00000000 00:00 0 
+7f8900202000-7f8900302000 rw-p 00000000 00:00 0 
+7f8900302000-7f8900305000 ---p 00000000 00:00 0 
+7f8900305000-7f8900403000 rw-p 00000000 00:00 0 
+7f8900403000-7f8900406000 ---p 00000000 00:00 0 
+7f8900406000-7f8900504000 rw-p 00000000 00:00 0 
+7f8900504000-7f8900507000 ---p 00000000 00:00 0 
+7f8900507000-7f8900605000 rw-p 00000000 00:00 0 
+7f8900605000-7f8900608000 ---p 00000000 00:00 0 
+7f8900608000-7f8900706000 rw-p 00000000 00:00 0 
+7f8900706000-7f8900709000 ---p 00000000 00:00 0 
+7f8900709000-7f8900807000 rw-p 00000000 00:00 0 
+7f8900807000-7f890080a000 ---p 00000000 00:00 0 
+7f890080a000-7f8900908000 rw-p 00000000 00:00 0 
+7f8900908000-7f890090e000 r-xp 00000000 fd:00 1844408                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libmanagement.so
+7f890090e000-7f8900b0e000 ---p 00006000 fd:00 1844408                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libmanagement.so
+7f8900b0e000-7f8900b0f000 rw-p 00006000 fd:00 1844408                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libmanagement.so
+7f8900b0f000-7f8900b12000 ---p 00000000 00:00 0 
+7f8900b12000-7f8900c10000 rw-p 00000000 00:00 0 
+7f8900c10000-7f8900c13000 r--s 00031000 fd:00 1975872                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/sunjce_provider.jar
+7f8900c13000-7f8900c1a000 r--s 000fb000 fd:00 1716999                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/resources.jar
+7f8900c1a000-7f8900c1e000 r--s 0007d000 fd:00 1716976                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/jsse.jar
+7f8900c1e000-7f8900c20000 r--s 00011000 fd:00 2895388                    /root/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar
+7f8900c20000-7f8900c27000 r--s 00037000 fd:00 524595                     /root/.m2/repository/junit/junit/4.10/junit-4.10.jar
+7f8900c27000-7f8900c2b000 r--s 00024000 fd:00 2895541                    /root/.m2/repository/org/hibernate/hibernate-jpamodelgen/1.1.1.Final/hibernate-jpamodelgen-1.1.1.Final.jar
+7f8900c2b000-7f8900c31000 r--s 00048000 fd:00 2894317                    /root/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+7f8900c31000-7f8900c51000 r--s 000e6000 fd:00 3028314                    /root/.m2/repository/com/googlecode/mgwt/mgwt/1.1.2/mgwt-1.1.2.jar
+7f8900c51000-7f8900d47000 r--s 003f9000 fd:00 3021088                    /root/.m2/repository/com/smartgwt/smartgwt-skins/3.1/smartgwt-skins-3.1.jar
+7f8900d47000-7f8900e00000 r--s 00ac0000 fd:00 3021089                    /root/.m2/repository/com/smartgwt/smartgwt/3.1/smartgwt-3.1.jar
+7f8900e00000-7f8900fc3000 r--s 01de6000 fd:00 1589814                    /root/.m2/repository/com/google/gwt/gwt-dev/2.5.0/gwt-dev-2.5.0.jar
+7f8900fc3000-7f8900fc5000 r--s 0000a000 fd:00 2504450                    /root/.m2/repository/org/json/json/20090211/json-20090211.jar
+7f8900fc5000-7f89010c9000 r--s 01a51000 fd:00 1589813                    /root/.m2/repository/com/google/gwt/gwt-user/2.5.0/gwt-user-2.5.0.jar
+7f89010c9000-7f89010cc000 r--s 00011000 fd:00 2896938                    /root/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar
+7f89010cc000-7f89010d1000 r--s 00016000 fd:00 3027123                    /root/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+7f89010d1000-7f89010d6000 r--s 00048000 fd:00 3026897                    /root/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar
+7f89010d6000-7f89010db000 r--s 00068000 fd:00 527853                     /root/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar
+7f89010db000-7f8901127000 r--s 003e2000 fd:00 527852                     /root/.m2/repository/org/hibernate/hibernate-core/4.1.1.Final/hibernate-core-4.1.1.Final.jar
+7f8901127000-7f8901129000 r--s 0000d000 fd:00 2508310                    /root/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar
+7f8901129000-7f8901132000 r--s 0006c000 fd:00 2504633                    /root/.m2/repository/org/hibernate/hibernate-entitymanager/4.1.1.Final/hibernate-entitymanager-4.1.1.Final.jar
+7f8901132000-7f890113d000 r--s 0005b000 fd:00 3145871                    /root/.m2/repository/org/jboss/errai/errai-jpa-client/2.2.0.CR2/errai-jpa-client-2.2.0.CR2.jar
+7f890113d000-7f890113f000 r--s 00008000 fd:00 3145829                    /root/.m2/repository/org/jboss/errai/errai-navigation/2.2.0.CR2/errai-navigation-2.2.0.CR2.jar
+7f890113f000-7f8901142000 r--s 00010000 fd:00 3145827                    /root/.m2/repository/org/jboss/errai/errai-data-binding/2.2.0.CR2/errai-data-binding-2.2.0.CR2.jar
+7f8901142000-7f8901145000 r--s 0000f000 fd:00 3021044                    /root/.m2/repository/org/jboss/errai/errai-ui/2.2.0.CR2/errai-ui-2.2.0.CR2.jar
+7f8901145000-7f8901147000 r--s 00004000 fd:00 2903917                    /root/.m2/repository/org/jboss/weld/weld-api/1.1.Final/weld-api-1.1.Final.jar
+7f8901147000-7f890114b000 r--s 0000a000 fd:00 2903918                    /root/.m2/repository/org/jboss/weld/weld-spi/1.1.Final/weld-spi-1.1.Final.jar
+7f890114b000-7f890114e000 r--s 00010000 fd:00 2896781                    /root/.m2/repository/org/jboss/weld/servlet/weld-servlet-core/1.1.6.Final/weld-servlet-core-1.1.6.Final.jar
+7f890114e000-7f8901151000 r--s 00022000 fd:00 526062                     /root/.m2/repository/org/jboss/errai/errai-weld-integration/2.2.0.CR2/errai-weld-integration-2.2.0.CR2.jar
+7f8901151000-7f8901154000 r--s 00006000 fd:00 526060                     /root/.m2/repository/org/jboss/errai/errai-javax-enterprise/2.2.0.CR2/errai-javax-enterprise-2.2.0.CR2.jar
+7f8901154000-7f8901157000 r--s 0000d000 fd:00 526061                     /root/.m2/repository/org/jboss/errai/errai-cdi-client/2.2.0.CR2/errai-cdi-client-2.2.0.CR2.jar
+7f8901157000-7f8901159000 r--s 00000000 fd:00 3145824                    /root/.m2/repository/org/jboss/errai/errai-jaxrs-provider/2.2.0.CR2/errai-jaxrs-provider-2.2.0.CR2.jar
+7f8901159000-7f8901165000 r--s 0009f000 fd:00 1589104                    /root/.m2/repository/com/google/guava/guava-gwt/12.0/guava-gwt-12.0.jar
+7f8901165000-7f8901167000 r--s 0000a000 fd:00 280151                     /root/.m2/repository/org/jboss/resteasy/jaxrs-api/2.3.5.Final/jaxrs-api-2.3.5.Final.jar
+7f8901167000-7f890116a000 r--s 00014000 fd:00 3145823                    /root/.m2/repository/org/jboss/errai/errai-jaxrs-client/2.2.0.CR2/errai-jaxrs-client-2.2.0.CR2.jar
+7f890116a000-7f8901172000 r--s 00096000 fd:00 3026856                    /root/.m2/repository/hsqldb/hsqldb/1.8.0.7/hsqldb-1.8.0.7.jar
+7f8901172000-7f8901176000 r--s 00025000 fd:00 526058                     /root/.m2/repository/org/jboss/errai/errai-tools/2.2.0.CR2/errai-tools-2.2.0.CR2.jar
+7f8901176000-7f8901185000 r--s 0008e000 fd:00 526055                     /root/.m2/repository/org/jboss/errai/errai-codegen/2.2.0.CR2/errai-codegen-2.2.0.CR2.jar
+7f8901185000-7f890118e000 r--s 0005a000 fd:00 526051                     /root/.m2/repository/org/jboss/errai/errai-ioc/2.2.0.CR2/errai-ioc-2.2.0.CR2.jar
+7f890118e000-7f8901191000 r--s 00006000 fd:00 1585442                    /root/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+7f8901191000-7f89011b3000 r--s 00195000 fd:00 1586186                    /root/.m2/repository/com/google/guava/guava/12.0/guava-12.0.jar
+7f89011b3000-7f89011ca000 r--s 0011c000 fd:00 527985                     /root/.m2/repository/org/jboss/errai/io/netty/netty/4.0.0.Alpha1.errai.r1/netty-4.0.0.Alpha1.errai.r1.jar
+7f89011ca000-7f89011d3000 r--s 00096000 fd:00 527854                     /root/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar
+7f89011d3000-7f89011d5000 r--s 00005000 fd:00 2637586                    /root/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar
+7f89011d5000-7f89011e1000 r--s 000a8000 fd:00 528001                     /root/.m2/repository/org/mvel/mvel2/2.1.Beta8/mvel2-2.1.Beta8.jar
+7f89011e1000-7f89011e3000 r--s 00000000 fd:00 3026992                    /root/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+7f89011e3000-7f89011f2000 r--s 0009f000 fd:00 1586149                    /root/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar
+7f89011f2000-7f89011f4000 r--s 0000b000 fd:00 3021038                    /root/.m2/repository/org/jboss/errai/errai-codegen-gwt/2.2.0.CR2/errai-codegen-gwt-2.2.0.CR2.jar
+7f89011f4000-7f89011fe000 r--s 00050000 fd:00 526048                     /root/.m2/repository/org/jboss/errai/errai-marshalling/2.2.0.CR2/errai-marshalling-2.2.0.CR2.jar
+7f89011fe000-7f8901200000 r--s 00008000 fd:00 3021035                    /root/.m2/repository/org/jboss/errai/errai-config/2.2.0.CR2/errai-config-2.2.0.CR2.jar
+7f8901200000-7f8901204000 r--s 0001e000 fd:00 526046                     /root/.m2/repository/org/jboss/errai/reflections/reflections/2.2.0.CR2/reflections-2.2.0.CR2.jar
+7f8901204000-7f890120a000 r--s 00025000 fd:00 526040                     /root/.m2/repository/org/jboss/errai/errai-common/2.2.0.CR2/errai-common-2.2.0.CR2.jar
+7f890120a000-7f890121c000 r--s 000ab000 fd:00 3145821                    /root/.m2/repository/org/jboss/errai/errai-bus/2.2.0.CR2/errai-bus-2.2.0.CR2.jar
+7f890121c000-7f8901224000 r--s 0004a000 fd:00 2897112                    /root/.m2/repository/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final-sources.jar
+7f8901224000-7f890122d000 r--s 00051000 fd:00 2895384                    /root/.m2/repository/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar
+7f890122d000-7f8901230000 ---p 00000000 00:00 0 
+7f8901230000-7f890132e000 rw-p 00000000 00:00 0 
+7f890132e000-7f8901331000 ---p 00000000 00:00 0 
+7f8901331000-7f890142f000 rw-p 00000000 00:00 0 
+7f890142f000-7f8901432000 ---p 00000000 00:00 0 
+7f8901432000-7f8901530000 rw-p 00000000 00:00 0 
+7f8901530000-7f8901531000 ---p 00000000 00:00 0 
+7f8901531000-7f8901f3a000 rw-p 00000000 00:00 0 
+7f8901f3a000-7f8901f97000 r--s 00885000 fd:00 2839718                    /root/eclipse/plugins/org.zeroturnaround.eclipse.embedder_5.1.2.SR1-201212211234/jrebel/jrebel.jar
+7f8901f97000-7f8902129000 r--s 037c2000 fd:00 1729427                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/rt.jar
+7f8902129000-7f890212a000 ---p 00000000 00:00 0 
+7f890212a000-7f890222a000 rw-p 00000000 00:00 0 
+7f890222a000-7f890222b000 ---p 00000000 00:00 0 
+7f890222b000-7f890232b000 rw-p 00000000 00:00 0 
+7f890232b000-7f890232c000 ---p 00000000 00:00 0 
+7f890232c000-7f890242c000 rw-p 00000000 00:00 0 
+7f890242c000-7f890242d000 ---p 00000000 00:00 0 
+7f890242d000-7f890252d000 rw-p 00000000 00:00 0 
+7f890252d000-7f890252e000 ---p 00000000 00:00 0 
+7f890252e000-7f890262e000 rw-p 00000000 00:00 0 
+7f890262e000-7f890262f000 ---p 00000000 00:00 0 
+7f890262f000-7f890272f000 rw-p 00000000 00:00 0 
+7f890272f000-7f8902730000 ---p 00000000 00:00 0 
+7f8902730000-7f8902830000 rw-p 00000000 00:00 0 
+7f8902830000-7f8902831000 ---p 00000000 00:00 0 
+7f8902831000-7f8902984000 rw-p 00000000 00:00 0 
+7f8902984000-7f8902ada000 rw-p 00000000 00:00 0 
+7f8902ada000-7f8902b2d000 rw-p 00000000 00:00 0 
+7f8902b2d000-7f8902c82000 rw-p 00000000 00:00 0 
+7f8902c82000-7f8902d00000 rw-p 00000000 00:00 0 
+7f8902d00000-7f8902d2d000 ---p 00000000 00:00 0 
+7f8902d2d000-7f8902d76000 rw-p 00000000 00:00 0 
+7f8902d76000-7f8902dee000 rw-p 00000000 00:00 0 
+7f8902dee000-7f8902df5000 r-xp 00000000 fd:00 1858228                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libzip.so
+7f8902df5000-7f8902ff4000 ---p 00007000 fd:00 1858228                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libzip.so
+7f8902ff4000-7f8902ff5000 rw-p 00006000 fd:00 1858228                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libzip.so
+7f8902ff5000-7f8903001000 r-xp 00000000 fd:00 524586                     /lib64/libnss_files-2.12.so
+7f8903001000-7f8903201000 ---p 0000c000 fd:00 524586                     /lib64/libnss_files-2.12.so
+7f8903201000-7f8903202000 r--p 0000c000 fd:00 524586                     /lib64/libnss_files-2.12.so
+7f8903202000-7f8903203000 rw-p 0000d000 fd:00 524586                     /lib64/libnss_files-2.12.so
+7f8903204000-7f8903207000 r--s 00009000 fd:00 524575                     /root/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar
+7f8903207000-7f890320a000 r--s 0000a000 fd:00 2895383                    /root/.m2/repository/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.2.Final/jboss-ejb-api_3.1_spec-1.0.2.Final.jar
+7f890320a000-7f890320f000 r--s 00015000 fd:00 2895382                    /root/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar
+7f890320f000-7f8903212000 r--s 00009000 fd:00 2895381                    /root/.m2/repository/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_1.1_spec/1.0.0.Final/jboss-jaxrs-api_1.1_spec-1.0.0.Final.jar
+7f8903212000-7f8903213000 r--s 00004000 fd:00 2895380                    /root/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.1.Final/jboss-annotations-api_1.1_spec-1.0.1.Final.jar
+7f8903213000-7f8903215000 r--s 00005000 fd:00 2895551                    /root/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar
+7f8903215000-7f8903216000 r--s 00000000 fd:00 3026952                    /root/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar
+7f8903216000-7f8903217000 r--s 00004000 fd:00 2895379                    /root/.m2/repository/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.1.Final/jboss-interceptors-api_1.1_spec-1.0.1.Final.jar
+7f8903217000-7f890321a000 r--s 0000a000 fd:00 524568                     /root/.m2/repository/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar
+7f890321a000-7f8903223000 r-xp 00000000 fd:00 1842679                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libinstrument.so
+7f8903223000-7f8903423000 ---p 00009000 fd:00 1842679                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libinstrument.so
+7f8903423000-7f8903424000 rw-p 00009000 fd:00 1842679                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libinstrument.so
+7f8903424000-7f890344f000 r-xp 00000000 fd:00 1844399                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libjava.so
+7f890344f000-7f890364f000 ---p 0002b000 fd:00 1844399                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libjava.so
+7f890364f000-7f8903653000 rw-p 0002b000 fd:00 1844399                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libjava.so
+7f8903653000-7f8903661000 r-xp 00000000 fd:00 1844418                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libverify.so
+7f8903661000-7f8903860000 ---p 0000e000 fd:00 1844418                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libverify.so
+7f8903860000-7f8903862000 rw-p 0000d000 fd:00 1844418                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/libverify.so
+7f8903862000-7f8903865000 ---p 00000000 00:00 0 
+7f8903865000-7f8903963000 rw-p 00000000 00:00 0 
+7f8903963000-7f89039e6000 r-xp 00000000 fd:00 524566                     /lib64/libm-2.12.so
+7f89039e6000-7f8903be5000 ---p 00083000 fd:00 524566                     /lib64/libm-2.12.so
+7f8903be5000-7f8903be6000 r--p 00082000 fd:00 524566                     /lib64/libm-2.12.so
+7f8903be6000-7f8903be7000 rw-p 00083000 fd:00 524566                     /lib64/libm-2.12.so
+7f8903be7000-7f890450b000 r-xp 00000000 fd:00 1844423                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so
+7f890450b000-7f890470a000 ---p 00924000 fd:00 1844423                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so
+7f890470a000-7f89047a5000 rw-p 00923000 fd:00 1844423                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so
+7f89047a5000-7f89047d2000 rw-p 00000000 00:00 0 
+7f89047d2000-7f89047d4000 r--s 0000e000 fd:00 527978                     /root/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar
+7f89047d4000-7f89047dd000 r--s 00065000 fd:00 1974172                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/gnome-java-bridge.jar
+7f89047dd000-7f89047df000 r--s 0000f000 fd:00 1970808                    /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext/pulse-java.jar
+7f89047df000-7f89047e7000 rw-s 00000000 fd:00 917634                     /tmp/hsperfdata_root/18733
+7f89047e7000-7f89047e8000 rw-p 00000000 00:00 0 
+7f89047e8000-7f89047e9000 r--p 00000000 00:00 0 
+7f89047e9000-7f89047ea000 rw-p 00000000 00:00 0 
+7fff4d580000-7fff4d599000 rw-p 00000000 00:00 0                          [stack]
+7fff4d5ff000-7fff4d600000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:45512/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -javaagent:/root/eclipse/plugins/org.zeroturnaround.eclipse.embedder_5.1.2.SR1-201212211234/jrebel/jrebel.jar -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:33986/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:33986/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:54185/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:54185/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:57007/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39432/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39432/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39432/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39432/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39607/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39607/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39607/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:39607/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:38290/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:38290/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:38290/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:59648/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:59648/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48589/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:48086/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:42783/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:55137/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:55137/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:55137/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:55137/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:55137/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Drebel.log.file=/root/.jrebel/jrebel.log -Drebel.properties=/root/.jrebel/jrebel.properties -Drebel.notification.url=http://127.0.0.1:41317/jrebel/notifications -Drebel.workspace.path=/home/workspace/cosbeni -Xmx1024m -Dfile.encoding=UTF-8 
+java_command: com.google.gwt.dev.DevMode -startupUrl http://localhost:8080/demo/index.html -war /home/workspace/cosbeni/com.cosbeni.demo.demo/src/main/webapp -noserver -remoteUI 41065:11527231263804 -logLevel INFO -codeServerPort auto com.cosbeni.demo.Demo
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/etc/alternatives/java_sdk
+PATH=/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/root/apache-maven-3.0.4/bin:/root/bin
+USERNAME=root
+LD_LIBRARY_PATH=/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/../lib/amd64
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x7a24b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x7a24b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x66bbf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x66bbf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x66bbf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x66bbf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x66b410], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x66d870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x66d870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x66d870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x66d870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS release 6.3 (Final)
+
+uname:Linux 2.6.32-279.11.1.el6.x86_64 #1 SMP Tue Oct 16 15:57:10 UTC 2012 x86_64
+libc:glibc 2.12 NPTL 2.12 
+rlimit: STACK 10240k, CORE 0k, NPROC 1024, NOFILE 4096, AS infinity
+load average:0.81 0.61 0.40
+
+/proc/meminfo:
+MemTotal:       16266540 kB
+MemFree:         4169800 kB
+Buffers:          231532 kB
+Cached:          1869704 kB
+SwapCached:        27600 kB
+Active:          8873504 kB
+Inactive:        2648852 kB
+Active(anon):    7790748 kB
+Inactive(anon):  1645264 kB
+Active(file):    1082756 kB
+Inactive(file):  1003588 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      18497528 kB
+SwapFree:       18427288 kB
+Dirty:            101988 kB
+Writeback:             0 kB
+AnonPages:       9398516 kB
+Mapped:           134132 kB
+Shmem:             14764 kB
+Slab:             255432 kB
+SReclaimable:     132388 kB
+SUnreclaim:       123044 kB
+KernelStack:        5456 kB
+PageTables:        57604 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    26630796 kB
+Committed_AS:   41812968 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      356472 kB
+VmallocChunk:   34359271084 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   6266880 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      200704 kB
+DirectMap2M:    16510976 kB
+
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 30 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 16266540k(4169800k free), swap 18497528k(18427288k free)
+
+vm_info: OpenJDK 64-Bit Server VM (20.0-b12) for linux-amd64 JRE (1.6.0_24-b24), built on Oct 17 2012 17:08:13 by "mockbuild" with gcc 4.4.6 20120305 (Red Hat 4.4.6-4)
+
+time: Tue Feb 19 00:34:35 2013
+elapsed time: 4020 seconds
+

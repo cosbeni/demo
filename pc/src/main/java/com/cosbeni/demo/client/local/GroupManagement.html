@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link href="/root/resource/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/root/resource/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/root/resource/bootstrap/css/docs.css" rel="stylesheet">
+<link href="/root/resource/custom/css/custom.css" rel="stylesheet">
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.ico">
+</head>
+<body class="cosbeni">
+	<div class="cosbeni-clear-both cosbeni-header navbar-fixed-top">
+		<div class="cosbeni-navbar-top">
+			<div id="Language"></div>
+			<ul class="nav nav-pills pull-right">
+				<li class="active"><a href="index.html">Demo</a></li>
+				<li><a href="bootstrap/getting-started.html">Bootstrap</a></li>
+			</ul>
+			<div class="cosbeni-logo"></div>
+		</div>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<div id="Menu" class="nav-collapse collapse"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="MainSpace">
+		<div data-field="GroupManagement">
+			<header class="jumbotron subhead" id="overview">
+				<div class="container">
+					<h1>Group</h1>
+					<p class="lead">Add, Update, Delete Group object to server using RESTful web service.</p>
+				</div>
+			</header>
+			<div class="container">
+				<div class="row">
+					<div class="span6" data-field="groupsTable">Group Table List</div>
+					<div class="span6">
+						<div data-field="info" class="alert fade in">
+							<button data-dismiss="alert" class="close" type="button">×</button>
+							<h4 data-field="infoMessage" class="alert"></h4>
+						</div>
+						<div data-field="alert" class="alert alert-block alert-error fade in">
+							<h4 data-field="alertMessage" class="alert-error"></h4>
+							<a data-field="deleteConfirm" class="btn btn-danger" href="#">Delete</a> <a data-field="deleteCancel" class="btn" href="#">Cancel</a>
+						</div>
+						<div data-field="groupBox">
+							<form class="form-horizontal">
+								<div data-field="idBox" class="control-group">
+									<label data-field="idLabel" for="id" class="control-label">ID</label>
+									<div class="controls">
+										<label data-field="id" id="id" class="control-label"></label>
+									</div>
+								</div>
+								<div data-field="groupNameBox" class="control-group">
+									<label data-field="groupNameLabel" for="groupName" class="control-label">Group Name</label>
+									<div class="controls">
+										<input data-field="groupName" id="groupName" type="text" placeholder="Group Name">
+									</div>
+								</div>
+								<div data-field="descriptionBox" class="control-group">
+									<label data-field="descriptionLabel" for="descrpiton" class="control-label">Descrpiton</label>
+									<div class="controls">
+										<textarea data-field="description" id="descrpiton" rows="3"></textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<a data-field="add" class="btn" href="#">Add</a> <a data-field="update" class="btn" href="#">Update</a> <a data-field="delete" class="btn" href="#">Delete</a><a data-field="cancel" class="btn" href="#">Cancel</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="file:///root/resource/jquery/jquery-1.8.3.min.js"></script>
+	<script src="file:///root/resource/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

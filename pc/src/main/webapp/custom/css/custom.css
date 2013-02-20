@@ -1,0 +1,262 @@
+/*!
+ * Custom v1.0.0
+ *
+ */
+.form-horizontal .control-label-left {
+	float: left;
+	width: 160px;
+	padding-top: 5px;
+}
+
+.cosbeni-logo {
+	background: url("../images/logo.png") no-repeat scroll 5px center white;
+	height: 75px;
+	padding-left: 20px;
+	width: 150px;
+}
+
+.control-label-required {
+	color: #880000;
+	font-weight: bold;
+}
+
+.cosbeni-login {
+	max-width: 400px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+
+.cosbeni-header{
+	background-color: #fff;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    z-index: 1000000;
+}
+
+.cosbeni-footer{
+	background-color: #F5F5F5;
+    border: 1px solid #D4D4D4;
+    text-align: center;
+    z-index: 1000000;
+}
+
+.cosbeni-navbar-top{
+	margin-left: 20px;
+	margin-right: 20px;	
+}
+
+.cosbeni-login input[type="text"],.cosbeni-login input[type="password"]
+	{
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.cosbeni-register {
+	max-width: 500px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.cosbeni-register input[type="text"],.cosbeni-register input[type="password"]
+	{
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.cosbeni-clear-both {
+	clear: both;
+}
+
+.cosbeni-row{
+	margin-left: -20px;
+}
+
+.cosbeni-dialog table {
+	margin: 0px;
+	border: 0px;
+}
+
+.cosbeni-dialog table th,.cosbeni-dialog table td {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.cosbeni-dialog .Caption {
+	background: none repeat scroll 0 0 #F1F1F1;
+	border-top: 1px solid #D2D2D2;
+	cursor: default;
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-weight: bold;
+	padding: 4px 8px 4px 4px;
+}
+
+.cosbeni-dialog .dialogTopLeft {
+	background: url("../images/circles.png") no-repeat scroll -20px 0 #F1F1F1;
+}
+
+.cosbeni-dialog .dialogTopLeftInner {
+	height: 8px;
+	width: 10px;
+}
+
+.cosbeni-dialog .dialogTopRight {
+	background: url("../images/circles.png") no-repeat scroll -28px 0 transparent;
+	width: 12px;
+}
+
+.cosbeni-dialog .dialogTopRightInner {
+	width: 12px;
+}
+
+.cosbeni-dialog .dialogMiddleLeft {
+	background: url("../images/vborder.png") repeat-y scroll -31px 0 white;
+}
+
+.cosbeni-dialog .dialogMiddleCenter {
+	background: none repeat scroll 0 0 white;
+	padding: 3px;
+}
+
+.cosbeni-dialog .dialogMiddleRight {
+	background: url("../images/vborder.png") repeat-y scroll -32px 0 white;
+}
+
+.cosbeni-dialog .dialogBottomLeft {
+	background: url("../images/circles.png") no-repeat scroll 0 -36px #F1F1F1;
+}
+
+.cosbeni-dialog .dialogBottomCenter {
+	background: url("../images/hborder.png") repeat-x scroll 0 -2945px #F1F1F1;
+}
+
+.cosbeni-dialog .dialogBottomRight {
+	background: url("../images/circles.png") no-repeat scroll -8px -36px transparent;
+}
+
+.cosbeni-dialog .dialogBottomRightInner {
+	height: 12px;
+	width: 12px;
+}
+
+.cosbeni-inline-block {
+	display: inline-block;
+}
+
+.cosbeni-font-size-large {
+	font-size: large;
+}
+
+.cosbeni section {
+    padding-top: 110px;
+}
+
+.cosbeni .jumbotron {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.cosbeni .container .cosbeni-row{
+	padding-bottom: 40px;
+}
+
+.cosbeni .navbar{
+    margin-bottom: 0px;
+}
+
+.cosbeni .bs-docs-sidenav.affix{
+	top: 100px;
+}
+
+.cosbeni .jumbotron{
+	padding-top: 120px;
+}
+
+.cosbeni .gwt-MenuBarPopup{
+	z-index: 1000000;
+}
+
+.mobilePreview {
+  z-index: 901 !important;
+  cursor: pointer !important;
+}
+
+.mobilePreview.tabletLandscape {
+  background: url(../images/preview/mobile/tablet/landscape.png) no-repeat !important;
+  width: 1300px !important;
+  height: 1025px !important;
+}
+
+.mobilePreview.tabletLandscape .popupContent {
+  position: absolute !important;
+  top: 211px !important;
+  left: 128px !important;
+  width: 1024px !important;
+  height: 672px !important;
+}
+
+.mobilePreview.tabletPortrait {
+  background: url(../images/preview/mobile/tablet/portrait.png) no-repeat !important;
+  width: 1020px !important;
+  height: 1300px !important;
+}
+
+.mobilePreview.tabletPortrait .popupContent {
+  position: absolute !important;
+  top: 224px !important;
+  left: 118px !important;
+  width: 768px !important;
+  height: 928px !important;
+}
+
+.mobilePreview.smartphoneLandscape {
+  background: url(../images/preview/mobile/smartphone/landscape.png) no-repeat !important;
+  width: 752px !important;
+  height: 461px !important;
+}
+
+.mobilePreview.smartphoneLandscape .popupContent {
+  position: absolute !important;
+  top: 112px !important;
+  left: 130px !important;
+  width: 480px !important;
+  height: 210px !important;
+}
+
+.mobilePreview.smartphonePortrait {
+  background: url(../images/preview/mobile/smartphone/portrait.png) no-repeat !important;
+  width: 393px !important;
+  height: 756px !important;
+}
+
+.mobilePreview.smartphonePortrait .popupContent {
+  position: absolute !important;
+  top: 213px !important;
+  left: 32px !important;
+  width: 320px !important;
+  height: 356px !important;
+}

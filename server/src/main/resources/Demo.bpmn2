@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.omg.org/bpmn20"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_nameItem" structureRef="String" />
+  <itemDefinition id="_manufacturerItem" structureRef="String" />
+  <itemDefinition id="_colorItem" structureRef="String" />
+  <itemDefinition id="_quantityItem" structureRef="Integer" />
+  <itemDefinition id="_productItem" structureRef="String" />
+  <itemDefinition id="_employeeItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="defaultPackage.Demo" name="Demo" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="name" itemSubjectRef="_nameItem"/>
+    <property id="manufacturer" itemSubjectRef="_manufacturerItem"/>
+    <property id="color" itemSubjectRef="_colorItem"/>
+    <property id="quantity" itemSubjectRef="_quantityItem"/>
+    <property id="product" itemSubjectRef="_productItem"/>
+    <property id="employee" itemSubjectRef="_employeeItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_CD34E2AF-6DF0-46EA-A5C9-596F2637802F" name="" />
+    <userTask id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" name="現地調査" >
+      <ioSpecification>
+        <dataInput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_TaskNameInput" name="TaskName" />
+        <dataOutput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_productOutput" name="product" />
+        <dataOutput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_colorOutput" name="color" />
+        <dataOutput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_manufacturerOutput" name="manufacturer" />
+        <dataOutput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_nameOutput" name="name" />
+        <dataOutput id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_quantityOutput" name="quantity" />
+        <inputSet>
+          <dataInputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_productOutput</dataOutputRefs>
+          <dataOutputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_colorOutput</dataOutputRefs>
+          <dataOutputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_manufacturerOutput</dataOutputRefs>
+          <dataOutputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_nameOutput</dataOutputRefs>
+          <dataOutputRefs>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_quantityOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Research</from>
+          <to xsi:type="tFormalExpression">_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_productOutput</sourceRef>
+        <targetRef>product</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_colorOutput</sourceRef>
+        <targetRef>color</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_manufacturerOutput</sourceRef>
+        <targetRef>manufacturer</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_nameOutput</sourceRef>
+        <targetRef>name</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_B80CA8CE-852D-4308-B3F6-6E622DEDABBA_quantityOutput</sourceRef>
+        <targetRef>quantity</targetRef>
+      </dataOutputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{employee}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" name="確認" >
+      <ioSpecification>
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_productInput" name="product" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_colorInput" name="color" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_manufacturerInput" name="manufacturer" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_nameInput" name="name" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_quantityInput" name="quantity" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_TaskNameInput" name="TaskName" />
+        <dataInput id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_productInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_colorInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_manufacturerInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_nameInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_quantityInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>product</sourceRef>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_productInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>color</sourceRef>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_colorInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>manufacturer</sourceRef>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_manufacturerInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_nameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>quantity</sourceRef>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_quantityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Confirm</from>
+          <to xsi:type="tFormalExpression">_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">sales</from>
+          <to xsi:type="tFormalExpression">_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression></formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_3114392B-2C7F-491F-A6E1-7A7EB54423FC" name="" gatewayDirection="Diverging" />
+    <userTask id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" name="大量" >
+      <ioSpecification>
+        <dataInput id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_nameInput" name="name" />
+        <dataInput id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_quantityInput" name="quantity" />
+        <dataInput id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_TaskNameInput" name="TaskName" />
+        <dataInput id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_nameInput</dataInputRefs>
+          <dataInputRefs>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_quantityInput</dataInputRefs>
+          <dataInputRefs>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_TaskNameInput</dataInputRefs>
+          <dataInputRefs>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_nameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>quantity</sourceRef>
+        <targetRef>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_quantityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Large</from>
+          <to xsi:type="tFormalExpression">_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PM</from>
+          <to xsi:type="tFormalExpression">_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </userTask>
+    <userTask id="_A9B1BD2F-ADB9-4585-A675-032B79B88F00" name="少量" >
+      <ioSpecification>
+        <dataInput id="_A9B1BD2F-ADB9-4585-A675-032B79B88F00_nameInput" name="name" />
+        <dataInput id="_A9B1BD2F-ADB9-4585-A675-032B79B88F00_quantityInput" name="quantity" />
+        <dataInput id="_A9B1BD2F-ADB9-4585-A675-032B79B88F00_TaskNameInput" name="TaskName" />
+        <inputSet>
+          <dataInputRefs>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_nameInput</dataInputRefs>
+          <dataInputRefs>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_quantityInput</dataInputRefs>
+          <dataInputRefs>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_TaskNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>name</sourceRef>
+        <targetRef>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_nameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>quantity</sourceRef>
+        <targetRef>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_quantityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_A9B1BD2F-ADB9-4585-A675-032B79B88F00_TaskNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Small</from>
+          <to xsi:type="tFormalExpression">_A9B1BD2F-ADB9-4585-A675-032B79B88F00_TaskNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{employee}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <endEvent id="_CBA3C89F-F254-4990-A093-D24E0A875B53" name="" />
+    <endEvent id="_C98A979B-2335-4E5C-8D81-B03C1301CFF3" name="" />
+
+    <!-- connections -->
+    <sequenceFlow id="_CD34E2AF-6DF0-46EA-A5C9-596F2637802F-_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" sourceRef="_CD34E2AF-6DF0-46EA-A5C9-596F2637802F" targetRef="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" />
+    <sequenceFlow id="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA-_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" sourceRef="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" targetRef="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" />
+    <sequenceFlow id="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D-_3114392B-2C7F-491F-A6E1-7A7EB54423FC" sourceRef="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" targetRef="_3114392B-2C7F-491F-A6E1-7A7EB54423FC" />
+    <sequenceFlow id="_3114392B-2C7F-491F-A6E1-7A7EB54423FC-_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" sourceRef="_3114392B-2C7F-491F-A6E1-7A7EB54423FC" targetRef="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return quantity &gt; 50;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_3114392B-2C7F-491F-A6E1-7A7EB54423FC-_A9B1BD2F-ADB9-4585-A675-032B79B88F00" sourceRef="_3114392B-2C7F-491F-A6E1-7A7EB54423FC" targetRef="_A9B1BD2F-ADB9-4585-A675-032B79B88F00" tns:priority="2" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A-_CBA3C89F-F254-4990-A093-D24E0A875B53" sourceRef="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" targetRef="_CBA3C89F-F254-4990-A093-D24E0A875B53" />
+    <sequenceFlow id="_A9B1BD2F-ADB9-4585-A675-032B79B88F00-_C98A979B-2335-4E5C-8D81-B03C1301CFF3" sourceRef="_A9B1BD2F-ADB9-4585-A675-032B79B88F00" targetRef="_C98A979B-2335-4E5C-8D81-B03C1301CFF3" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="defaultPackage.Demo" >
+      <bpmndi:BPMNShape bpmnElement="_CD34E2AF-6DF0-46EA-A5C9-596F2637802F" >
+        <dc:Bounds x="116" y="151" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" >
+        <dc:Bounds x="200" y="135" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" >
+        <dc:Bounds x="375" y="135" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3114392B-2C7F-491F-A6E1-7A7EB54423FC" >
+        <dc:Bounds x="516" y="151" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" >
+        <dc:Bounds x="605" y="135" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_A9B1BD2F-ADB9-4585-A675-032B79B88F00" >
+        <dc:Bounds x="605" y="285" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_CBA3C89F-F254-4990-A093-D24E0A875B53" >
+        <dc:Bounds x="740" y="151" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_C98A979B-2335-4E5C-8D81-B03C1301CFF3" >
+        <dc:Bounds x="740" y="301" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_CD34E2AF-6DF0-46EA-A5C9-596F2637802F-_B80CA8CE-852D-4308-B3F6-6E622DEDABBA" >
+        <di:waypoint x="140" y="175" />
+        <di:waypoint x="250" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_B80CA8CE-852D-4308-B3F6-6E622DEDABBA-_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D" >
+        <di:waypoint x="250" y="175" />
+        <di:waypoint x="425" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2FC3944E-D75D-48C5-BF80-A47EB9FC1F4D-_3114392B-2C7F-491F-A6E1-7A7EB54423FC" >
+        <di:waypoint x="425" y="175" />
+        <di:waypoint x="540" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3114392B-2C7F-491F-A6E1-7A7EB54423FC-_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A" >
+        <di:waypoint x="540" y="175" />
+        <di:waypoint x="655" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3114392B-2C7F-491F-A6E1-7A7EB54423FC-_A9B1BD2F-ADB9-4585-A675-032B79B88F00" >
+        <di:waypoint x="540" y="175" />
+        <di:waypoint x="540" y="325" />
+        <di:waypoint x="655" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9D47DB1D-8D8E-4975-AD1C-A5DB0E0F267A-_CBA3C89F-F254-4990-A093-D24E0A875B53" >
+        <di:waypoint x="655" y="175" />
+        <di:waypoint x="764" y="175" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_A9B1BD2F-ADB9-4585-A675-032B79B88F00-_C98A979B-2335-4E5C-8D81-B03C1301CFF3" >
+        <di:waypoint x="655" y="325" />
+        <di:waypoint x="764" y="325" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

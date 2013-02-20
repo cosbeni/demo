@@ -1,0 +1,19 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h2>内容確認</h2>
+<hr>
+ユーザ名: ${userId} <br/>
+説明: ${description} <br/>
+日付: ${date?date} ${date?time}
+<form action="complete" method="POST" enctype="multipart/form-data">
+コメント:<BR/>
+<textarea cols="50" rows="5" name="comment"></textarea></BR>
+<input type="submit" name="outcome" value="Approve">
+<input type="submit" name="outcome" value="Deny">
+</form>
+</body>
+</html>
