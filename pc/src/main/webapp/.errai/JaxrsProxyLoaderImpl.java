@@ -1,9 +1,7 @@
 package org.jboss.errai.enterprise.client.jaxrs;
 
-import com.cosbeni.demo.shared.entity.Demo;
 import com.cosbeni.demo.shared.entity.Group;
 import com.cosbeni.demo.shared.entity.User;
-import com.cosbeni.demo.shared.service.DemoService;
 import com.cosbeni.demo.shared.service.GroupService;
 import com.cosbeni.demo.shared.service.UserService;
 import com.google.gwt.http.client.RequestBuilder;
@@ -105,97 +103,6 @@ public class JaxrsProxyLoaderImpl implements JaxrsProxyLoader {
     RemoteServiceProxyFactory.addRemoteProxy(GroupService.class, new ProxyProvider() {
       public Object getProxy() {
         return new GroupServiceImpl();
-      }
-    });
-    class DemoServiceImpl extends AbstractJaxrsProxy implements DemoService {
-      private RemoteCallback remoteCallback;
-      private ErrorCallback errorCallback;
-      public RemoteCallback getRemoteCallback() {
-        return remoteCallback;
-      }
-
-      public void setRemoteCallback(RemoteCallback callback) {
-        remoteCallback = callback;
-      }
-
-      public ErrorCallback getErrorCallback() {
-        return errorCallback;
-      }
-
-      public void setErrorCallback(ErrorCallback callback) {
-        errorCallback = callback;
-      }
-
-      public String add(final Demo a0) {
-        StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("demo/add");
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST, url.toString());
-        requestBuilder.setHeader("Accept", "application/json");
-        requestBuilder.setHeader("Content-Type", "application/json");
-        sendRequest(requestBuilder, MarshallingWrapper.toJSON(a0), new ResponseDemarshallingCallback() {
-          public Object demarshallResponse(String response) {
-            return String.valueOf(response);
-          }
-        });
-        return null;
-      }
-
-      public String update(final Demo a0) {
-        StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("demo/update");
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST, url.toString());
-        requestBuilder.setHeader("Accept", "application/json");
-        requestBuilder.setHeader("Content-Type", "application/json");
-        sendRequest(requestBuilder, MarshallingWrapper.toJSON(a0), new ResponseDemarshallingCallback() {
-          public Object demarshallResponse(String response) {
-            return String.valueOf(response);
-          }
-        });
-        return null;
-      }
-
-      public String delete(final String a0) {
-        StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("demo/delete/{id}".replace("{id}", URL.encodePathSegment(a0 == null ? "" : a0)));
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET, url.toString());
-        requestBuilder.setHeader("Accept", "application/json");
-        sendRequest(requestBuilder, null, new ResponseDemarshallingCallback() {
-          public Object demarshallResponse(String response) {
-            return String.valueOf(response);
-          }
-        });
-        return null;
-      }
-
-      public List getDemos() {
-        StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("demo/groups");
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET, url.toString());
-        requestBuilder.setHeader("Accept", "application/json");
-        sendRequest(requestBuilder, null, new ResponseDemarshallingCallback() {
-          public Object demarshallResponse(String response) {
-            return MarshallingWrapper.fromJSON(response, List.class, Demo.class);
-          }
-        });
-        return null;
-      }
-
-      public Demo getDemo(final String a0) {
-        StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("demo/group/{id}".replace("{id}", URL.encodePathSegment(a0 == null ? "" : a0)));
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET, url.toString());
-        requestBuilder.setHeader("Accept", "application/json");
-        sendRequest(requestBuilder, null, new ResponseDemarshallingCallback() {
-          public Object demarshallResponse(String response) {
-            return MarshallingWrapper.fromJSON(response, Demo.class, null);
-          }
-        });
-        return null;
-      }
-    }
-    RemoteServiceProxyFactory.addRemoteProxy(DemoService.class, new ProxyProvider() {
-      public Object getProxy() {
-        return new DemoServiceImpl();
       }
     });
     class UserServiceImpl extends AbstractJaxrsProxy implements UserService {

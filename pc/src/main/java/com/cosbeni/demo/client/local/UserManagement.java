@@ -560,7 +560,7 @@ public class UserManagement extends Composite {
         em.remove(g);
       }
       while (group.getItemCount() != 0) {
-        group.removeItem(1);
+        group.removeItem(0);
       }
       for (Group g : result) {
         group.addItem(g.getGroupName(), g.getId().toString());

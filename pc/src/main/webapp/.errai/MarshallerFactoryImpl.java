@@ -1,6 +1,5 @@
 package org.jboss.errai.marshalling.client.api;
 
-import com.cosbeni.demo.shared.entity.Demo;
 import com.cosbeni.demo.shared.entity.Group;
 import com.cosbeni.demo.shared.entity.User;
 import java.io.IOException;
@@ -53,8 +52,8 @@ import org.jboss.errai.marshalling.client.marshallers.TimestampMarshaller;
   private FloatMarshaller java_lang_Float;
   private LinkedListMarshaller java_util_LinkedList;
   private ListMarshaller java_util_Vector;
-  private SetMarshaller java_util_HashSet;
   private QueueMarshaller java_util_Queue;
+  private SetMarshaller java_util_HashSet;
   private LongMarshaller java_lang_Long;
   private ShortMarshaller java_lang_Short;
   private PriorityQueueMarshaller java_util_PriorityQueue;
@@ -109,7 +108,6 @@ import org.jboss.errai.marshalling.client.marshallers.TimestampMarshaller;
   private Marshaller<NullPointerException> java_lang_NullPointerException;
   private Marshaller<NegativeArraySizeException> java_lang_NegativeArraySizeException;
   private Marshaller<TransportIOException> org_jboss_errai_bus_client_api_base_TransportIOException;
-  private Marshaller<Demo> com_cosbeni_demo_shared_entity_Demo;
   private Marshaller<ArithmeticException> java_lang_ArithmeticException;
   private Marshaller<MessageDeliveryFailure> org_jboss_errai_bus_client_api_base_MessageDeliveryFailure;
   private QualifyingMarshallerWrapper<Object[]> arrayOf_java_lang_Object_D1;
@@ -137,11 +135,11 @@ import org.jboss.errai.marshalling.client.marshallers.TimestampMarshaller;
     marshallers.put("java.util.LinkedList", java_util_LinkedList);
     java_util_Vector = new ListMarshaller();
     marshallers.put("java.util.Vector", java_util_Vector);
-    java_util_HashSet = new SetMarshaller();
-    marshallers.put("java.util.HashSet", java_util_HashSet);
     java_util_Queue = new QueueMarshaller();
     marshallers.put("java.util.Queue", java_util_Queue);
     marshallers.put("java.util.AbstractQueue", java_util_Queue);
+    java_util_HashSet = new SetMarshaller();
+    marshallers.put("java.util.HashSet", java_util_HashSet);
     java_lang_Long = new LongMarshaller();
     marshallers.put("java.lang.Long", java_lang_Long);
     java_lang_Short = new ShortMarshaller();
@@ -1190,67 +1188,6 @@ import org.jboss.errai.marshalling.client.marshallers.TimestampMarshaller;
       }
     };
     marshallers.put("org.jboss.errai.bus.client.api.base.TransportIOException", org_jboss_errai_bus_client_api_base_TransportIOException);
-    com_cosbeni_demo_shared_entity_Demo = new Marshaller<Demo>() {
-      private Demo[] EMPTY_ARRAY = new Demo[0];
-      public Demo[] getEmptyArray() {
-        return EMPTY_ARRAY;
-      }
-      public Class getTypeHandled() {
-        return Demo.class;
-      }
-      public Demo demarshall(EJValue a0, MarshallingSession a1) {
-        try {
-          if (a0.isNull()) {
-            return null;
-          }
-          EJObject obj = a0.isObject();
-          String objId = obj.get("^ObjectID").isString().stringValue();
-          if (a1.hasObject(objId)) {
-            return a1.getObject(Demo.class, objId);
-          }
-          Demo entity = new Demo();
-          a1.recordObject(objId, entity);
-          if ((obj.containsKey("id")) && (!obj.get("id").isNull())) {
-            entity.setId(java_lang_Long.demarshall(obj.get("id"), a1));
-          }
-          if ((obj.containsKey("username")) && (!obj.get("username").isNull())) {
-            entity.setUsername(java_lang_String.demarshall(obj.get("username"), a1));
-          }
-          if ((obj.containsKey("data1")) && (!obj.get("data1").isNull())) {
-            entity.setData1(java_lang_String.demarshall(obj.get("data1"), a1));
-          }
-          if ((obj.containsKey("data2")) && (!obj.get("data2").isNull())) {
-            entity.setData2(java_lang_String.demarshall(obj.get("data2"), a1));
-          }
-          if ((obj.containsKey("data3")) && (!obj.get("data3").isNull())) {
-            entity.setData3(java_lang_String.demarshall(obj.get("data3"), a1));
-          }
-          if ((obj.containsKey("data4")) && (!obj.get("data4").isNull())) {
-            entity.setData4(java_lang_String.demarshall(obj.get("data4"), a1));
-          }
-          if ((obj.containsKey("data5")) && (!obj.get("data5").isNull())) {
-            entity.setData5(java_lang_String.demarshall(obj.get("data5"), a1));
-          }
-          return entity;
-        } catch (Throwable t) {
-          t.printStackTrace();
-          throw new RuntimeException("error demarshalling entity: com.cosbeni.demo.shared.entity.Demo", t);
-        }
-      }
-      public String marshall(Demo a0, MarshallingSession a1) {
-        if (a0 == null) {
-          return "null";
-        }
-        if (a1.hasObject(a0)) {
-          String objId = a1.getObject(a0);
-          return new StringBuilder(128).append("{\"^EncodedType\":\"com.cosbeni.demo.shared.entity.Demo\"").append(",").append("\"^ObjectID\":\"").append(objId).append("\"}").toString();
-        }
-        String objId = a1.getObject(a0);
-        a1.recordObject(objId, objId);
-        return new StringBuilder(1024).append("{\"^EncodedType\":\"com.cosbeni.demo.shared.entity.Demo\",\"^ObjectID\":\"").append(objId).append("\"").append(",").append("\"id\" : ").append(java_lang_Long.marshall(a0.getId(), a1)).append(",").append("\"username\" : ").append(java_lang_String.marshall(a0.getUsername(), a1)).append(",").append("\"data1\" : ").append(java_lang_String.marshall(a0.getData1(), a1)).append(",").append("\"data2\" : ").append(java_lang_String.marshall(a0.getData2(), a1)).append(",").append("\"data3\" : ").append(java_lang_String.marshall(a0.getData3(), a1)).append(",").append("\"data4\" : ").append(java_lang_String.marshall(a0.getData4(), a1)).append(",").append("\"data5\" : ").append(java_lang_String.marshall(a0.getData5(), a1)).append("}").toString();
-      }
-    };
-    marshallers.put("com.cosbeni.demo.shared.entity.Demo", com_cosbeni_demo_shared_entity_Demo);
     java_lang_ArithmeticException = new Marshaller<ArithmeticException>() {
       private ArithmeticException[] EMPTY_ARRAY = new ArithmeticException[0];
       public ArithmeticException[] getEmptyArray() {
