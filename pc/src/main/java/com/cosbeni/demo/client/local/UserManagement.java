@@ -1,7 +1,9 @@
 package com.cosbeni.demo.client.local;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -37,13 +39,11 @@ import com.google.gwt.dom.client.LabelElement;
 import com.google.gwt.dom.client.SpanElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.view.client.ListDataProvider;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.events.SelectionChangedHandler;
 import com.smartgwt.client.widgets.grid.events.SelectionEvent;
@@ -72,8 +72,6 @@ public class UserManagement extends Composite {
 
   @DataField
   ListGrid usersServerTable = new ListGrid();
-
-  private ListDataProvider<User> dataProvider = new ListDataProvider<User>();
 
   @Inject
   @DataField
@@ -137,7 +135,7 @@ public class UserManagement extends Composite {
 
   @DataField
   private LabelElement passwordLabel = DOM.createLabel().cast();
-  
+
   @DataField
   private SpanElement passwordMessage = DOM.createSpan().cast();
 
@@ -228,7 +226,11 @@ public class UserManagement extends Composite {
 
   @Inject
   @DataField
-  private Button pullUser;
+  private Button pullUserLocal;
+
+  @Inject
+  @DataField
+  private Button pullUserServer;
 
   private DemoConstants demoConstants;
 
@@ -252,6 +254,7 @@ public class UserManagement extends Composite {
     info.setVisible(false);
 
     idLabel.setInnerText(demoConstants.id());
+    ridLabel.setInnerText(demoConstants.rid());
     userNameLabel.setInnerText(demoConstants.userName());
     userNameMessage.setInnerText("");
     passwordLabel.setInnerText(demoConstants.password());
@@ -263,7 +266,7 @@ public class UserManagement extends Composite {
     emailMessage.setInnerText("");
     groupLabel.setInnerText(demoConstants.group());
     usersClientTable.setWidth(570);
-    usersClientTable.setHeight(400);
+    usersClientTable.setHeight(200);
     usersClientTable.setShowFilterEditor(true);
     usersClientTable.setFilterOnKeypress(true);
     usersClientTable.addSelectionChangedHandler(new SelectionChangedHandler() {
@@ -281,7 +284,7 @@ public class UserManagement extends Composite {
     });
 
     usersServerTable.setWidth(570);
-    usersServerTable.setHeight(400);
+    usersServerTable.setHeight(200);
     usersServerTable.setShowFilterEditor(true);
     usersServerTable.setFilterOnKeypress(true);
     fetchUsers();
@@ -325,9 +328,29 @@ public class UserManagement extends Composite {
     usersClientTable.fetchData();
   }
 
-  @EventHandler("add")
-  public void add(ClickEvent e) {
-    user = toUserValue(new User(), "ADD", true);
+  public void reset() {
+    user = new User();
+    toWidget();
+    userNameMessage.setInnerText("");
+    userNameBox.removeStyleName("error");
+    passwordMessage.setInnerText("");
+    passwordBox.removeStyleName("error");
+    firstNameMessage.setInnerText("");
+    firstNameBox.removeStyleName("error");
+    lastNameMessage.setInnerText("");
+    lastNameBox.removeStyleName("error");
+    emailMessage.setInnerText("");
+    emailBox.removeStyleName("error");
+    userBox.setVisible(true);
+    add.setVisible(true);
+    update.setVisible(false);
+    delete.setVisible(false);
+    cancel.setVisible(false);
+    alert.setVisible(false);
+    info.setVisible(false);
+  }
+
+  public Boolean validation(User user) {
     Boolean violation = false;
     Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
     Set<ConstraintViolation<User>> violations = validator.validate(user);
@@ -355,8 +378,13 @@ public class UserManagement extends Composite {
         violation = true;
       }
     }
+    return violation;
+  }
 
-    if (violation == false) {
+  @EventHandler("add")
+  public void add(ClickEvent e) {
+    user = toUserValue(new User(), "ADD", true);
+    if (!validation(user)) {
       TypedQuery<Group> query = em.createNamedQuery("groupById", Group.class);
       query.setParameter("id", user.getGroup().getId());
       Group result = query.getSingleResult();
@@ -365,6 +393,7 @@ public class UserManagement extends Composite {
       em.flush();
       em.detach(user);
       fetchUsers();
+      reset();
     }
   }
 
@@ -374,33 +403,10 @@ public class UserManagement extends Composite {
       user = em.find(User.class, new Long(id.getInnerText()));
     }
     user = toUserValue(user, "UPDATE", true);
-    Boolean violation = false;
-    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-    Set<ConstraintViolation<User>> violations = validator.validate(user);
-    for (ConstraintViolation<User> cv : violations) {
-      String prop = cv.getPropertyPath().toString();
-      if (prop.equals("userName")) {
-        userNameMessage.setInnerText(cv.getMessage());
-        userNameBox.addStyleName("error");
-        violation = true;
-      } else if (prop.equals("firstName")) {
-        firstNameMessage.setInnerText(cv.getMessage());
-        firstNameBox.addStyleName("error");
-        violation = true;
-      } else if (prop.equals("lastName")) {
-        lastNameMessage.setInnerText(cv.getMessage());
-        lastNameBox.addStyleName("error");
-        violation = true;
-      } else if (prop.equals("email")) {
-        emailMessage.setInnerText(cv.getMessage());
-        emailBox.addStyleName("error");
-        violation = true;
-      }
-    }
-
-    if (violation == false) {
+    if (!validation(user)) {
       em.flush();
       fetchUsers();
+      reset();
     }
     em.detach(user);
   }
@@ -413,15 +419,7 @@ public class UserManagement extends Composite {
 
   @EventHandler("cancel")
   public void cancel(ClickEvent e) {
-    user = new User();
-    toWidget();
-    userBox.setVisible(true);
-    add.setVisible(true);
-    update.setVisible(false);
-    delete.setVisible(false);
-    cancel.setVisible(false);
-    alert.setVisible(false);
-    info.setVisible(false);
+    reset();
   }
 
   @EventHandler("deleteConfirm")
@@ -437,52 +435,74 @@ public class UserManagement extends Composite {
       em.detach(user);
     }
     fetchUsers();
-    user = new User();
-    toWidget();
-    userBox.setVisible(true);
-    add.setVisible(true);
-    update.setVisible(false);
-    delete.setVisible(false);
-    cancel.setVisible(false);
-    alert.setVisible(false);
-    info.setVisible(false);
+    reset();
   }
 
   @EventHandler("deleteCancel")
   public void deleteCancel(ClickEvent e) {
-    user = new User();
-    toWidget();
-    userBox.setVisible(true);
-    add.setVisible(true);
-    update.setVisible(false);
-    delete.setVisible(false);
-    cancel.setVisible(false);
-    alert.setVisible(false);
-    info.setVisible(false);
+    reset();
   }
 
-  @EventHandler("pullUser")
-  public void pullUser(ClickEvent e) {
-    userService.call(pullData).getUsers();
+  @EventHandler("pullUserLocal")
+  public void pullUserLocal(ClickEvent e) {
+    userService.call(pullUserLocalPreserve).getUsers();
   }
 
-  final private RemoteCallback<List<User>> pullData = new RemoteCallback<List<User>>() {
+  final private RemoteCallback<List<User>> pullUserLocalPreserve = new RemoteCallback<List<User>>() {
     @Override
     public void callback(List<User> remoteData) {
       List<User> localData = em.createNamedQuery("rids", User.class).getResultList();
       List<Long> localRids = new ArrayList<Long>();
-      for (User user : localData) {
-        localRids.add(user.getRid());
+      for (User lu : localData) {
+        localRids.add(lu.getRid());
       }
-      for (User user : remoteData) {
-        if (!localRids.contains(user.getId())) {
-          user.setRid(user.getId());
-          user.setId(0L);
-          Group group = em.find(Group.class, user.getGroup().getId());
-          user.setGroup(group);
-          em.persist(user);
+      for (User ru : remoteData) {
+        if (!localRids.contains(ru.getId())) {
+          ru.setRid(ru.getId());
+          ru.setId(0L);
+          Group g = em.find(Group.class, ru.getGroup().getId());
+          ru.setGroup(g);
+          em.persist(ru);
         }
       }
+      fetchUsers();
+    }
+  };
+
+  @EventHandler("pullUserServer")
+  public void pullUserServer(ClickEvent e) {
+    userService.call(pullUserLocalOverwrite).getUsers();
+  }
+
+  final private RemoteCallback<List<User>> pullUserLocalOverwrite = new RemoteCallback<List<User>>() {
+    @Override
+    public void callback(List<User> remoteData) {
+      List<User> localData = em.createNamedQuery("rids", User.class).getResultList();
+      Map<Long, User> localMap = new HashMap<Long, User>();
+      for (User lu : localData) {
+        localMap.put(lu.getRid(), lu);
+      }
+      for (User ru : remoteData) {
+        if (!localMap.containsKey(ru.getId())) {
+          ru.setRid(ru.getId());
+          ru.setId(0L);
+          Group g = em.find(Group.class, ru.getGroup().getId());
+          ru.setGroup(g);
+          em.persist(ru);
+        } else {
+          User lu = localMap.get(ru.getId());
+          lu.setUserName(ru.getUserName());
+          lu.setFirstName(ru.getFirstName());
+          lu.setLastName(ru.getLastName());
+          lu.setEmail(ru.getEmail());
+          lu.setFlag(ru.getFlag());
+          lu.setCommand(ru.getCommand());
+          lu.setPassword(ru.getPassword());
+          Group g = em.find(Group.class, ru.getGroup().getId());
+          lu.setGroup(g);
+        }
+      }
+      em.flush();
       fetchUsers();
     }
   };
@@ -491,47 +511,50 @@ public class UserManagement extends Composite {
   public void pushUser(ClickEvent e) {
     TypedQuery<User> query = em.createNamedQuery("adds", User.class);
     List<User> users = query.getResultList();
-    for (User user : users) {
-      userService.call(userAdd).add(user);
+    for (User u : users) {
+      userService.call(userAdd).add(u);
     }
     query = em.createNamedQuery("updates", User.class);
     users = query.getResultList();
-    for (User user : users) {
-      if (user.getRid() == 0)
-        userService.call(userAdd).add(user);
+    for (User u : users) {
+      if (u.getRid() == 0)
+        userService.call(userAdd).add(u);
       else
-        userService.call(userUpdate).update(user);
+        userService.call(userUpdate).update(u);
     }
     query = em.createNamedQuery("deletes", User.class);
     users = query.getResultList();
-    for (User user : users) {
-      if (user.getRid() == 0)
-        em.remove(user);
+    for (User u : users) {
+      if (u.getRid() == 0)
+        em.remove(u);
       else {
-        userService.call(userDelete).delete(user.getRid().toString());
+        userService.call(userDelete).delete(u.getRid().toString());
       }
     }
-    RestClient.setApplicationRoot(serverPath);
-    RestClient.setJacksonMarshallingActive(false);
-    userService.call(userUsers).getUsers();
   }
 
   final private RemoteCallback<User> userAdd = new RemoteCallback<User>() {
     @Override
     public void callback(User result) {
       if (result != null) {
-        User user = em.find(User.class, result.getRid());
-        user.setRid(result.getId());
+        User u = em.find(User.class, result.getRid());
+        u.setRid(result.getId());
         em.flush();
         fetchUsers();
+        RestClient.setApplicationRoot(serverPath);
+        RestClient.setJacksonMarshallingActive(false);
+        userService.call(userUsers).getUsers();        
       }
-      
+
     }
   };
 
   final private RemoteCallback<User> userUpdate = new RemoteCallback<User>() {
     @Override
     public void callback(User result) {
+      RestClient.setApplicationRoot(serverPath);
+      RestClient.setJacksonMarshallingActive(false);
+      userService.call(userUsers).getUsers();      
     }
   };
 
@@ -539,9 +562,12 @@ public class UserManagement extends Composite {
     @Override
     public void callback(User result) {
       if (result != null) {
-        User user = em.find(User.class, result.getRid());
-        em.remove(user);
+        User u = em.find(User.class, result.getRid());
+        em.remove(u);
         em.flush();
+        RestClient.setApplicationRoot(serverPath);
+        RestClient.setJacksonMarshallingActive(false);
+        userService.call(userUsers).getUsers();        
       }
     }
   };
@@ -588,7 +614,13 @@ public class UserManagement extends Composite {
     } else {
       id.setInnerText("");
     }
+    if (user.getRid() != null) {
+      rid.setInnerText(user.getRid().toString());
+    } else {
+      rid.setInnerText("");
+    }
     userName.setValue(user.getUserName());
+    password.setValue(user.getPassword());
     firstName.setValue(user.getFirstName());
     lastName.setValue(user.getLastName());
     email.setValue(user.getEmail());

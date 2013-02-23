@@ -9,15 +9,13 @@ public interface DemoConstants extends Constants {
   String update();
   String delete();
   String cancel();
-  String name();
+  String groupName();
   String description();
   String id();
+  String rid();
   String userName();
   String password();
   String firstName();
   String lastName();
   String email();
-  String userNamePlaceholder();
-  String passwordPlaceholder();
-  String emailPlaceholder();
 }

@@ -54,6 +54,79 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
       }
     };
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
+      private native String _$1389311774_password(User instance) /*-{
+        return instance.@com.cosbeni.demo.shared.entity.User::password;
+      }-*/;
+
+      private native void _$1389311774_password(User instance, String value) /*-{
+        instance.@com.cosbeni.demo.shared.entity.User::password = value;
+      }-*/;
+      public boolean cascades(CascadeType arg0) {
+        throw new UnsupportedOperationException("Not a relationship attribute");
+      }
+      public Object get(Object arg0) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        return _$1389311774_password((User) arg0);
+      }
+      public Class getBindableJavaType() {
+        return String.class;
+      }
+      public BindableType getBindableType() {
+        return BindableType.SINGULAR_ATTRIBUTE;
+      }
+      public ManagedType getDeclaringType() {
+        return et_com_cosbeni_demo_shared_entity_User;
+      }
+      public Class getJavaType() {
+        return String.class;
+      }
+      public String getName() {
+        return "password";
+      }
+      public PersistentAttributeType getPersistentAttributeType() {
+        return PersistentAttributeType.BASIC;
+      }
+      public Type getType() {
+        return new Type() {
+          public Class getJavaType() {
+            return String.class;
+          }
+          public PersistenceType getPersistenceType() {
+            return PersistenceType.BASIC;
+          }
+        };
+      }
+      public Iterator getValueGenerator() {
+        throw new UnsupportedOperationException("Not a generated attribute");
+      }
+      public boolean isAssociation() {
+        return false;
+      }
+      public boolean isCollection() {
+        return false;
+      }
+      public boolean isGeneratedValue() {
+        return false;
+      }
+      public boolean isId() {
+        return false;
+      }
+      public boolean isOptional() {
+        return true;
+      }
+      public boolean isVersion() {
+        return false;
+      }
+      public void set(Object arg0, Object arg1) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        _$1389311774_password((User) arg0, (String) arg1);
+      }
+    });
+    et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
       private native Group _$1389311774_group(User instance) /*-{
         return instance.@com.cosbeni.demo.shared.entity.User::group;
       }-*/;
@@ -124,6 +197,79 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
         _$1389311774_group((User) arg0, (Group) arg1);
+      }
+    });
+    et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
+      private native String _$1389311774_userName(User instance) /*-{
+        return instance.@com.cosbeni.demo.shared.entity.User::userName;
+      }-*/;
+
+      private native void _$1389311774_userName(User instance, String value) /*-{
+        instance.@com.cosbeni.demo.shared.entity.User::userName = value;
+      }-*/;
+      public boolean cascades(CascadeType arg0) {
+        throw new UnsupportedOperationException("Not a relationship attribute");
+      }
+      public Object get(Object arg0) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        return _$1389311774_userName((User) arg0);
+      }
+      public Class getBindableJavaType() {
+        return String.class;
+      }
+      public BindableType getBindableType() {
+        return BindableType.SINGULAR_ATTRIBUTE;
+      }
+      public ManagedType getDeclaringType() {
+        return et_com_cosbeni_demo_shared_entity_User;
+      }
+      public Class getJavaType() {
+        return String.class;
+      }
+      public String getName() {
+        return "userName";
+      }
+      public PersistentAttributeType getPersistentAttributeType() {
+        return PersistentAttributeType.BASIC;
+      }
+      public Type getType() {
+        return new Type() {
+          public Class getJavaType() {
+            return String.class;
+          }
+          public PersistenceType getPersistenceType() {
+            return PersistenceType.BASIC;
+          }
+        };
+      }
+      public Iterator getValueGenerator() {
+        throw new UnsupportedOperationException("Not a generated attribute");
+      }
+      public boolean isAssociation() {
+        return false;
+      }
+      public boolean isCollection() {
+        return false;
+      }
+      public boolean isGeneratedValue() {
+        return false;
+      }
+      public boolean isId() {
+        return false;
+      }
+      public boolean isOptional() {
+        return true;
+      }
+      public boolean isVersion() {
+        return false;
+      }
+      public void set(Object arg0, Object arg1) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        _$1389311774_userName((User) arg0, (String) arg1);
       }
     });
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
@@ -200,12 +346,12 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
       }
     });
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
-      private native String _$1389311774_command(User instance) /*-{
-        return instance.@com.cosbeni.demo.shared.entity.User::command;
+      private native Long _$1389311774_rid(User instance) /*-{
+        return instance.@com.cosbeni.demo.shared.entity.User::rid;
       }-*/;
 
-      private native void _$1389311774_command(User instance, String value) /*-{
-        instance.@com.cosbeni.demo.shared.entity.User::command = value;
+      private native void _$1389311774_rid(User instance, Long value) /*-{
+        instance.@com.cosbeni.demo.shared.entity.User::rid = value;
       }-*/;
       public boolean cascades(CascadeType arg0) {
         throw new UnsupportedOperationException("Not a relationship attribute");
@@ -214,10 +360,10 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         if (arg0 instanceof WrappedPortable) {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
-        return _$1389311774_command((User) arg0);
+        return _$1389311774_rid((User) arg0);
       }
       public Class getBindableJavaType() {
-        return String.class;
+        return Long.class;
       }
       public BindableType getBindableType() {
         return BindableType.SINGULAR_ATTRIBUTE;
@@ -226,10 +372,10 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         return et_com_cosbeni_demo_shared_entity_User;
       }
       public Class getJavaType() {
-        return String.class;
+        return Long.class;
       }
       public String getName() {
-        return "command";
+        return "rid";
       }
       public PersistentAttributeType getPersistentAttributeType() {
         return PersistentAttributeType.BASIC;
@@ -237,7 +383,7 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
       public Type getType() {
         return new Type() {
           public Class getJavaType() {
-            return String.class;
+            return Long.class;
           }
           public PersistenceType getPersistenceType() {
             return PersistenceType.BASIC;
@@ -269,7 +415,7 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         if (arg0 instanceof WrappedPortable) {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
-        _$1389311774_command((User) arg0, (String) arg1);
+        _$1389311774_rid((User) arg0, (Long) arg1);
       }
     });
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
@@ -419,12 +565,12 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
       }
     });
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
-      private native String _$1389311774_password(User instance) /*-{
-        return instance.@com.cosbeni.demo.shared.entity.User::password;
+      private native String _$1389311774_command(User instance) /*-{
+        return instance.@com.cosbeni.demo.shared.entity.User::command;
       }-*/;
 
-      private native void _$1389311774_password(User instance, String value) /*-{
-        instance.@com.cosbeni.demo.shared.entity.User::password = value;
+      private native void _$1389311774_command(User instance, String value) /*-{
+        instance.@com.cosbeni.demo.shared.entity.User::command = value;
       }-*/;
       public boolean cascades(CascadeType arg0) {
         throw new UnsupportedOperationException("Not a relationship attribute");
@@ -433,7 +579,7 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         if (arg0 instanceof WrappedPortable) {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
-        return _$1389311774_password((User) arg0);
+        return _$1389311774_command((User) arg0);
       }
       public Class getBindableJavaType() {
         return String.class;
@@ -448,7 +594,7 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         return String.class;
       }
       public String getName() {
-        return "password";
+        return "command";
       }
       public PersistentAttributeType getPersistentAttributeType() {
         return PersistentAttributeType.BASIC;
@@ -488,80 +634,7 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         if (arg0 instanceof WrappedPortable) {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
-        _$1389311774_password((User) arg0, (String) arg1);
-      }
-    });
-    et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
-      private native Long _$1389311774_rid(User instance) /*-{
-        return instance.@com.cosbeni.demo.shared.entity.User::rid;
-      }-*/;
-
-      private native void _$1389311774_rid(User instance, Long value) /*-{
-        instance.@com.cosbeni.demo.shared.entity.User::rid = value;
-      }-*/;
-      public boolean cascades(CascadeType arg0) {
-        throw new UnsupportedOperationException("Not a relationship attribute");
-      }
-      public Object get(Object arg0) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        return _$1389311774_rid((User) arg0);
-      }
-      public Class getBindableJavaType() {
-        return Long.class;
-      }
-      public BindableType getBindableType() {
-        return BindableType.SINGULAR_ATTRIBUTE;
-      }
-      public ManagedType getDeclaringType() {
-        return et_com_cosbeni_demo_shared_entity_User;
-      }
-      public Class getJavaType() {
-        return Long.class;
-      }
-      public String getName() {
-        return "rid";
-      }
-      public PersistentAttributeType getPersistentAttributeType() {
-        return PersistentAttributeType.BASIC;
-      }
-      public Type getType() {
-        return new Type() {
-          public Class getJavaType() {
-            return Long.class;
-          }
-          public PersistenceType getPersistenceType() {
-            return PersistenceType.BASIC;
-          }
-        };
-      }
-      public Iterator getValueGenerator() {
-        throw new UnsupportedOperationException("Not a generated attribute");
-      }
-      public boolean isAssociation() {
-        return false;
-      }
-      public boolean isCollection() {
-        return false;
-      }
-      public boolean isGeneratedValue() {
-        return false;
-      }
-      public boolean isId() {
-        return false;
-      }
-      public boolean isOptional() {
-        return true;
-      }
-      public boolean isVersion() {
-        return false;
-      }
-      public void set(Object arg0, Object arg1) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        _$1389311774_rid((User) arg0, (Long) arg1);
+        _$1389311774_command((User) arg0, (String) arg1);
       }
     });
     et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
@@ -711,79 +784,6 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
         _$1389311774_id((User) arg0, (Long) arg1);
       }
     });
-    et_com_cosbeni_demo_shared_entity_User.addAttribute(new ErraiSingularAttribute() {
-      private native String _$1389311774_userName(User instance) /*-{
-        return instance.@com.cosbeni.demo.shared.entity.User::userName;
-      }-*/;
-
-      private native void _$1389311774_userName(User instance, String value) /*-{
-        instance.@com.cosbeni.demo.shared.entity.User::userName = value;
-      }-*/;
-      public boolean cascades(CascadeType arg0) {
-        throw new UnsupportedOperationException("Not a relationship attribute");
-      }
-      public Object get(Object arg0) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        return _$1389311774_userName((User) arg0);
-      }
-      public Class getBindableJavaType() {
-        return String.class;
-      }
-      public BindableType getBindableType() {
-        return BindableType.SINGULAR_ATTRIBUTE;
-      }
-      public ManagedType getDeclaringType() {
-        return et_com_cosbeni_demo_shared_entity_User;
-      }
-      public Class getJavaType() {
-        return String.class;
-      }
-      public String getName() {
-        return "userName";
-      }
-      public PersistentAttributeType getPersistentAttributeType() {
-        return PersistentAttributeType.BASIC;
-      }
-      public Type getType() {
-        return new Type() {
-          public Class getJavaType() {
-            return String.class;
-          }
-          public PersistenceType getPersistenceType() {
-            return PersistenceType.BASIC;
-          }
-        };
-      }
-      public Iterator getValueGenerator() {
-        throw new UnsupportedOperationException("Not a generated attribute");
-      }
-      public boolean isAssociation() {
-        return false;
-      }
-      public boolean isCollection() {
-        return false;
-      }
-      public boolean isGeneratedValue() {
-        return false;
-      }
-      public boolean isId() {
-        return false;
-      }
-      public boolean isOptional() {
-        return true;
-      }
-      public boolean isVersion() {
-        return false;
-      }
-      public void set(Object arg0, Object arg1) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        _$1389311774_userName((User) arg0, (String) arg1);
-      }
-    });
     metamodel.addEntityType(et_com_cosbeni_demo_shared_entity_User);
     // **
     // ** EntityType for com.cosbeni.demo.shared.entity.Group
@@ -821,79 +821,6 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
 
       }
     };
-    et_com_cosbeni_demo_shared_entity_Group.addAttribute(new ErraiSingularAttribute() {
-      private native String _$131941304_groupName(Group instance) /*-{
-        return instance.@com.cosbeni.demo.shared.entity.Group::groupName;
-      }-*/;
-
-      private native void _$131941304_groupName(Group instance, String value) /*-{
-        instance.@com.cosbeni.demo.shared.entity.Group::groupName = value;
-      }-*/;
-      public boolean cascades(CascadeType arg0) {
-        throw new UnsupportedOperationException("Not a relationship attribute");
-      }
-      public Object get(Object arg0) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        return _$131941304_groupName((Group) arg0);
-      }
-      public Class getBindableJavaType() {
-        return String.class;
-      }
-      public BindableType getBindableType() {
-        return BindableType.SINGULAR_ATTRIBUTE;
-      }
-      public ManagedType getDeclaringType() {
-        return et_com_cosbeni_demo_shared_entity_Group;
-      }
-      public Class getJavaType() {
-        return String.class;
-      }
-      public String getName() {
-        return "groupName";
-      }
-      public PersistentAttributeType getPersistentAttributeType() {
-        return PersistentAttributeType.BASIC;
-      }
-      public Type getType() {
-        return new Type() {
-          public Class getJavaType() {
-            return String.class;
-          }
-          public PersistenceType getPersistenceType() {
-            return PersistenceType.BASIC;
-          }
-        };
-      }
-      public Iterator getValueGenerator() {
-        throw new UnsupportedOperationException("Not a generated attribute");
-      }
-      public boolean isAssociation() {
-        return false;
-      }
-      public boolean isCollection() {
-        return false;
-      }
-      public boolean isGeneratedValue() {
-        return false;
-      }
-      public boolean isId() {
-        return false;
-      }
-      public boolean isOptional() {
-        return true;
-      }
-      public boolean isVersion() {
-        return false;
-      }
-      public void set(Object arg0, Object arg1) {
-        if (arg0 instanceof WrappedPortable) {
-          arg0 = ((WrappedPortable) arg0).unwrap();
-        }
-        _$131941304_groupName((Group) arg0, (String) arg1);
-      }
-    });
     et_com_cosbeni_demo_shared_entity_Group.addAttribute(new ErraiSingularAttribute() {
       private native String _$131941304_description(Group instance) /*-{
         return instance.@com.cosbeni.demo.shared.entity.Group::description;
@@ -965,6 +892,79 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
           arg0 = ((WrappedPortable) arg0).unwrap();
         }
         _$131941304_description((Group) arg0, (String) arg1);
+      }
+    });
+    et_com_cosbeni_demo_shared_entity_Group.addAttribute(new ErraiSingularAttribute() {
+      private native String _$131941304_groupName(Group instance) /*-{
+        return instance.@com.cosbeni.demo.shared.entity.Group::groupName;
+      }-*/;
+
+      private native void _$131941304_groupName(Group instance, String value) /*-{
+        instance.@com.cosbeni.demo.shared.entity.Group::groupName = value;
+      }-*/;
+      public boolean cascades(CascadeType arg0) {
+        throw new UnsupportedOperationException("Not a relationship attribute");
+      }
+      public Object get(Object arg0) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        return _$131941304_groupName((Group) arg0);
+      }
+      public Class getBindableJavaType() {
+        return String.class;
+      }
+      public BindableType getBindableType() {
+        return BindableType.SINGULAR_ATTRIBUTE;
+      }
+      public ManagedType getDeclaringType() {
+        return et_com_cosbeni_demo_shared_entity_Group;
+      }
+      public Class getJavaType() {
+        return String.class;
+      }
+      public String getName() {
+        return "groupName";
+      }
+      public PersistentAttributeType getPersistentAttributeType() {
+        return PersistentAttributeType.BASIC;
+      }
+      public Type getType() {
+        return new Type() {
+          public Class getJavaType() {
+            return String.class;
+          }
+          public PersistenceType getPersistenceType() {
+            return PersistenceType.BASIC;
+          }
+        };
+      }
+      public Iterator getValueGenerator() {
+        throw new UnsupportedOperationException("Not a generated attribute");
+      }
+      public boolean isAssociation() {
+        return false;
+      }
+      public boolean isCollection() {
+        return false;
+      }
+      public boolean isGeneratedValue() {
+        return false;
+      }
+      public boolean isId() {
+        return false;
+      }
+      public boolean isOptional() {
+        return true;
+      }
+      public boolean isVersion() {
+        return false;
+      }
+      public void set(Object arg0, Object arg1) {
+        if (arg0 instanceof WrappedPortable) {
+          arg0 = ((WrappedPortable) arg0).unwrap();
+        }
+        _$131941304_groupName((Group) arg0, (String) arg1);
       }
     });
     et_com_cosbeni_demo_shared_entity_Group.addAttribute(new ErraiSingularAttribute() {
@@ -1046,6 +1046,38 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
   }
 
   protected void populateNamedQueries() {
+    // **
+    // ** NamedQuery "groups"
+    // ** SELECT g FROM Group g
+    // **
+    super.namedQueries.put("groups", new TypedQueryFactory(this, Group.class, new ErraiParameter[] { }) {
+      protected TypedQuery createQuery() {
+        return new ErraiTypedQuery(entityManager, actualResultType, parameters) {
+          protected Comparator getComparator() {
+            return null;
+          }
+          public boolean matches(JSONObject candidate) {
+            return true;
+          }
+        };
+      }
+    });
+    // **
+    // ** NamedQuery "groupById"
+    // ** SELECT g FROM Group g WHERE g.id = :id
+    // **
+    super.namedQueries.put("groupById", new TypedQueryFactory(this, Group.class, new ErraiParameter[] { new ErraiParameter("id", 0, Long.class) }) {
+      protected TypedQuery createQuery() {
+        return new ErraiTypedQuery(entityManager, actualResultType, parameters) {
+          protected Comparator getComparator() {
+            return null;
+          }
+          public boolean matches(JSONObject candidate) {
+            return Comparisons.nullSafeEquals(JsonUtil.basicValueFromJson(candidate.get("id"), Long.class), getParameterValue("id"));
+          }
+        };
+      }
+    });
     // **
     // ** NamedQuery "users"
     // ** SELECT u FROM User u WHERE u.flag = true ORDER BY u.id
@@ -1170,38 +1202,6 @@ public class GeneratedErraiEntityManager extends ErraiEntityManager {
           }
           public boolean matches(JSONObject candidate) {
             return Comparisons.nullSafeEquals(JsonUtil.basicValueFromJson(candidate.get("command"), String.class), "DELETE");
-          }
-        };
-      }
-    });
-    // **
-    // ** NamedQuery "groups"
-    // ** SELECT g FROM Group g
-    // **
-    super.namedQueries.put("groups", new TypedQueryFactory(this, Group.class, new ErraiParameter[] { }) {
-      protected TypedQuery createQuery() {
-        return new ErraiTypedQuery(entityManager, actualResultType, parameters) {
-          protected Comparator getComparator() {
-            return null;
-          }
-          public boolean matches(JSONObject candidate) {
-            return true;
-          }
-        };
-      }
-    });
-    // **
-    // ** NamedQuery "groupById"
-    // ** SELECT g FROM Group g WHERE g.id = :id
-    // **
-    super.namedQueries.put("groupById", new TypedQueryFactory(this, Group.class, new ErraiParameter[] { new ErraiParameter("id", 0, Long.class) }) {
-      protected TypedQuery createQuery() {
-        return new ErraiTypedQuery(entityManager, actualResultType, parameters) {
-          protected Comparator getComparator() {
-            return null;
-          }
-          public boolean matches(JSONObject candidate) {
-            return Comparisons.nullSafeEquals(JsonUtil.basicValueFromJson(candidate.get("id"), Long.class), getParameterValue("id"));
           }
         };
       }

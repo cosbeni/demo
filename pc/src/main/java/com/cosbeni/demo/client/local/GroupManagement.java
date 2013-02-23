@@ -164,6 +164,11 @@ public class GroupManagement extends Composite {
     deleteCancel.setText(demoConstants.cancel());    
     alert.setVisible(false);
     info.setVisible(false);   
+    
+    idLabel.setInnerText(demoConstants.id());
+    groupNameLabel.setInnerText(demoConstants.groupName());
+    descriptionLabel.setInnerText(demoConstants.description());
+    
     groupsTable.setShowFilterEditor(true);
     groupsTable.setFilterOnKeypress(true);
     groupsTable.addSelectionChangedHandler(new SelectionChangedHandler() {

@@ -39,9 +39,9 @@ public class UserClientDS extends DataSource {
 
     demoConstants = GWT.create(DemoConstants.class);
     setID(id);
-    DataSourceSequenceField idField = new DataSourceSequenceField("id");
+    DataSourceSequenceField idField = new DataSourceSequenceField("id",demoConstants.id());
     idField.setPrimaryKey(true);
-    DataSourceIntegerField ridField = new DataSourceIntegerField("rid");
+    DataSourceIntegerField ridField = new DataSourceIntegerField("rid",demoConstants.rid());
     DataSourceTextField userNameField = new DataSourceTextField("userName", demoConstants.userName());
     DataSourceTextField passwordField = new DataSourceTextField("password", demoConstants.password());
     passwordField.setHidden(true);

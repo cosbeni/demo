@@ -37,11 +37,11 @@ public class GroupDS extends DataSource {
 
     demoConstants = GWT.create(DemoConstants.class);
     setID(id);
-    DataSourceSequenceField idField = new DataSourceSequenceField("id");
+    DataSourceSequenceField idField = new DataSourceSequenceField("id",demoConstants.id());
     idField.setHidden(true);
     idField.setPrimaryKey(true);
 
-    DataSourceTextField nameField = new DataSourceTextField("groupName", demoConstants.name());
+    DataSourceTextField nameField = new DataSourceTextField("groupName", demoConstants.groupName());
     DataSourceTextField descriptionField = new DataSourceTextField("description", demoConstants.description());
 
     setFields(idField, nameField, descriptionField);
