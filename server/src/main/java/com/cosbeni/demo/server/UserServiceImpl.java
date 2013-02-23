@@ -62,6 +62,7 @@ public class UserServiceImpl implements UserService {
         Predicate predicate = cb.equal(u.get("id"), user.getRid());
         criteria.where(predicate);
         User result = em.createQuery(criteria).getSingleResult();
+        result.setRid(user.getId());
         result.setUserName(user.getUserName());
         result.setPassword(user.getPassword());
         result.setFirstName(user.getFirstName());
