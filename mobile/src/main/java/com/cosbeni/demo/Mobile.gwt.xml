@@ -14,10 +14,13 @@
 	<inherits name="org.jboss.errai.enterprise.CDI" />
 	<inherits name="org.jboss.errai.enterprise.Jaxrs" />	
 	<inherits name="org.jboss.errai.jpa.JPA" />
-	<inherits name="org.hibernate.validator.HibernateValidator" />
+	<inherits name="org.hibernate.validator.HibernateValidator" />	
+	<replace-with class="com.cosbeni.demo.mobile.DemoValidatorFactory">
+		<when-type-is class="javax.validation.ValidatorFactory" />
+	</replace-with>
 	<replace-with class="com.cosbeni.demo.shared.validation.ValidationMessagesResolver">
 		<when-type-is class="com.google.gwt.validation.client.UserValidationMessagesResolver" />
-	</replace-with>
+	</replace-with>	
 	<source path="mobile" />
 	<extend-property name="locale" values="en" />
 	<extend-property name="locale" values="ja" />

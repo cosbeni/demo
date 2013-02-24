@@ -9,15 +9,21 @@ public interface DemoConstants extends Constants {
   String update();
   String delete();
   String cancel();
-  String name();
+  String back();
+  String groupName();
   String description();
   String id();
+  String rid();
   String userName();
   String password();
   String firstName();
   String lastName();
   String email();
-  String userNamePlaceholder();
-  String passwordPlaceholder();
-  String emailPlaceholder();
-}
+  String newUser();
+  String userList();
+  String userInput();
+  String remote();
+  String upload();
+  String localWin();
+  String serverWin();
+ }

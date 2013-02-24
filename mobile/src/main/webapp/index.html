@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="jquery.mobile-1.2.0/jquery.mobile-1.2.0.css" />
 <link rel="stylesheet" href="jquery.mobile-1.2.0/demos/docs/_assets/css/jqm-docs.css" />
+<link rel="stylesheet" href="custom/css/mobile.css">
 <script src="jquery/jquery-1.8.3.js"></script>
 <script src="jquery.mobile-1.2.0/demos/docs/_assets/js/jqm-doc.js"></script>
 <script src="jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
@@ -15,5 +16,22 @@
 	<noscript>
 		<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">Your web browser must have JavaScript enabled in order for this application to display correctly.</div>
 	</noscript>
+	<div data-role="page">
+		<div data-field="header" data-role="header">
+			<h1>Home</h1>
+		</div>
+		<div data-role="content">
+				<img src="custom/images/logo.png"></img>
+		</div>
+		<div data-field="footer" data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a data-role="button" href="#UserListPage" data-transition="flip">User List</a></li>
+					<li><a data-role="button" href="#UserFormPage" data-transition="flip">User Input</a></li>
+					<li><a data-role="button" href="#RemotePage" data-transition="flip">Remote</a></li>				
+				</ul>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

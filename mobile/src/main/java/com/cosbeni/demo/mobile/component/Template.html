@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Mobile Framework - Documentation</title>
+<link href="/root/resource/custom/css/mobile.css" rel="stylesheet">
+<link rel="stylesheet" href="file:///root/resource/jquery.mobile-1.2.0/jquery.mobile-1.2.0.css" />
+<link rel="stylesheet" href="file:///root/resource/jquery.mobile-1.2.0/demos/docs/_assets/css/jqm-docs.css" />
+
+<script src="file:///root/resource/jquery/jquery-1.8.3.js"></script>
+<script src="file:///root/resource/jquery.mobile-1.2.0/demos/docs/_assets/js/jqm-doc.js"></script>
+<script src="file:///root/resource/jquery.mobile-1.2.0/jquery.mobile-1.2.0.js"></script>
+</head>
+<body>
+	<div data-role="page" id="UserFormPage">
+		<div data-role="header">
+			<h1>User Input</h1>
+		</div>
+		<div data-role="content">
+			<form data-field="UserForm">
+				<div data-role="fieldcontain">
+					<label data-field="idLabel" for="id">ID</label><input type="text" data-field="id" id="id" disabled=true value="" />
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="ridLabel" for="rid">RID</label><input type="text" data-field="rid" id="rid" disabled=true value="" />
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="userNameLabel" for="userName">User Name</label> <input type="text" data-field="userName" id="userName" value="" /> <label class="error" data-field="userNameMessage"></label>
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="passwordLabel" for="password">Password</label> <input type="password" data-field="password" id="password" value="" /> <label class="error" data-field="passwordMessage"></label>
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="firstNameLabel" for="firstName">First Name</label> <input type="text" data-field="firstName" id="firstName" value="" /> <label class="error" data-field="firstNameMessage"></label>
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="lastNameLabel" for="lastName">Last Name</label> <input type="text" data-field="lastName" id="lastName" value="" /> <label class="error" data-field="lastNameMessage"></label>
+				</div>
+				<div data-role="fieldcontain">
+					<label data-field="emailLabel" for="email">Email</label> <input type="text" data-field="email" id="email" value="" /> <label class="error" data-field="emailMessage"></label>
+				</div>
+				<div data-field="group" data-role="fieldcontain"></div>
+				<div data-field="updateBox" class="ui-body ui-body-b">
+					<fieldset class="ui-grid-b">
+						<div class="ui-block-a">
+							<a data-field="update" data-role="button" type="submit" data-theme="b">Update</a>
+						</div>
+						<div class="ui-block-b">
+							<a href="#DeleteDialog" data-field="delete" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a">Delete</a>
+						</div>
+						<div class="ui-block-c">
+							<a data-field="cancel" data-role="button" data-theme="c">Cancel</a>
+						</div>
+					</fieldset>
+				</div>
+				<div data-field="addBox" class="ui-body ui-body-b">
+					<fieldset class="ui-grid-solo">
+						<div class="ui-block-a">
+							<button data-field="add" type="submit" data-theme="d">Add</button>
+						</div>
+					</fieldset>
+				</div>
+			</form>
+		</div>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#UserListPage" data-transition="flip">User List</a></li>
+					<li><a href="#UserFormPage" data-transition="flip">User Input</a></li>
+					<li><a href="#RemotePage" data-transition="flip">Remote</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="UserListPage">
+		<div data-role="header">
+			<h1>User List</h1>
+		</div>
+		<div data-role="content">
+			<div data-field="UserList">
+				<div data-field="content">
+					<ul data-role="listview">
+						<li><h2>Username</h2>
+							<p>First name Last Name Email address</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#UserListPage" data-transition="flip">User List</a></li>
+					<li><a href="#UserFormPage" data-transition="flip">User Input</a></li>
+					<li><a href="#RemotePage" data-transition="flip">Remote</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="RemotePage">
+		<div data-role="header">
+			<h1>Remote List</h1>
+		</div>
+		<div data-role="content">
+			<div data-field="RemoteUserList">
+				<div class="ui-grid-c">
+					<div class="ui-block-a">
+						<a data-field="upload" data-role="button" data-icon="arrow-u">Upload</a>
+					</div>
+					<div class="ui-block-b">
+						<a data-field="localWin" data-role="button" data-icon="arrow-d">Local Win</a>
+					</div>
+					<div class="ui-block-c">
+						<a data-field="serverWin" data-role="button" data-icon="arrow-d">Server Win</a>
+					</div>
+					<div class="ui-block-d">
+						<a data-field="group" data-role="button" data-icon="arrow-d" data-rel="dialog" data-transition="pop">Group</a>
+					</div>
+				</div>
+				<br>
+				<div data-field="content">
+					<ul data-role="listview">
+						<li><h2>Username</h2>
+							<p>First name Last Name Email address</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#UserListPage" data-transition="flip">User List</a></li>
+					<li><a href="#UserFormPage" data-transition="flip">User Input</a></li>
+					<li><a href="#RemotePage" data-transition="flip">Remote</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="DeleteDialog" data-role="page">
+		<div data-role="content" data-theme="c">
+			<div data-field="DeleteDialog">
+				<h1 data-field="message"></h1>
+				<a data-field="deleteConfirm" data-role="button" data-theme="b">Delete</a> <a data-field="deleteCancel" data-role="button" data-theme="c">Cancel</a>
+			</div>
+		</div>
+	</div>
+	<div id="ConfirmDialog" data-role="page">
+		<div data-role="content" data-theme="c">
+			<div data-field="ConfirmDialog">
+				<h1 data-field="message"></h1>
+				<a data-field="confirm" data-role="button" data-theme="b">Confirm</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
