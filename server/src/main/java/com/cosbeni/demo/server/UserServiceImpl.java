@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
         result.setEmail(user.getEmail());
         userTransaction.commit();
         return result;
-      }      
+      }
     } catch (Exception ex) {
       try {
         userTransaction.rollback();
@@ -109,16 +109,18 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public User delete(String id) {
+  public User delete(User user) {
     try {
       userTransaction.begin();
       CriteriaBuilder cb = em.getCriteriaBuilder();
       CriteriaQuery<User> criteria = cb.createQuery(User.class);
       Root<User> u = criteria.from(User.class);
       criteria.select(u);
-      Predicate predicate = cb.equal(u.get("id"), id);
+      Predicate predicate = cb.equal(u.get("id"), user.getRid());
       criteria.where(predicate);
       User result = em.createQuery(criteria).getSingleResult();
+      if (result == null)
+        return user;
       em.remove(result);
       userTransaction.commit();
       return result;
