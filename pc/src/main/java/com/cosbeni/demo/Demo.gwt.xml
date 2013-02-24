@@ -25,8 +25,7 @@
 	<replace-with class="com.cosbeni.demo.shared.validation.ValidationMessagesResolver">
 		<when-type-is class="com.google.gwt.validation.client.UserValidationMessagesResolver" />
 	</replace-with>	
-	<source path="client" />
-	<source path="validation" />	
+	<source path="client" />	
 	<extend-property name="locale" values="en" />
 	<extend-property name="locale" values="ja" />
 	<set-property-fallback name="locale" value="en" />	

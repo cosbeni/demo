@@ -478,29 +478,15 @@ public class UserManagement extends Composite {
     @Override
     public void callback(List<User> remoteData) {
       List<User> localData = em.createNamedQuery("rids", User.class).getResultList();
-      Map<Long, User> localMap = new HashMap<Long, User>();
       for (User lu : localData) {
-        localMap.put(lu.getRid(), lu);
+        em.remove(lu);
       }
       for (User ru : remoteData) {
-        if (!localMap.containsKey(ru.getId())) {
-          ru.setRid(ru.getId());
-          ru.setId(0L);
-          Group g = em.find(Group.class, ru.getGroup().getId());
-          ru.setGroup(g);
-          em.persist(ru);
-        } else {
-          User lu = localMap.get(ru.getId());
-          lu.setUserName(ru.getUserName());
-          lu.setFirstName(ru.getFirstName());
-          lu.setLastName(ru.getLastName());
-          lu.setEmail(ru.getEmail());
-          lu.setFlag(ru.getFlag());
-          lu.setCommand(ru.getCommand());
-          lu.setPassword(ru.getPassword());
-          Group g = em.find(Group.class, ru.getGroup().getId());
-          lu.setGroup(g);
-        }
+        ru.setRid(ru.getId());
+        ru.setId(0L);
+        Group g = em.find(Group.class, ru.getGroup().getId());
+        ru.setGroup(g);
+        em.persist(ru);
       }
       em.flush();
       fetchUsers();
@@ -528,7 +514,7 @@ public class UserManagement extends Composite {
       if (u.getRid() == 0)
         em.remove(u);
       else {
-        userService.call(userDelete).delete(u.getRid().toString());
+        userService.call(userDelete).delete(u);
       }
     }
   }
@@ -543,7 +529,7 @@ public class UserManagement extends Composite {
         fetchUsers();
         RestClient.setApplicationRoot(serverPath);
         RestClient.setJacksonMarshallingActive(false);
-        userService.call(userUsers).getUsers();        
+        userService.call(userUsers).getUsers();
       }
 
     }
@@ -554,7 +540,7 @@ public class UserManagement extends Composite {
     public void callback(User result) {
       RestClient.setApplicationRoot(serverPath);
       RestClient.setJacksonMarshallingActive(false);
-      userService.call(userUsers).getUsers();      
+      userService.call(userUsers).getUsers();
     }
   };
 
@@ -567,7 +553,7 @@ public class UserManagement extends Composite {
         em.flush();
         RestClient.setApplicationRoot(serverPath);
         RestClient.setJacksonMarshallingActive(false);
-        userService.call(userUsers).getUsers();        
+        userService.call(userUsers).getUsers();
       }
     }
   };

@@ -34,26 +34,25 @@
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
 }
 
-
-.cosbeni-header{
+.cosbeni-header {
 	background-color: #fff;
-    border: 1px solid #D4D4D4;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
-    min-height: 40px;
-    z-index: 1000000;
+	border: 1px solid #D4D4D4;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	min-height: 40px;
+	z-index: 1000000;
 }
 
-.cosbeni-footer{
+.cosbeni-footer {
 	background-color: #F5F5F5;
-    border: 1px solid #D4D4D4;
-    text-align: center;
-    z-index: 1000000;
+	border: 1px solid #D4D4D4;
+	text-align: center;
+	z-index: 1000000;
 }
 
-.cosbeni-navbar-top{
+.cosbeni-navbar-top {
 	margin-left: 20px;
-	margin-right: 20px;	
+	margin-right: 20px;
 }
 
 .cosbeni-login input[type="text"],.cosbeni-login input[type="password"]
@@ -90,7 +89,11 @@
 	clear: both;
 }
 
-.cosbeni-row{
+.cosbeni-center {
+	text-align: center
+}
+
+.cosbeni-row {
 	margin-left: -20px;
 }
 
@@ -115,7 +118,8 @@
 }
 
 .cosbeni-dialog .dialogTopLeft {
-	background: url("../images/circles.png") no-repeat scroll -20px 0 #F1F1F1;
+	background: url("../images/circles.png") no-repeat scroll -20px 0
+		#F1F1F1;
 }
 
 .cosbeni-dialog .dialogTopLeftInner {
@@ -124,7 +128,8 @@
 }
 
 .cosbeni-dialog .dialogTopRight {
-	background: url("../images/circles.png") no-repeat scroll -28px 0 transparent;
+	background: url("../images/circles.png") no-repeat scroll -28px 0
+		transparent;
 	width: 12px;
 }
 
@@ -146,15 +151,18 @@
 }
 
 .cosbeni-dialog .dialogBottomLeft {
-	background: url("../images/circles.png") no-repeat scroll 0 -36px #F1F1F1;
+	background: url("../images/circles.png") no-repeat scroll 0 -36px
+		#F1F1F1;
 }
 
 .cosbeni-dialog .dialogBottomCenter {
-	background: url("../images/hborder.png") repeat-x scroll 0 -2945px #F1F1F1;
+	background: url("../images/hborder.png") repeat-x scroll 0 -2945px
+		#F1F1F1;
 }
 
 .cosbeni-dialog .dialogBottomRight {
-	background: url("../images/circles.png") no-repeat scroll -8px -36px transparent;
+	background: url("../images/circles.png") no-repeat scroll -8px -36px
+		transparent;
 }
 
 .cosbeni-dialog .dialogBottomRightInner {
@@ -171,7 +179,7 @@
 }
 
 .cosbeni section {
-    padding-top: 110px;
+	padding-top: 110px;
 }
 
 .cosbeni .jumbotron {
@@ -180,83 +188,87 @@
 	margin-bottom: 20px;
 }
 
-.cosbeni .container .cosbeni-row{
+.cosbeni .container .cosbeni-row {
 	padding-bottom: 40px;
 }
 
-.cosbeni .navbar{
-    margin-bottom: 0px;
+.cosbeni .navbar {
+	margin-bottom: 0px;
 }
 
-.cosbeni .bs-docs-sidenav.affix{
+.cosbeni .bs-docs-sidenav.affix {
 	top: 100px;
 }
 
-.cosbeni .jumbotron{
+.cosbeni .jumbotron {
 	padding-top: 120px;
 }
 
-.cosbeni .gwt-MenuBarPopup{
+.cosbeni .gwt-MenuBarPopup {
 	z-index: 1000000;
 }
 
 .mobilePreview {
-  z-index: 901 !important;
-  cursor: pointer !important;
+	z-index: 901 !important;
+	cursor: pointer !important;
 }
 
 .mobilePreview.tabletLandscape {
-  background: url(../images/preview/mobile/tablet/landscape.png) no-repeat !important;
-  width: 1300px !important;
-  height: 1025px !important;
+	background: url(../images/preview/mobile/tablet/landscape.png) no-repeat
+		!important;
+	width: 1300px !important;
+	height: 1025px !important;
 }
 
 .mobilePreview.tabletLandscape .popupContent {
-  position: absolute !important;
-  top: 211px !important;
-  left: 128px !important;
-  width: 1024px !important;
-  height: 672px !important;
+	position: absolute !important;
+	top: 211px !important;
+	left: 128px !important;
+	width: 1024px !important;
+	height: 672px !important;
 }
 
 .mobilePreview.tabletPortrait {
-  background: url(../images/preview/mobile/tablet/portrait.png) no-repeat !important;
-  width: 1020px !important;
-  height: 1300px !important;
+	background: url(../images/preview/mobile/tablet/portrait.png) no-repeat
+		!important;
+	width: 1020px !important;
+	height: 1300px !important;
 }
 
 .mobilePreview.tabletPortrait .popupContent {
-  position: absolute !important;
-  top: 224px !important;
-  left: 118px !important;
-  width: 768px !important;
-  height: 928px !important;
+	position: absolute !important;
+	top: 224px !important;
+	left: 118px !important;
+	width: 768px !important;
+	height: 928px !important;
 }
 
 .mobilePreview.smartphoneLandscape {
-  background: url(../images/preview/mobile/smartphone/landscape.png) no-repeat !important;
-  width: 752px !important;
-  height: 461px !important;
+	background: url(../images/preview/mobile/smartphone/landscape.png)
+		no-repeat !important;
+	width: 752px !important;
+	height: 461px !important;
 }
 
 .mobilePreview.smartphoneLandscape .popupContent {
-  position: absolute !important;
-  top: 112px !important;
-  left: 130px !important;
-  width: 480px !important;
-  height: 210px !important;
+	position: absolute !important;
+	top: 112px !important;
+	left: 130px !important;
+	width: 480px !important;
+	height: 210px !important;
 }
 
 .mobilePreview.smartphonePortrait {
-  background: url(../images/preview/mobile/smartphone/portrait.png) no-repeat !important;
-  width: 393px !important;
-  height: 756px !important;
+	background: url(../images/preview/mobile/smartphone/portrait.png)
+		no-repeat !important;
+	width: 393px !important;
+	height: 756px !important;
 }
 
 .mobilePreview.smartphonePortrait .popupContent {
-  position: absolute !important;
-  top: 213px !important;
-  left: 32px !important;
-  width: 320px !important;
-  height: 356px !important;
+	position: absolute !important;
+	top: 213px !important;
+	left: 32px !important;
+	width: 320px !important;
+	height: 356px !important;
 }

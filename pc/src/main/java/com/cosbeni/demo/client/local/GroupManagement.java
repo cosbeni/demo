@@ -6,25 +6,21 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 
 import org.jboss.errai.bus.client.api.RemoteCallback;
 import org.jboss.errai.enterprise.client.jaxrs.api.RestClient;
 import org.jboss.errai.ioc.client.api.Caller;
-
 import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.nav.client.local.PageHiding;
 import org.jboss.errai.ui.nav.client.local.PageShowing;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.EventHandler;
-import org.jboss.errai.ui.shared.api.annotations.SinkNative;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 
 import com.cosbeni.demo.client.data.GroupDS;
 import com.cosbeni.demo.client.data.GroupRecord;
 import com.cosbeni.demo.client.i18n.DemoConstants;
 import com.cosbeni.demo.shared.entity.Group;
-import com.cosbeni.demo.shared.entity.User;
 import com.cosbeni.demo.shared.service.GroupService;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
@@ -32,15 +28,11 @@ import com.google.gwt.dom.client.HeadingElement;
 import com.google.gwt.dom.client.LabelElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Event;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.view.client.ListDataProvider;
 import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.grid.events.SelectionChangedHandler;
 import com.smartgwt.client.widgets.grid.events.SelectionEvent;
@@ -63,8 +55,6 @@ public class GroupManagement extends Composite {
 
   @DataField
   ListGrid groupsTable = new ListGrid();
-
-  private ListDataProvider<User> dataProvider = new ListDataProvider<User>();
 
   @Inject
   @DataField
