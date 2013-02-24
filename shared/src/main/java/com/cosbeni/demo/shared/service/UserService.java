@@ -38,9 +38,10 @@ public interface UserService {
   @Produces("application/json")
   public User getUser(@PathParam("id") String id);
   
-  @GET
-  @Path("/delete/{id}")
-  @Produces("application/json")    
-  public User delete(@PathParam("id") String id);
+  @POST
+  @Path("/delete")
+  @Produces("application/json")
+  @Consumes("application/json")  
+  public User delete(User user);
 
 }
