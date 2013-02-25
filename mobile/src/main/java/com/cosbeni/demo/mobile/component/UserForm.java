@@ -27,6 +27,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.sksamuel.jqm4gwt.form.elements.JQMSelect;
 
@@ -101,7 +102,11 @@ public class UserForm extends Composite {
   private LabelElement emailMessage = DOM.createLabel().cast();
 
   @DataField
-  private JQMSelect group = new JQMSelect();
+  private LabelElement groupLabel = DOM.createLabel().cast();
+
+  @Inject
+  @DataField
+  private ListBox group;
 
   @Inject
   @DataField
@@ -148,22 +153,21 @@ public class UserForm extends Composite {
     lastNameMessage.setInnerText("");
     emailLabel.setInnerText(demoConstants.email());
     emailMessage.setInnerText("");
+    groupLabel.setInnerText(demoConstants.group());
     TypedQuery<Group> query = em.createNamedQuery("groups", Group.class);
     List<Group> groups = query.getResultList();
     for (Group g : groups) {
-      group.addOption(g.getId().toString(),g.getGroupName());
+      group.addItem(g.getGroupName(), g.getId().toString());
     }
-    group.setText(demoConstants.group());
   }
 
   public void refresh() {
     Object userId = Common.getAttribute("UserId");
-    group = new JQMSelect();
-    group.setText(demoConstants.group());
+    group.clear();
     TypedQuery<Group> query = em.createNamedQuery("groups", Group.class);
     List<Group> groups = query.getResultList();
     for (Group g : groups) {
-      group.addOption(g.getId().toString(),g.getGroupName());
+      group.addItem(g.getGroupName(), g.getId().toString());
     }
     if (userId != null) {
       user = em.find(User.class, userId);
@@ -172,7 +176,13 @@ public class UserForm extends Composite {
       addBox.setVisible(false);
       updateBox.setVisible(true);
     }
+    refresh("group");
   }
+
+  private native void refresh(String id) /*-{
+		var select = $wnd.$("select#" + id);
+		select.selectmenu("refresh");
+  }-*/;
 
   public void reset() {
     user = new User();
@@ -255,7 +265,7 @@ public class UserForm extends Composite {
     user.setFirstName(firstName.getValue());
     user.setLastName(lastName.getValue());
     user.setEmail(email.getValue());
-    Group g = em.find(Group.class, new Long(group.getSelectedValue()));
+    Group g = em.find(Group.class, new Long(group.getValue(group.getSelectedIndex())));
     user.setGroup(g);
     user.setCommand(command);
     user.setFlag(flag);
@@ -279,8 +289,13 @@ public class UserForm extends Composite {
     lastName.setValue(user.getLastName());
     email.setValue(user.getEmail());
     if (user.getGroup() != null) {
-      group.setSelectedValue(user.getGroup().getId().toString());
-      group.refresh();
+      for (int k = 0; k < group.getItemCount(); k++) {
+        if (group.getValue(k).equalsIgnoreCase(user.getGroup().getId().toString())) {
+          group.setSelectedIndex(k);
+          break;
+        }
+      }
+      refresh("group");
     }
   }
 }

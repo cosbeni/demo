@@ -178,12 +178,13 @@ public class JaxrsProxyLoaderImpl implements JaxrsProxyLoader {
         return null;
       }
 
-      public User delete(final String a0) {
+      public User delete(final User a0) {
         StringBuilder url = new StringBuilder(getBaseUrl());
-        url.append("user/delete/{id}".replace("{id}", URL.encodePathSegment(a0 == null ? "" : a0)));
-        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET, url.toString());
+        url.append("user/delete");
+        RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST, url.toString());
         requestBuilder.setHeader("Accept", "application/json");
-        sendRequest(requestBuilder, null, new ResponseDemarshallingCallback() {
+        requestBuilder.setHeader("Content-Type", "application/json");
+        sendRequest(requestBuilder, MarshallingWrapper.toJSON(a0), new ResponseDemarshallingCallback() {
           public Object demarshallResponse(String response) {
             return MarshallingWrapper.fromJSON(response, User.class, null);
           }

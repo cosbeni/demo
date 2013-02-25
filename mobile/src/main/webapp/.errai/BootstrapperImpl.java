@@ -97,6 +97,7 @@ import com.google.gwt.user.client.ui.IsRenderable;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.LabelBase;
+import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RenderableStamper;
 import com.google.gwt.user.client.ui.SourcesChangeEvents;
@@ -118,7 +119,6 @@ import com.sksamuel.jqm4gwt.HasTransition;
 import com.sksamuel.jqm4gwt.JQMContainer;
 import com.sksamuel.jqm4gwt.JQMPage;
 import com.sksamuel.jqm4gwt.JQMWidget;
-import com.sksamuel.jqm4gwt.form.elements.JQMSelect;
 import com.sksamuel.jqm4gwt.list.HasFilter;
 import com.sksamuel.jqm4gwt.list.JQMList;
 import java.lang.annotation.Annotation;
@@ -162,548 +162,558 @@ public class BootstrapperImpl implements Bootstrapper {
     new DataBindingModuleBootstrapper().run();
     new JaxrsModuleBootstrapper().run();
   }
-  private final Default _1998831462Default_527992193 = new Default() {
+  private final Default _1998831462Default_783621714 = new Default() {
     public Class annotationType() {
       return Default.class;
     }
   };
-  private final Any _1998831462Any_562358347 = new Any() {
+  private final Any _1998831462Any_1960423794 = new Any() {
     public Class annotationType() {
       return Any.class;
     }
   };
-  private final Annotation[] arrayOf_19635043Annotation_1117084415 = new Annotation[] { _1998831462Default_527992193, _1998831462Any_562358347 };
+  private final Annotation[] arrayOf_19635043Annotation_862865390 = new Annotation[] { _1998831462Any_1960423794, _1998831462Default_783621714 };
   private final BootstrapperInjectionContext injContext = new BootstrapperInjectionContext();
   private final CreationalContext context = injContext.getRootContext();
-  private final CreationalCallback<DataBinderProvider> inj70381_DataBinderProvider_creational = new CreationalCallback<DataBinderProvider>() {
+  private final CreationalCallback<DataBinderProvider> inj6381_DataBinderProvider_creational = new CreationalCallback<DataBinderProvider>() {
     public DataBinderProvider getInstance(final CreationalContext context) {
-      final DataBinderProvider inj70368_DataBinderProvider = new DataBinderProvider();
-      context.addBean(context.getBeanReference(DataBinderProvider.class, arrayOf_19635043Annotation_1117084415), inj70368_DataBinderProvider);
-      return inj70368_DataBinderProvider;
+      final DataBinderProvider inj6368_DataBinderProvider = new DataBinderProvider();
+      context.addBean(context.getBeanReference(DataBinderProvider.class, arrayOf_19635043Annotation_862865390), inj6368_DataBinderProvider);
+      return inj6368_DataBinderProvider;
     }
   };
-  private final DataBinderProvider inj70368_DataBinderProvider = inj70381_DataBinderProvider_creational.getInstance(context);
-  private final CreationalCallback<RequestDispatcherProvider> inj70382_RequestDispatcherProvider_creational = new CreationalCallback<RequestDispatcherProvider>() {
+  private final DataBinderProvider inj6368_DataBinderProvider = inj6381_DataBinderProvider_creational.getInstance(context);
+  private final CreationalCallback<RequestDispatcherProvider> inj6382_RequestDispatcherProvider_creational = new CreationalCallback<RequestDispatcherProvider>() {
     public RequestDispatcherProvider getInstance(final CreationalContext context) {
-      final RequestDispatcherProvider inj70360_RequestDispatcherProvider = new RequestDispatcherProvider();
-      context.addBean(context.getBeanReference(RequestDispatcherProvider.class, arrayOf_19635043Annotation_1117084415), inj70360_RequestDispatcherProvider);
-      return inj70360_RequestDispatcherProvider;
+      final RequestDispatcherProvider inj6360_RequestDispatcherProvider = new RequestDispatcherProvider();
+      context.addBean(context.getBeanReference(RequestDispatcherProvider.class, arrayOf_19635043Annotation_862865390), inj6360_RequestDispatcherProvider);
+      return inj6360_RequestDispatcherProvider;
     }
   };
-  private final RequestDispatcherProvider inj70360_RequestDispatcherProvider = inj70382_RequestDispatcherProvider_creational.getInstance(context);
-  private final CreationalCallback<InstanceProvider> inj70383_InstanceProvider_creational = new CreationalCallback<InstanceProvider>() {
+  private final RequestDispatcherProvider inj6360_RequestDispatcherProvider = inj6382_RequestDispatcherProvider_creational.getInstance(context);
+  private final CreationalCallback<InstanceProvider> inj6383_InstanceProvider_creational = new CreationalCallback<InstanceProvider>() {
     public InstanceProvider getInstance(final CreationalContext context) {
-      final InstanceProvider inj70370_InstanceProvider = new InstanceProvider();
-      context.addBean(context.getBeanReference(InstanceProvider.class, arrayOf_19635043Annotation_1117084415), inj70370_InstanceProvider);
-      return inj70370_InstanceProvider;
+      final InstanceProvider inj6370_InstanceProvider = new InstanceProvider();
+      context.addBean(context.getBeanReference(InstanceProvider.class, arrayOf_19635043Annotation_862865390), inj6370_InstanceProvider);
+      return inj6370_InstanceProvider;
     }
   };
-  private final InstanceProvider inj70370_InstanceProvider = inj70383_InstanceProvider_creational.getInstance(context);
-  private final CreationalCallback<ErraiEntityManagerProvider> inj70388_ErraiEntityManagerProvider_creational = new CreationalCallback<ErraiEntityManagerProvider>() {
+  private final InstanceProvider inj6370_InstanceProvider = inj6383_InstanceProvider_creational.getInstance(context);
+  private final CreationalCallback<ErraiEntityManagerProvider> inj6388_ErraiEntityManagerProvider_creational = new CreationalCallback<ErraiEntityManagerProvider>() {
     public ErraiEntityManagerProvider getInstance(final CreationalContext context) {
-      final ErraiEntityManagerProvider inj70366_ErraiEntityManagerProvider = new ErraiEntityManagerProvider();
-      context.addBean(context.getBeanReference(ErraiEntityManagerProvider.class, arrayOf_19635043Annotation_1117084415), inj70366_ErraiEntityManagerProvider);
-      return inj70366_ErraiEntityManagerProvider;
+      final ErraiEntityManagerProvider inj6366_ErraiEntityManagerProvider = new ErraiEntityManagerProvider();
+      context.addBean(context.getBeanReference(ErraiEntityManagerProvider.class, arrayOf_19635043Annotation_862865390), inj6366_ErraiEntityManagerProvider);
+      return inj6366_ErraiEntityManagerProvider;
     }
   };
-  private final ErraiEntityManagerProvider inj70366_ErraiEntityManagerProvider = inj70388_ErraiEntityManagerProvider_creational.getInstance(context);
-  private final CreationalCallback<JQMList> inj70390_JQMList_creational = new CreationalCallback<JQMList>() {
+  private final ErraiEntityManagerProvider inj6366_ErraiEntityManagerProvider = inj6388_ErraiEntityManagerProvider_creational.getInstance(context);
+  private final CreationalCallback<JQMList> inj6390_JQMList_creational = new CreationalCallback<JQMList>() {
     public JQMList getInstance(final CreationalContext context) {
-      final JQMList inj70021_JQMList = new JQMList();
-      context.addBean(context.getBeanReference(JQMList.class, arrayOf_19635043Annotation_1117084415), inj70021_JQMList);
-      return inj70021_JQMList;
+      final JQMList inj6021_JQMList = new JQMList();
+      context.addBean(context.getBeanReference(JQMList.class, arrayOf_19635043Annotation_862865390), inj6021_JQMList);
+      return inj6021_JQMList;
     }
   };
-  private InitializationCallback<UserList> init_inj69950_UserList = new InitializationCallback<UserList>() {
+  private InitializationCallback<UserList> init_inj5954_UserList = new InitializationCallback<UserList>() {
     public void init(final UserList obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<UserList> inj70387_UserList_creational = new CreationalCallback<UserList>() {
+  private final CreationalCallback<UserList> inj6387_UserList_creational = new CreationalCallback<UserList>() {
     public UserList getInstance(final CreationalContext context) {
-      final UserList inj69950_UserList = new UserList();
-      context.addBean(context.getBeanReference(UserList.class, arrayOf_19635043Annotation_1117084415), inj69950_UserList);
-      _$1137283503_em(inj69950_UserList, inj70366_ErraiEntityManagerProvider.get());
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final UserList inj5954_UserList = new UserList();
+      context.addBean(context.getBeanReference(UserList.class, arrayOf_19635043Annotation_862865390), inj5954_UserList);
+      _$1137283503_em(inj5954_UserList, inj6366_ErraiEntityManagerProvider.get());
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _$1137283503_pages(inj69950_UserList, inj70389_proxy);
-      _$1137283503_formattedList(inj69950_UserList, inj70390_JQMList_creational.getInstance(context));
-      context.addInitializationCallback(inj69950_UserList, new InitializationCallback<UserList>() {
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _$1137283503_pages(inj5954_UserList, inj6389_proxy);
+      _$1137283503_formattedList(inj5954_UserList, inj6390_JQMList_creational.getInstance(context));
+      context.addInitializationCallback(inj5954_UserList, new InitializationCallback<UserList>() {
         public void init(UserList obj) {
-          com_cosbeni_demo_mobile_component_UserListTemplateResource var497 = GWT.create(com_cosbeni_demo_mobile_component_UserListTemplateResource.class);
-          Element var498 = TemplateUtil.getRootTemplateElement(var497.getContents().getText(), "UserList");
-          Map<String, Element> var499 = TemplateUtil.getDataFieldElements(var498);
-          Map<String, Widget> var500 = new LinkedHashMap<String, Widget>();
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserList", "com/cosbeni/demo/mobile/component/Template.html", _$1137283503_content(inj69950_UserList), var499, "content");
-          var500.put("content", _$1137283503_content(inj69950_UserList));
-          TemplateUtil.initWidget(inj69950_UserList, var498, var500.values());
+          com_cosbeni_demo_mobile_component_UserListTemplateResource var41 = GWT.create(com_cosbeni_demo_mobile_component_UserListTemplateResource.class);
+          Element var42 = TemplateUtil.getRootTemplateElement(var41.getContents().getText(), "UserList");
+          Map<String, Element> var43 = TemplateUtil.getDataFieldElements(var42);
+          Map<String, Widget> var44 = new LinkedHashMap<String, Widget>();
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserList", "com/cosbeni/demo/mobile/component/Template.html", _$1137283503_content(inj5954_UserList), var43, "content");
+          var44.put("content", _$1137283503_content(inj5954_UserList));
+          TemplateUtil.initWidget(inj5954_UserList, var42, var44.values());
         }
       });
-      context.addInitializationCallback(inj69950_UserList, init_inj69950_UserList);
-      return inj69950_UserList;
+      context.addInitializationCallback(inj5954_UserList, init_inj5954_UserList);
+      return inj5954_UserList;
     }
   };
-  private InitializationCallback<UserListPage> init_inj70015_UserListPage = new InitializationCallback<UserListPage>() {
+  private InitializationCallback<UserListPage> init_inj6014_UserListPage = new InitializationCallback<UserListPage>() {
     public void init(final UserListPage obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<UserListPage> inj70386_UserListPage_creational = new CreationalCallback<UserListPage>() {
+  private final CreationalCallback<UserListPage> inj6386_UserListPage_creational = new CreationalCallback<UserListPage>() {
     public UserListPage getInstance(final CreationalContext context) {
-      final UserListPage inj70015_UserListPage = new UserListPage();
-      context.addBean(context.getBeanReference(UserListPage.class, arrayOf_19635043Annotation_1117084415), inj70015_UserListPage);
-      _745152032_userList(inj70015_UserListPage, inj70387_UserList_creational.getInstance(context));
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final UserListPage inj6014_UserListPage = new UserListPage();
+      context.addBean(context.getBeanReference(UserListPage.class, arrayOf_19635043Annotation_862865390), inj6014_UserListPage);
+      _745152032_userList(inj6014_UserListPage, inj6387_UserList_creational.getInstance(context));
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _745152032_pages(inj70015_UserListPage, inj70389_proxy);
-      context.addInitializationCallback(inj70015_UserListPage, init_inj70015_UserListPage);
-      return inj70015_UserListPage;
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _745152032_pages(inj6014_UserListPage, inj6389_proxy);
+      context.addInitializationCallback(inj6014_UserListPage, init_inj6014_UserListPage);
+      return inj6014_UserListPage;
     }
   };
-  private final CreationalCallback<TextBox> inj70393_TextBox_creational = new CreationalCallback<TextBox>() {
+  private final CreationalCallback<TextBox> inj6393_TextBox_creational = new CreationalCallback<TextBox>() {
     public TextBox getInstance(final CreationalContext context) {
-      final TextBox inj70027_TextBox = new TextBox();
-      context.addBean(context.getBeanReference(TextBox.class, arrayOf_19635043Annotation_1117084415), inj70027_TextBox);
-      return inj70027_TextBox;
+      final TextBox inj6027_TextBox = new TextBox();
+      context.addBean(context.getBeanReference(TextBox.class, arrayOf_19635043Annotation_862865390), inj6027_TextBox);
+      return inj6027_TextBox;
     }
   };
-  private final CreationalCallback<Label> inj70394_Label_creational = new CreationalCallback<Label>() {
+  private final CreationalCallback<ListBox> inj6394_ListBox_creational = new CreationalCallback<ListBox>() {
+    public ListBox getInstance(final CreationalContext context) {
+      final ListBox inj6060_ListBox = new ListBox();
+      context.addBean(context.getBeanReference(ListBox.class, arrayOf_19635043Annotation_862865390), inj6060_ListBox);
+      return inj6060_ListBox;
+    }
+  };
+  private final CreationalCallback<Label> inj6395_Label_creational = new CreationalCallback<Label>() {
     public Label getInstance(final CreationalContext context) {
-      final Label inj70105_Label = new Label();
-      context.addBean(context.getBeanReference(Label.class, arrayOf_19635043Annotation_1117084415), inj70105_Label);
-      return inj70105_Label;
+      final Label inj6105_Label = new Label();
+      context.addBean(context.getBeanReference(Label.class, arrayOf_19635043Annotation_862865390), inj6105_Label);
+      return inj6105_Label;
     }
   };
-  private InitializationCallback<UserForm> init_inj69951_UserForm = new InitializationCallback<UserForm>() {
+  private InitializationCallback<UserForm> init_inj5951_UserForm = new InitializationCallback<UserForm>() {
     public void init(final UserForm obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<UserForm> inj70392_UserForm_creational = new CreationalCallback<UserForm>() {
+  private final CreationalCallback<UserForm> inj6392_UserForm_creational = new CreationalCallback<UserForm>() {
     public UserForm getInstance(final CreationalContext context) {
-      final UserForm inj69951_UserForm = new UserForm();
-      context.addBean(context.getBeanReference(UserForm.class, arrayOf_19635043Annotation_1117084415), inj69951_UserForm);
-      _$1137456521_em(inj69951_UserForm, inj70366_ErraiEntityManagerProvider.get());
-      _$1137456521_id(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_rid(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_userName(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_password(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_firstName(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_lastName(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_email(inj69951_UserForm, inj70393_TextBox_creational.getInstance(context));
-      _$1137456521_addBox(inj69951_UserForm, inj70394_Label_creational.getInstance(context));
-      _$1137456521_updateBox(inj69951_UserForm, inj70394_Label_creational.getInstance(context));
-      context.addInitializationCallback(inj69951_UserForm, new InitializationCallback<UserForm>() {
+      final UserForm inj5951_UserForm = new UserForm();
+      context.addBean(context.getBeanReference(UserForm.class, arrayOf_19635043Annotation_862865390), inj5951_UserForm);
+      _$1137456521_em(inj5951_UserForm, inj6366_ErraiEntityManagerProvider.get());
+      _$1137456521_id(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_rid(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_userName(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_password(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_firstName(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_lastName(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_email(inj5951_UserForm, inj6393_TextBox_creational.getInstance(context));
+      _$1137456521_group(inj5951_UserForm, inj6394_ListBox_creational.getInstance(context));
+      _$1137456521_addBox(inj5951_UserForm, inj6395_Label_creational.getInstance(context));
+      _$1137456521_updateBox(inj5951_UserForm, inj6395_Label_creational.getInstance(context));
+      context.addInitializationCallback(inj5951_UserForm, new InitializationCallback<UserForm>() {
         public void init(UserForm obj) {
-          com_cosbeni_demo_mobile_component_UserFormTemplateResource var501 = GWT.create(com_cosbeni_demo_mobile_component_UserFormTemplateResource.class);
-          Element var502 = TemplateUtil.getRootTemplateElement(var501.getContents().getText(), "UserForm");
-          Map<String, Element> var503 = TemplateUtil.getDataFieldElements(var502);
-          Map<String, Widget> var504 = new LinkedHashMap<String, Widget>();
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_id(inj69951_UserForm), var503, "id");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_idLabel(inj69951_UserForm)), var503, "idLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_rid(inj69951_UserForm), var503, "rid");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_ridLabel(inj69951_UserForm)), var503, "ridLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_userName(inj69951_UserForm), var503, "userName");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_userNameLabel(inj69951_UserForm)), var503, "userNameLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_userNameMessage(inj69951_UserForm)), var503, "userNameMessage");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_password(inj69951_UserForm), var503, "password");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_passwordLabel(inj69951_UserForm)), var503, "passwordLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_passwordMessage(inj69951_UserForm)), var503, "passwordMessage");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_firstName(inj69951_UserForm), var503, "firstName");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_firstNameLabel(inj69951_UserForm)), var503, "firstNameLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_firstNameMessage(inj69951_UserForm)), var503, "firstNameMessage");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_lastName(inj69951_UserForm), var503, "lastName");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_lastNameLabel(inj69951_UserForm)), var503, "lastNameLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_lastNameMessage(inj69951_UserForm)), var503, "lastNameMessage");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_email(inj69951_UserForm), var503, "email");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_emailLabel(inj69951_UserForm)), var503, "emailLabel");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_emailMessage(inj69951_UserForm)), var503, "emailMessage");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_group(inj69951_UserForm), var503, "group");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_addBox(inj69951_UserForm), var503, "addBox");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_add(inj69951_UserForm)), var503, "add");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_updateBox(inj69951_UserForm), var503, "updateBox");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_update(inj69951_UserForm)), var503, "update");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_delete(inj69951_UserForm)), var503, "delete");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_cancel(inj69951_UserForm)), var503, "cancel");
-          var504.put("id", _$1137456521_id(inj69951_UserForm));
-          var504.put("idLabel", new ElementWrapperWidget(_$1137456521_idLabel(inj69951_UserForm)));
-          var504.put("rid", _$1137456521_rid(inj69951_UserForm));
-          var504.put("ridLabel", new ElementWrapperWidget(_$1137456521_ridLabel(inj69951_UserForm)));
-          var504.put("userName", _$1137456521_userName(inj69951_UserForm));
-          var504.put("userNameLabel", new ElementWrapperWidget(_$1137456521_userNameLabel(inj69951_UserForm)));
-          var504.put("userNameMessage", new ElementWrapperWidget(_$1137456521_userNameMessage(inj69951_UserForm)));
-          var504.put("password", _$1137456521_password(inj69951_UserForm));
-          var504.put("passwordLabel", new ElementWrapperWidget(_$1137456521_passwordLabel(inj69951_UserForm)));
-          var504.put("passwordMessage", new ElementWrapperWidget(_$1137456521_passwordMessage(inj69951_UserForm)));
-          var504.put("firstName", _$1137456521_firstName(inj69951_UserForm));
-          var504.put("firstNameLabel", new ElementWrapperWidget(_$1137456521_firstNameLabel(inj69951_UserForm)));
-          var504.put("firstNameMessage", new ElementWrapperWidget(_$1137456521_firstNameMessage(inj69951_UserForm)));
-          var504.put("lastName", _$1137456521_lastName(inj69951_UserForm));
-          var504.put("lastNameLabel", new ElementWrapperWidget(_$1137456521_lastNameLabel(inj69951_UserForm)));
-          var504.put("lastNameMessage", new ElementWrapperWidget(_$1137456521_lastNameMessage(inj69951_UserForm)));
-          var504.put("email", _$1137456521_email(inj69951_UserForm));
-          var504.put("emailLabel", new ElementWrapperWidget(_$1137456521_emailLabel(inj69951_UserForm)));
-          var504.put("emailMessage", new ElementWrapperWidget(_$1137456521_emailMessage(inj69951_UserForm)));
-          var504.put("group", _$1137456521_group(inj69951_UserForm));
-          var504.put("addBox", _$1137456521_addBox(inj69951_UserForm));
-          var504.put("add", new ElementWrapperWidget(_$1137456521_add(inj69951_UserForm)));
-          var504.put("updateBox", _$1137456521_updateBox(inj69951_UserForm));
-          var504.put("update", new ElementWrapperWidget(_$1137456521_update(inj69951_UserForm)));
-          var504.put("delete", new ElementWrapperWidget(_$1137456521_delete(inj69951_UserForm)));
-          var504.put("cancel", new ElementWrapperWidget(_$1137456521_cancel(inj69951_UserForm)));
-          TemplateUtil.initWidget(inj69951_UserForm, var502, var504.values());
-          TemplateUtil.setupWrappedElementEventHandler(inj69951_UserForm, var504.get("add"), new ClickHandler() {
+          com_cosbeni_demo_mobile_component_UserFormTemplateResource var45 = GWT.create(com_cosbeni_demo_mobile_component_UserFormTemplateResource.class);
+          Element var46 = TemplateUtil.getRootTemplateElement(var45.getContents().getText(), "UserForm");
+          Map<String, Element> var47 = TemplateUtil.getDataFieldElements(var46);
+          Map<String, Widget> var48 = new LinkedHashMap<String, Widget>();
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_id(inj5951_UserForm), var47, "id");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_idLabel(inj5951_UserForm)), var47, "idLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_rid(inj5951_UserForm), var47, "rid");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_ridLabel(inj5951_UserForm)), var47, "ridLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_userName(inj5951_UserForm), var47, "userName");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_userNameLabel(inj5951_UserForm)), var47, "userNameLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_userNameMessage(inj5951_UserForm)), var47, "userNameMessage");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_password(inj5951_UserForm), var47, "password");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_passwordLabel(inj5951_UserForm)), var47, "passwordLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_passwordMessage(inj5951_UserForm)), var47, "passwordMessage");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_firstName(inj5951_UserForm), var47, "firstName");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_firstNameLabel(inj5951_UserForm)), var47, "firstNameLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_firstNameMessage(inj5951_UserForm)), var47, "firstNameMessage");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_lastName(inj5951_UserForm), var47, "lastName");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_lastNameLabel(inj5951_UserForm)), var47, "lastNameLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_lastNameMessage(inj5951_UserForm)), var47, "lastNameMessage");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_email(inj5951_UserForm), var47, "email");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_emailLabel(inj5951_UserForm)), var47, "emailLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_emailMessage(inj5951_UserForm)), var47, "emailMessage");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_groupLabel(inj5951_UserForm)), var47, "groupLabel");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_group(inj5951_UserForm), var47, "group");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_addBox(inj5951_UserForm), var47, "addBox");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_add(inj5951_UserForm)), var47, "add");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", _$1137456521_updateBox(inj5951_UserForm), var47, "updateBox");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_update(inj5951_UserForm)), var47, "update");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_delete(inj5951_UserForm)), var47, "delete");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.UserForm", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$1137456521_cancel(inj5951_UserForm)), var47, "cancel");
+          var48.put("id", _$1137456521_id(inj5951_UserForm));
+          var48.put("idLabel", new ElementWrapperWidget(_$1137456521_idLabel(inj5951_UserForm)));
+          var48.put("rid", _$1137456521_rid(inj5951_UserForm));
+          var48.put("ridLabel", new ElementWrapperWidget(_$1137456521_ridLabel(inj5951_UserForm)));
+          var48.put("userName", _$1137456521_userName(inj5951_UserForm));
+          var48.put("userNameLabel", new ElementWrapperWidget(_$1137456521_userNameLabel(inj5951_UserForm)));
+          var48.put("userNameMessage", new ElementWrapperWidget(_$1137456521_userNameMessage(inj5951_UserForm)));
+          var48.put("password", _$1137456521_password(inj5951_UserForm));
+          var48.put("passwordLabel", new ElementWrapperWidget(_$1137456521_passwordLabel(inj5951_UserForm)));
+          var48.put("passwordMessage", new ElementWrapperWidget(_$1137456521_passwordMessage(inj5951_UserForm)));
+          var48.put("firstName", _$1137456521_firstName(inj5951_UserForm));
+          var48.put("firstNameLabel", new ElementWrapperWidget(_$1137456521_firstNameLabel(inj5951_UserForm)));
+          var48.put("firstNameMessage", new ElementWrapperWidget(_$1137456521_firstNameMessage(inj5951_UserForm)));
+          var48.put("lastName", _$1137456521_lastName(inj5951_UserForm));
+          var48.put("lastNameLabel", new ElementWrapperWidget(_$1137456521_lastNameLabel(inj5951_UserForm)));
+          var48.put("lastNameMessage", new ElementWrapperWidget(_$1137456521_lastNameMessage(inj5951_UserForm)));
+          var48.put("email", _$1137456521_email(inj5951_UserForm));
+          var48.put("emailLabel", new ElementWrapperWidget(_$1137456521_emailLabel(inj5951_UserForm)));
+          var48.put("emailMessage", new ElementWrapperWidget(_$1137456521_emailMessage(inj5951_UserForm)));
+          var48.put("groupLabel", new ElementWrapperWidget(_$1137456521_groupLabel(inj5951_UserForm)));
+          var48.put("group", _$1137456521_group(inj5951_UserForm));
+          var48.put("addBox", _$1137456521_addBox(inj5951_UserForm));
+          var48.put("add", new ElementWrapperWidget(_$1137456521_add(inj5951_UserForm)));
+          var48.put("updateBox", _$1137456521_updateBox(inj5951_UserForm));
+          var48.put("update", new ElementWrapperWidget(_$1137456521_update(inj5951_UserForm)));
+          var48.put("delete", new ElementWrapperWidget(_$1137456521_delete(inj5951_UserForm)));
+          var48.put("cancel", new ElementWrapperWidget(_$1137456521_cancel(inj5951_UserForm)));
+          TemplateUtil.initWidget(inj5951_UserForm, var46, var48.values());
+          TemplateUtil.setupWrappedElementEventHandler(inj5951_UserForm, var48.get("add"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69951_UserForm.add(event);
+              inj5951_UserForm.add(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69951_UserForm, var504.get("update"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5951_UserForm, var48.get("update"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69951_UserForm.update(event);
+              inj5951_UserForm.update(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69951_UserForm, var504.get("delete"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5951_UserForm, var48.get("delete"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69951_UserForm.delete(event);
+              inj5951_UserForm.delete(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69951_UserForm, var504.get("cancel"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5951_UserForm, var48.get("cancel"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69951_UserForm.cancel(event);
+              inj5951_UserForm.cancel(event);
             }
           }, ClickEvent.getType());
         }
       });
-      context.addInitializationCallback(inj69951_UserForm, init_inj69951_UserForm);
-      return inj69951_UserForm;
+      context.addInitializationCallback(inj5951_UserForm, init_inj5951_UserForm);
+      return inj5951_UserForm;
     }
   };
-  private InitializationCallback<UserFormPage> init_inj70009_UserFormPage = new InitializationCallback<UserFormPage>() {
+  private InitializationCallback<UserFormPage> init_inj6012_UserFormPage = new InitializationCallback<UserFormPage>() {
     public void init(final UserFormPage obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<UserFormPage> inj70391_UserFormPage_creational = new CreationalCallback<UserFormPage>() {
+  private final CreationalCallback<UserFormPage> inj6391_UserFormPage_creational = new CreationalCallback<UserFormPage>() {
     public UserFormPage getInstance(final CreationalContext context) {
-      final UserFormPage inj70009_UserFormPage = new UserFormPage();
-      context.addBean(context.getBeanReference(UserFormPage.class, arrayOf_19635043Annotation_1117084415), inj70009_UserFormPage);
-      _$126814394_userForm(inj70009_UserFormPage, inj70392_UserForm_creational.getInstance(context));
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final UserFormPage inj6012_UserFormPage = new UserFormPage();
+      context.addBean(context.getBeanReference(UserFormPage.class, arrayOf_19635043Annotation_862865390), inj6012_UserFormPage);
+      _$126814394_userForm(inj6012_UserFormPage, inj6392_UserForm_creational.getInstance(context));
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _$126814394_pages(inj70009_UserFormPage, inj70389_proxy);
-      context.addInitializationCallback(inj70009_UserFormPage, init_inj70009_UserFormPage);
-      return inj70009_UserFormPage;
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _$126814394_pages(inj6012_UserFormPage, inj6389_proxy);
+      context.addInitializationCallback(inj6012_UserFormPage, init_inj6012_UserFormPage);
+      return inj6012_UserFormPage;
     }
   };
-  private final CreationalCallback<CallerProvider> inj70397_CallerProvider_creational = new CreationalCallback<CallerProvider>() {
+  private final CreationalCallback<CallerProvider> inj6398_CallerProvider_creational = new CreationalCallback<CallerProvider>() {
     public CallerProvider getInstance(final CreationalContext context) {
-      final CallerProvider inj70376_CallerProvider = new CallerProvider();
-      context.addBean(context.getBeanReference(CallerProvider.class, arrayOf_19635043Annotation_1117084415), inj70376_CallerProvider);
-      return inj70376_CallerProvider;
+      final CallerProvider inj6376_CallerProvider = new CallerProvider();
+      context.addBean(context.getBeanReference(CallerProvider.class, arrayOf_19635043Annotation_862865390), inj6376_CallerProvider);
+      return inj6376_CallerProvider;
     }
   };
-  private final CallerProvider inj70376_CallerProvider = inj70397_CallerProvider_creational.getInstance(context);
-  private InitializationCallback<RemoteUserList> init_inj69952_RemoteUserList = new InitializationCallback<RemoteUserList>() {
+  private final CallerProvider inj6376_CallerProvider = inj6398_CallerProvider_creational.getInstance(context);
+  private InitializationCallback<RemoteUserList> init_inj5952_RemoteUserList = new InitializationCallback<RemoteUserList>() {
     public void init(final RemoteUserList obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<RemoteUserList> inj70396_RemoteUserList_creational = new CreationalCallback<RemoteUserList>() {
+  private final CreationalCallback<RemoteUserList> inj6397_RemoteUserList_creational = new CreationalCallback<RemoteUserList>() {
     public RemoteUserList getInstance(final CreationalContext context) {
-      final RemoteUserList inj69952_RemoteUserList = new RemoteUserList();
-      context.addBean(context.getBeanReference(RemoteUserList.class, arrayOf_19635043Annotation_1117084415), inj69952_RemoteUserList);
-      _$536703305_em(inj69952_RemoteUserList, inj70366_ErraiEntityManagerProvider.get());
-      _$536703305_userService(inj69952_RemoteUserList, inj70376_CallerProvider.provide(new Class[] { UserService.class }, null));
-      _$536703305_groupService(inj69952_RemoteUserList, inj70376_CallerProvider.provide(new Class[] { GroupService.class }, null));
-      _$536703305_formattedList(inj69952_RemoteUserList, inj70390_JQMList_creational.getInstance(context));
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final RemoteUserList inj5952_RemoteUserList = new RemoteUserList();
+      context.addBean(context.getBeanReference(RemoteUserList.class, arrayOf_19635043Annotation_862865390), inj5952_RemoteUserList);
+      _$536703305_em(inj5952_RemoteUserList, inj6366_ErraiEntityManagerProvider.get());
+      _$536703305_userService(inj5952_RemoteUserList, inj6376_CallerProvider.provide(new Class[] { UserService.class }, null));
+      _$536703305_groupService(inj5952_RemoteUserList, inj6376_CallerProvider.provide(new Class[] { GroupService.class }, null));
+      _$536703305_formattedList(inj5952_RemoteUserList, inj6390_JQMList_creational.getInstance(context));
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _$536703305_pages(inj69952_RemoteUserList, inj70389_proxy);
-      context.addInitializationCallback(inj69952_RemoteUserList, new InitializationCallback<RemoteUserList>() {
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _$536703305_pages(inj5952_RemoteUserList, inj6389_proxy);
+      context.addInitializationCallback(inj5952_RemoteUserList, new InitializationCallback<RemoteUserList>() {
         public void init(RemoteUserList obj) {
-          com_cosbeni_demo_mobile_component_RemoteUserListTemplateResource var505 = GWT.create(com_cosbeni_demo_mobile_component_RemoteUserListTemplateResource.class);
-          Element var506 = TemplateUtil.getRootTemplateElement(var505.getContents().getText(), "RemoteUserList");
-          Map<String, Element> var507 = TemplateUtil.getDataFieldElements(var506);
-          Map<String, Widget> var508 = new LinkedHashMap<String, Widget>();
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", _$536703305_content(inj69952_RemoteUserList), var507, "content");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_upload(inj69952_RemoteUserList)), var507, "upload");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_localWin(inj69952_RemoteUserList)), var507, "localWin");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_serverWin(inj69952_RemoteUserList)), var507, "serverWin");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_group(inj69952_RemoteUserList)), var507, "group");
-          var508.put("content", _$536703305_content(inj69952_RemoteUserList));
-          var508.put("upload", new ElementWrapperWidget(_$536703305_upload(inj69952_RemoteUserList)));
-          var508.put("localWin", new ElementWrapperWidget(_$536703305_localWin(inj69952_RemoteUserList)));
-          var508.put("serverWin", new ElementWrapperWidget(_$536703305_serverWin(inj69952_RemoteUserList)));
-          var508.put("group", new ElementWrapperWidget(_$536703305_group(inj69952_RemoteUserList)));
-          TemplateUtil.initWidget(inj69952_RemoteUserList, var506, var508.values());
-          TemplateUtil.setupWrappedElementEventHandler(inj69952_RemoteUserList, var508.get("upload"), new ClickHandler() {
+          com_cosbeni_demo_mobile_component_RemoteUserListTemplateResource var49 = GWT.create(com_cosbeni_demo_mobile_component_RemoteUserListTemplateResource.class);
+          Element var50 = TemplateUtil.getRootTemplateElement(var49.getContents().getText(), "RemoteUserList");
+          Map<String, Element> var51 = TemplateUtil.getDataFieldElements(var50);
+          Map<String, Widget> var52 = new LinkedHashMap<String, Widget>();
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", _$536703305_content(inj5952_RemoteUserList), var51, "content");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_upload(inj5952_RemoteUserList)), var51, "upload");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_localWin(inj5952_RemoteUserList)), var51, "localWin");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_serverWin(inj5952_RemoteUserList)), var51, "serverWin");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.RemoteUserList", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$536703305_group(inj5952_RemoteUserList)), var51, "group");
+          var52.put("content", _$536703305_content(inj5952_RemoteUserList));
+          var52.put("upload", new ElementWrapperWidget(_$536703305_upload(inj5952_RemoteUserList)));
+          var52.put("localWin", new ElementWrapperWidget(_$536703305_localWin(inj5952_RemoteUserList)));
+          var52.put("serverWin", new ElementWrapperWidget(_$536703305_serverWin(inj5952_RemoteUserList)));
+          var52.put("group", new ElementWrapperWidget(_$536703305_group(inj5952_RemoteUserList)));
+          TemplateUtil.initWidget(inj5952_RemoteUserList, var50, var52.values());
+          TemplateUtil.setupWrappedElementEventHandler(inj5952_RemoteUserList, var52.get("upload"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69952_RemoteUserList.upload(event);
+              inj5952_RemoteUserList.upload(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69952_RemoteUserList, var508.get("localWin"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5952_RemoteUserList, var52.get("localWin"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69952_RemoteUserList.localWin(event);
+              inj5952_RemoteUserList.localWin(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69952_RemoteUserList, var508.get("serverWin"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5952_RemoteUserList, var52.get("serverWin"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69952_RemoteUserList.serverWin(event);
+              inj5952_RemoteUserList.serverWin(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69952_RemoteUserList, var508.get("group"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5952_RemoteUserList, var52.get("group"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69952_RemoteUserList.group(event);
+              inj5952_RemoteUserList.group(event);
             }
           }, ClickEvent.getType());
         }
       });
-      context.addInitializationCallback(inj69952_RemoteUserList, init_inj69952_RemoteUserList);
-      return inj69952_RemoteUserList;
+      context.addInitializationCallback(inj5952_RemoteUserList, init_inj5952_RemoteUserList);
+      return inj5952_RemoteUserList;
     }
   };
-  private InitializationCallback<RemotePage> init_inj70014_RemotePage = new InitializationCallback<RemotePage>() {
+  private InitializationCallback<RemotePage> init_inj6013_RemotePage = new InitializationCallback<RemotePage>() {
     public void init(final RemotePage obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<RemotePage> inj70395_RemotePage_creational = new CreationalCallback<RemotePage>() {
+  private final CreationalCallback<RemotePage> inj6396_RemotePage_creational = new CreationalCallback<RemotePage>() {
     public RemotePage getInstance(final CreationalContext context) {
-      final RemotePage inj70014_RemotePage = new RemotePage();
-      context.addBean(context.getBeanReference(RemotePage.class, arrayOf_19635043Annotation_1117084415), inj70014_RemotePage);
-      _1251415773_remoteUserList(inj70014_RemotePage, inj70396_RemoteUserList_creational.getInstance(context));
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final RemotePage inj6013_RemotePage = new RemotePage();
+      context.addBean(context.getBeanReference(RemotePage.class, arrayOf_19635043Annotation_862865390), inj6013_RemotePage);
+      _1251415773_remoteUserList(inj6013_RemotePage, inj6397_RemoteUserList_creational.getInstance(context));
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _1251415773_pages(inj70014_RemotePage, inj70389_proxy);
-      context.addInitializationCallback(inj70014_RemotePage, init_inj70014_RemotePage);
-      return inj70014_RemotePage;
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _1251415773_pages(inj6013_RemotePage, inj6389_proxy);
+      context.addInitializationCallback(inj6013_RemotePage, init_inj6013_RemotePage);
+      return inj6013_RemotePage;
     }
   };
-  private InitializationCallback<ConfirmDialog> init_inj69953_ConfirmDialog = new InitializationCallback<ConfirmDialog>() {
+  private InitializationCallback<ConfirmDialog> init_inj5955_ConfirmDialog = new InitializationCallback<ConfirmDialog>() {
     public void init(final ConfirmDialog obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<ConfirmDialog> inj70399_ConfirmDialog_creational = new CreationalCallback<ConfirmDialog>() {
+  private final CreationalCallback<ConfirmDialog> inj6400_ConfirmDialog_creational = new CreationalCallback<ConfirmDialog>() {
     public ConfirmDialog getInstance(final CreationalContext context) {
-      final ConfirmDialog inj69953_ConfirmDialog = new ConfirmDialog();
-      context.addBean(context.getBeanReference(ConfirmDialog.class, arrayOf_19635043Annotation_1117084415), inj69953_ConfirmDialog);
-      context.addInitializationCallback(inj69953_ConfirmDialog, new InitializationCallback<ConfirmDialog>() {
+      final ConfirmDialog inj5955_ConfirmDialog = new ConfirmDialog();
+      context.addBean(context.getBeanReference(ConfirmDialog.class, arrayOf_19635043Annotation_862865390), inj5955_ConfirmDialog);
+      context.addInitializationCallback(inj5955_ConfirmDialog, new InitializationCallback<ConfirmDialog>() {
         public void init(ConfirmDialog obj) {
-          com_cosbeni_demo_mobile_component_ConfirmDialogTemplateResource var509 = GWT.create(com_cosbeni_demo_mobile_component_ConfirmDialogTemplateResource.class);
-          Element var510 = TemplateUtil.getRootTemplateElement(var509.getContents().getText(), "ConfirmDialog");
-          Map<String, Element> var511 = TemplateUtil.getDataFieldElements(var510);
-          Map<String, Widget> var512 = new LinkedHashMap<String, Widget>();
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.ConfirmDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$2100997664_message(inj69953_ConfirmDialog)), var511, "message");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.ConfirmDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$2100997664_confirm(inj69953_ConfirmDialog)), var511, "confirm");
-          var512.put("message", new ElementWrapperWidget(_$2100997664_message(inj69953_ConfirmDialog)));
-          var512.put("confirm", new ElementWrapperWidget(_$2100997664_confirm(inj69953_ConfirmDialog)));
-          TemplateUtil.initWidget(inj69953_ConfirmDialog, var510, var512.values());
-          TemplateUtil.setupWrappedElementEventHandler(inj69953_ConfirmDialog, var512.get("confirm"), new ClickHandler() {
+          com_cosbeni_demo_mobile_component_ConfirmDialogTemplateResource var53 = GWT.create(com_cosbeni_demo_mobile_component_ConfirmDialogTemplateResource.class);
+          Element var54 = TemplateUtil.getRootTemplateElement(var53.getContents().getText(), "ConfirmDialog");
+          Map<String, Element> var55 = TemplateUtil.getDataFieldElements(var54);
+          Map<String, Widget> var56 = new LinkedHashMap<String, Widget>();
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.ConfirmDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$2100997664_message(inj5955_ConfirmDialog)), var55, "message");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.ConfirmDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_$2100997664_confirm(inj5955_ConfirmDialog)), var55, "confirm");
+          var56.put("message", new ElementWrapperWidget(_$2100997664_message(inj5955_ConfirmDialog)));
+          var56.put("confirm", new ElementWrapperWidget(_$2100997664_confirm(inj5955_ConfirmDialog)));
+          TemplateUtil.initWidget(inj5955_ConfirmDialog, var54, var56.values());
+          TemplateUtil.setupWrappedElementEventHandler(inj5955_ConfirmDialog, var56.get("confirm"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69953_ConfirmDialog.confirm(event);
+              inj5955_ConfirmDialog.confirm(event);
             }
           }, ClickEvent.getType());
         }
       });
-      context.addInitializationCallback(inj69953_ConfirmDialog, init_inj69953_ConfirmDialog);
-      return inj69953_ConfirmDialog;
+      context.addInitializationCallback(inj5955_ConfirmDialog, init_inj5955_ConfirmDialog);
+      return inj5955_ConfirmDialog;
     }
   };
-  private InitializationCallback<ConfirmDialogPage> init_inj70011_ConfirmDialogPage = new InitializationCallback<ConfirmDialogPage>() {
+  private InitializationCallback<ConfirmDialogPage> init_inj6015_ConfirmDialogPage = new InitializationCallback<ConfirmDialogPage>() {
     public void init(final ConfirmDialogPage obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<ConfirmDialogPage> inj70398_ConfirmDialogPage_creational = new CreationalCallback<ConfirmDialogPage>() {
+  private final CreationalCallback<ConfirmDialogPage> inj6399_ConfirmDialogPage_creational = new CreationalCallback<ConfirmDialogPage>() {
     public ConfirmDialogPage getInstance(final CreationalContext context) {
-      final ConfirmDialogPage inj70011_ConfirmDialogPage = new ConfirmDialogPage();
-      context.addBean(context.getBeanReference(ConfirmDialogPage.class, arrayOf_19635043Annotation_1117084415), inj70011_ConfirmDialogPage);
-      _1727058671_confirmDialog(inj70011_ConfirmDialogPage, inj70399_ConfirmDialog_creational.getInstance(context));
-      context.addInitializationCallback(inj70011_ConfirmDialogPage, init_inj70011_ConfirmDialogPage);
-      return inj70011_ConfirmDialogPage;
+      final ConfirmDialogPage inj6015_ConfirmDialogPage = new ConfirmDialogPage();
+      context.addBean(context.getBeanReference(ConfirmDialogPage.class, arrayOf_19635043Annotation_862865390), inj6015_ConfirmDialogPage);
+      _1727058671_confirmDialog(inj6015_ConfirmDialogPage, inj6400_ConfirmDialog_creational.getInstance(context));
+      context.addInitializationCallback(inj6015_ConfirmDialogPage, init_inj6015_ConfirmDialogPage);
+      return inj6015_ConfirmDialogPage;
     }
   };
-  private InitializationCallback<DeleteDialog> init_inj69948_DeleteDialog = new InitializationCallback<DeleteDialog>() {
+  private InitializationCallback<DeleteDialog> init_inj5953_DeleteDialog = new InitializationCallback<DeleteDialog>() {
     public void init(final DeleteDialog obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<DeleteDialog> inj70401_DeleteDialog_creational = new CreationalCallback<DeleteDialog>() {
+  private final CreationalCallback<DeleteDialog> inj6402_DeleteDialog_creational = new CreationalCallback<DeleteDialog>() {
     public DeleteDialog getInstance(final CreationalContext context) {
-      final DeleteDialog inj69948_DeleteDialog = new DeleteDialog();
-      context.addBean(context.getBeanReference(DeleteDialog.class, arrayOf_19635043Annotation_1117084415), inj69948_DeleteDialog);
-      _1509202459_em(inj69948_DeleteDialog, inj70366_ErraiEntityManagerProvider.get());
-      final Pages_inj70389_proxy inj70389_proxy = new Pages_inj70389_proxy();
+      final DeleteDialog inj5953_DeleteDialog = new DeleteDialog();
+      context.addBean(context.getBeanReference(DeleteDialog.class, arrayOf_19635043Annotation_862865390), inj5953_DeleteDialog);
+      _1509202459_em(inj5953_DeleteDialog, inj6366_ErraiEntityManagerProvider.get());
+      final Pages_inj6389_proxy inj6389_proxy = new Pages_inj6389_proxy();
       context.addUnresolvedProxy(new ProxyResolver<Pages>() {
         public void resolve(Pages obj) {
-          inj70389_proxy.__$setProxiedInstance$(obj);
-          context.addProxyReference(inj70389_proxy, obj);
+          inj6389_proxy.__$setProxiedInstance$(obj);
+          context.addProxyReference(inj6389_proxy, obj);
         }
-      }, Pages.class, arrayOf_19635043Annotation_1117084415);
-      _1509202459_pages(inj69948_DeleteDialog, inj70389_proxy);
-      context.addInitializationCallback(inj69948_DeleteDialog, new InitializationCallback<DeleteDialog>() {
+      }, Pages.class, arrayOf_19635043Annotation_862865390);
+      _1509202459_pages(inj5953_DeleteDialog, inj6389_proxy);
+      context.addInitializationCallback(inj5953_DeleteDialog, new InitializationCallback<DeleteDialog>() {
         public void init(DeleteDialog obj) {
-          com_cosbeni_demo_mobile_component_DeleteDialogTemplateResource var513 = GWT.create(com_cosbeni_demo_mobile_component_DeleteDialogTemplateResource.class);
-          Element var514 = TemplateUtil.getRootTemplateElement(var513.getContents().getText(), "DeleteDialog");
-          Map<String, Element> var515 = TemplateUtil.getDataFieldElements(var514);
-          Map<String, Widget> var516 = new LinkedHashMap<String, Widget>();
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_message(inj69948_DeleteDialog)), var515, "message");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_deleteConfirm(inj69948_DeleteDialog)), var515, "deleteConfirm");
-          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_deleteCancel(inj69948_DeleteDialog)), var515, "deleteCancel");
-          var516.put("message", new ElementWrapperWidget(_1509202459_message(inj69948_DeleteDialog)));
-          var516.put("deleteConfirm", new ElementWrapperWidget(_1509202459_deleteConfirm(inj69948_DeleteDialog)));
-          var516.put("deleteCancel", new ElementWrapperWidget(_1509202459_deleteCancel(inj69948_DeleteDialog)));
-          TemplateUtil.initWidget(inj69948_DeleteDialog, var514, var516.values());
-          TemplateUtil.setupWrappedElementEventHandler(inj69948_DeleteDialog, var516.get("deleteConfirm"), new ClickHandler() {
+          com_cosbeni_demo_mobile_component_DeleteDialogTemplateResource var57 = GWT.create(com_cosbeni_demo_mobile_component_DeleteDialogTemplateResource.class);
+          Element var58 = TemplateUtil.getRootTemplateElement(var57.getContents().getText(), "DeleteDialog");
+          Map<String, Element> var59 = TemplateUtil.getDataFieldElements(var58);
+          Map<String, Widget> var60 = new LinkedHashMap<String, Widget>();
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_message(inj5953_DeleteDialog)), var59, "message");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_deleteConfirm(inj5953_DeleteDialog)), var59, "deleteConfirm");
+          TemplateUtil.compositeComponentReplace("com.cosbeni.demo.mobile.component.DeleteDialog", "com/cosbeni/demo/mobile/component/Template.html", new ElementWrapperWidget(_1509202459_deleteCancel(inj5953_DeleteDialog)), var59, "deleteCancel");
+          var60.put("message", new ElementWrapperWidget(_1509202459_message(inj5953_DeleteDialog)));
+          var60.put("deleteConfirm", new ElementWrapperWidget(_1509202459_deleteConfirm(inj5953_DeleteDialog)));
+          var60.put("deleteCancel", new ElementWrapperWidget(_1509202459_deleteCancel(inj5953_DeleteDialog)));
+          TemplateUtil.initWidget(inj5953_DeleteDialog, var58, var60.values());
+          TemplateUtil.setupWrappedElementEventHandler(inj5953_DeleteDialog, var60.get("deleteConfirm"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69948_DeleteDialog.confirm(event);
+              inj5953_DeleteDialog.confirm(event);
             }
           }, ClickEvent.getType());
-          TemplateUtil.setupWrappedElementEventHandler(inj69948_DeleteDialog, var516.get("deleteCancel"), new ClickHandler() {
+          TemplateUtil.setupWrappedElementEventHandler(inj5953_DeleteDialog, var60.get("deleteCancel"), new ClickHandler() {
             public void onClick(ClickEvent event) {
-              inj69948_DeleteDialog.cancel(event);
+              inj5953_DeleteDialog.cancel(event);
             }
           }, ClickEvent.getType());
         }
       });
-      context.addInitializationCallback(inj69948_DeleteDialog, init_inj69948_DeleteDialog);
-      return inj69948_DeleteDialog;
+      context.addInitializationCallback(inj5953_DeleteDialog, init_inj5953_DeleteDialog);
+      return inj5953_DeleteDialog;
     }
   };
-  private InitializationCallback<DeleteDialogPage> init_inj70012_DeleteDialogPage = new InitializationCallback<DeleteDialogPage>() {
+  private InitializationCallback<DeleteDialogPage> init_inj6011_DeleteDialogPage = new InitializationCallback<DeleteDialogPage>() {
     public void init(final DeleteDialogPage obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<DeleteDialogPage> inj70400_DeleteDialogPage_creational = new CreationalCallback<DeleteDialogPage>() {
+  private final CreationalCallback<DeleteDialogPage> inj6401_DeleteDialogPage_creational = new CreationalCallback<DeleteDialogPage>() {
     public DeleteDialogPage getInstance(final CreationalContext context) {
-      final DeleteDialogPage inj70012_DeleteDialogPage = new DeleteDialogPage();
-      context.addBean(context.getBeanReference(DeleteDialogPage.class, arrayOf_19635043Annotation_1117084415), inj70012_DeleteDialogPage);
-      _$1658092310_deleteDialog(inj70012_DeleteDialogPage, inj70401_DeleteDialog_creational.getInstance(context));
-      context.addInitializationCallback(inj70012_DeleteDialogPage, init_inj70012_DeleteDialogPage);
-      return inj70012_DeleteDialogPage;
+      final DeleteDialogPage inj6011_DeleteDialogPage = new DeleteDialogPage();
+      context.addBean(context.getBeanReference(DeleteDialogPage.class, arrayOf_19635043Annotation_862865390), inj6011_DeleteDialogPage);
+      _$1658092310_deleteDialog(inj6011_DeleteDialogPage, inj6402_DeleteDialog_creational.getInstance(context));
+      context.addInitializationCallback(inj6011_DeleteDialogPage, init_inj6011_DeleteDialogPage);
+      return inj6011_DeleteDialogPage;
     }
   };
-  private final CreationalCallback<Pages> inj70385_Pages_creational = new CreationalCallback<Pages>() {
+  private final CreationalCallback<Pages> inj6385_Pages_creational = new CreationalCallback<Pages>() {
     public Pages getInstance(final CreationalContext context) {
-      final Pages inj70384_Pages = new Pages();
-      context.addBean(context.getBeanReference(Pages.class, arrayOf_19635043Annotation_1117084415), inj70384_Pages);
-      _$1078139940_userListPage(inj70384_Pages, inj70386_UserListPage_creational.getInstance(context));
-      _$1078139940_userFormPage(inj70384_Pages, inj70391_UserFormPage_creational.getInstance(context));
-      _$1078139940_remotePage(inj70384_Pages, inj70395_RemotePage_creational.getInstance(context));
-      _$1078139940_confirmDialog(inj70384_Pages, inj70398_ConfirmDialogPage_creational.getInstance(context));
-      _$1078139940_deleteDialog(inj70384_Pages, inj70400_DeleteDialogPage_creational.getInstance(context));
-      return inj70384_Pages;
+      final Pages inj6384_Pages = new Pages();
+      context.addBean(context.getBeanReference(Pages.class, arrayOf_19635043Annotation_862865390), inj6384_Pages);
+      _$1078139940_userListPage(inj6384_Pages, inj6386_UserListPage_creational.getInstance(context));
+      _$1078139940_userFormPage(inj6384_Pages, inj6391_UserFormPage_creational.getInstance(context));
+      _$1078139940_remotePage(inj6384_Pages, inj6396_RemotePage_creational.getInstance(context));
+      _$1078139940_confirmDialog(inj6384_Pages, inj6399_ConfirmDialogPage_creational.getInstance(context));
+      _$1078139940_deleteDialog(inj6384_Pages, inj6401_DeleteDialogPage_creational.getInstance(context));
+      return inj6384_Pages;
     }
   };
-  private final Pages inj70384_Pages = inj70385_Pages_creational.getInstance(context);
-  private InitializationCallback<App> init_inj70402_App = new InitializationCallback<App>() {
+  private final Pages inj6384_Pages = inj6385_Pages_creational.getInstance(context);
+  private InitializationCallback<App> init_inj6403_App = new InitializationCallback<App>() {
     public void init(final App obj) {
       obj.init();
     }
   };
-  private final CreationalCallback<App> inj70403_App_creational = new CreationalCallback<App>() {
+  private final CreationalCallback<App> inj6404_App_creational = new CreationalCallback<App>() {
     public App getInstance(final CreationalContext context) {
-      final App inj70402_App = new App();
-      context.addBean(context.getBeanReference(App.class, arrayOf_19635043Annotation_1117084415), inj70402_App);
-      _2007837066_pages(inj70402_App, inj70384_Pages);
-      context.addInitializationCallback(inj70402_App, init_inj70402_App);
-      return inj70402_App;
+      final App inj6403_App = new App();
+      context.addBean(context.getBeanReference(App.class, arrayOf_19635043Annotation_862865390), inj6403_App);
+      _2007837066_pages(inj6403_App, inj6384_Pages);
+      context.addInitializationCallback(inj6403_App, init_inj6403_App);
+      return inj6403_App;
     }
   };
-  private final App inj70402_App = inj70403_App_creational.getInstance(context);
-  private final CreationalCallback<EventProvider> inj70404_EventProvider_creational = new CreationalCallback<EventProvider>() {
+  private final App inj6403_App = inj6404_App_creational.getInstance(context);
+  private final CreationalCallback<EventProvider> inj6405_EventProvider_creational = new CreationalCallback<EventProvider>() {
     public EventProvider getInstance(final CreationalContext context) {
-      final EventProvider inj70374_EventProvider = new EventProvider();
-      context.addBean(context.getBeanReference(EventProvider.class, arrayOf_19635043Annotation_1117084415), inj70374_EventProvider);
-      return inj70374_EventProvider;
+      final EventProvider inj6374_EventProvider = new EventProvider();
+      context.addBean(context.getBeanReference(EventProvider.class, arrayOf_19635043Annotation_862865390), inj6374_EventProvider);
+      return inj6374_EventProvider;
     }
   };
-  private final EventProvider inj70374_EventProvider = inj70404_EventProvider_creational.getInstance(context);
-  private final CreationalCallback<MessageBusProvider> inj70405_MessageBusProvider_creational = new CreationalCallback<MessageBusProvider>() {
+  private final EventProvider inj6374_EventProvider = inj6405_EventProvider_creational.getInstance(context);
+  private final CreationalCallback<MessageBusProvider> inj6406_MessageBusProvider_creational = new CreationalCallback<MessageBusProvider>() {
     public MessageBusProvider getInstance(final CreationalContext context) {
-      final MessageBusProvider inj70358_MessageBusProvider = new MessageBusProvider();
-      context.addBean(context.getBeanReference(MessageBusProvider.class, arrayOf_19635043Annotation_1117084415), inj70358_MessageBusProvider);
-      return inj70358_MessageBusProvider;
+      final MessageBusProvider inj6358_MessageBusProvider = new MessageBusProvider();
+      context.addBean(context.getBeanReference(MessageBusProvider.class, arrayOf_19635043Annotation_862865390), inj6358_MessageBusProvider);
+      return inj6358_MessageBusProvider;
     }
   };
-  private final MessageBusProvider inj70358_MessageBusProvider = inj70405_MessageBusProvider_creational.getInstance(context);
-  private final CreationalCallback<IOCBeanManagerProvider> inj70406_IOCBeanManagerProvider_creational = new CreationalCallback<IOCBeanManagerProvider>() {
+  private final MessageBusProvider inj6358_MessageBusProvider = inj6406_MessageBusProvider_creational.getInstance(context);
+  private final CreationalCallback<IOCBeanManagerProvider> inj6407_IOCBeanManagerProvider_creational = new CreationalCallback<IOCBeanManagerProvider>() {
     public IOCBeanManagerProvider getInstance(final CreationalContext context) {
-      final IOCBeanManagerProvider inj70364_IOCBeanManagerProvider = new IOCBeanManagerProvider();
-      context.addBean(context.getBeanReference(IOCBeanManagerProvider.class, arrayOf_19635043Annotation_1117084415), inj70364_IOCBeanManagerProvider);
-      return inj70364_IOCBeanManagerProvider;
+      final IOCBeanManagerProvider inj6364_IOCBeanManagerProvider = new IOCBeanManagerProvider();
+      context.addBean(context.getBeanReference(IOCBeanManagerProvider.class, arrayOf_19635043Annotation_862865390), inj6364_IOCBeanManagerProvider);
+      return inj6364_IOCBeanManagerProvider;
     }
   };
-  private final IOCBeanManagerProvider inj70364_IOCBeanManagerProvider = inj70406_IOCBeanManagerProvider_creational.getInstance(context);
-  private final CreationalCallback<SenderProvider> inj70407_SenderProvider_creational = new CreationalCallback<SenderProvider>() {
+  private final IOCBeanManagerProvider inj6364_IOCBeanManagerProvider = inj6407_IOCBeanManagerProvider_creational.getInstance(context);
+  private final CreationalCallback<SenderProvider> inj6408_SenderProvider_creational = new CreationalCallback<SenderProvider>() {
     public SenderProvider getInstance(final CreationalContext context) {
-      final SenderProvider inj70380_SenderProvider = new SenderProvider();
-      context.addBean(context.getBeanReference(SenderProvider.class, arrayOf_19635043Annotation_1117084415), inj70380_SenderProvider);
-      return inj70380_SenderProvider;
+      final SenderProvider inj6380_SenderProvider = new SenderProvider();
+      context.addBean(context.getBeanReference(SenderProvider.class, arrayOf_19635043Annotation_862865390), inj6380_SenderProvider);
+      return inj6380_SenderProvider;
     }
   };
-  private final SenderProvider inj70380_SenderProvider = inj70407_SenderProvider_creational.getInstance(context);
-  private final CreationalCallback<InitBallotProvider> inj70408_InitBallotProvider_creational = new CreationalCallback<InitBallotProvider>() {
+  private final SenderProvider inj6380_SenderProvider = inj6408_SenderProvider_creational.getInstance(context);
+  private final CreationalCallback<InitBallotProvider> inj6409_InitBallotProvider_creational = new CreationalCallback<InitBallotProvider>() {
     public InitBallotProvider getInstance(final CreationalContext context) {
-      final InitBallotProvider inj70372_InitBallotProvider = new InitBallotProvider();
-      context.addBean(context.getBeanReference(InitBallotProvider.class, arrayOf_19635043Annotation_1117084415), inj70372_InitBallotProvider);
-      return inj70372_InitBallotProvider;
+      final InitBallotProvider inj6372_InitBallotProvider = new InitBallotProvider();
+      context.addBean(context.getBeanReference(InitBallotProvider.class, arrayOf_19635043Annotation_862865390), inj6372_InitBallotProvider);
+      return inj6372_InitBallotProvider;
     }
   };
-  private final InitBallotProvider inj70372_InitBallotProvider = inj70408_InitBallotProvider_creational.getInstance(context);
-  private final CreationalCallback<RootPanelProvider> inj70409_RootPanelProvider_creational = new CreationalCallback<RootPanelProvider>() {
+  private final InitBallotProvider inj6372_InitBallotProvider = inj6409_InitBallotProvider_creational.getInstance(context);
+  private final CreationalCallback<RootPanelProvider> inj6410_RootPanelProvider_creational = new CreationalCallback<RootPanelProvider>() {
     public RootPanelProvider getInstance(final CreationalContext context) {
-      final RootPanelProvider inj70362_RootPanelProvider = new RootPanelProvider();
-      context.addBean(context.getBeanReference(RootPanelProvider.class, arrayOf_19635043Annotation_1117084415), inj70362_RootPanelProvider);
-      return inj70362_RootPanelProvider;
+      final RootPanelProvider inj6362_RootPanelProvider = new RootPanelProvider();
+      context.addBean(context.getBeanReference(RootPanelProvider.class, arrayOf_19635043Annotation_862865390), inj6362_RootPanelProvider);
+      return inj6362_RootPanelProvider;
     }
   };
-  private final RootPanelProvider inj70362_RootPanelProvider = inj70409_RootPanelProvider_creational.getInstance(context);
-  private final CreationalCallback<ListWidgetProvider> inj70410_ListWidgetProvider_creational = new CreationalCallback<ListWidgetProvider>() {
+  private final RootPanelProvider inj6362_RootPanelProvider = inj6410_RootPanelProvider_creational.getInstance(context);
+  private final CreationalCallback<ListWidgetProvider> inj6411_ListWidgetProvider_creational = new CreationalCallback<ListWidgetProvider>() {
     public ListWidgetProvider getInstance(final CreationalContext context) {
-      final ListWidgetProvider inj70356_ListWidgetProvider = new ListWidgetProvider();
-      context.addBean(context.getBeanReference(ListWidgetProvider.class, arrayOf_19635043Annotation_1117084415), inj70356_ListWidgetProvider);
-      return inj70356_ListWidgetProvider;
+      final ListWidgetProvider inj6356_ListWidgetProvider = new ListWidgetProvider();
+      context.addBean(context.getBeanReference(ListWidgetProvider.class, arrayOf_19635043Annotation_862865390), inj6356_ListWidgetProvider);
+      return inj6356_ListWidgetProvider;
     }
   };
-  private final ListWidgetProvider inj70356_ListWidgetProvider = inj70410_ListWidgetProvider_creational.getInstance(context);
-  private final CreationalCallback<DisposerProvider> inj70411_DisposerProvider_creational = new CreationalCallback<DisposerProvider>() {
+  private final ListWidgetProvider inj6356_ListWidgetProvider = inj6411_ListWidgetProvider_creational.getInstance(context);
+  private final CreationalCallback<DisposerProvider> inj6412_DisposerProvider_creational = new CreationalCallback<DisposerProvider>() {
     public DisposerProvider getInstance(final CreationalContext context) {
-      final DisposerProvider inj70378_DisposerProvider = new DisposerProvider();
-      context.addBean(context.getBeanReference(DisposerProvider.class, arrayOf_19635043Annotation_1117084415), inj70378_DisposerProvider);
-      _$1300398733_beanManager(inj70378_DisposerProvider, inj70364_IOCBeanManagerProvider.get());
-      return inj70378_DisposerProvider;
+      final DisposerProvider inj6378_DisposerProvider = new DisposerProvider();
+      context.addBean(context.getBeanReference(DisposerProvider.class, arrayOf_19635043Annotation_862865390), inj6378_DisposerProvider);
+      _$1300398733_beanManager(inj6378_DisposerProvider, inj6364_IOCBeanManagerProvider.get());
+      return inj6378_DisposerProvider;
     }
   };
-  private final DisposerProvider inj70378_DisposerProvider = inj70411_DisposerProvider_creational.getInstance(context);
-  static class Pages_inj70389_proxy extends Pages {
+  private final DisposerProvider inj6378_DisposerProvider = inj6412_DisposerProvider_creational.getInstance(context);
+  static class Pages_inj6389_proxy extends Pages {
     private Pages $$_proxy_$$;
     public UserListPage getUserListPage() {
       return $$_proxy_$$.getUserListPage();
@@ -1040,322 +1050,375 @@ public class BootstrapperImpl implements Bootstrapper {
   public interface com_cosbeni_demo_mobile_component_DeleteDialogTemplateResource extends Template, ClientBundle {
   @Source("com/cosbeni/demo/mobile/component/Template.html") public TextResource getContents(); }
   private void declareBeans_0() {
-    injContext.addBean(DataBinderProvider.class, DataBinderProvider.class, inj70381_DataBinderProvider_creational, inj70368_DataBinderProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, DataBinderProvider.class, inj70381_DataBinderProvider_creational, inj70368_DataBinderProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(RequestDispatcherProvider.class, RequestDispatcherProvider.class, inj70382_RequestDispatcherProvider_creational, inj70360_RequestDispatcherProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Provider.class, RequestDispatcherProvider.class, inj70382_RequestDispatcherProvider_creational, inj70360_RequestDispatcherProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(InstanceProvider.class, InstanceProvider.class, inj70383_InstanceProvider_creational, inj70370_InstanceProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, InstanceProvider.class, inj70383_InstanceProvider_creational, inj70370_InstanceProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ErraiEntityManagerProvider.class, ErraiEntityManagerProvider.class, inj70388_ErraiEntityManagerProvider_creational, inj70366_ErraiEntityManagerProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Provider.class, ErraiEntityManagerProvider.class, inj70388_ErraiEntityManagerProvider_creational, inj70366_ErraiEntityManagerProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMList.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(HasClickHandlers.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasInset.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFilter.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMWidget.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDataRole.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Composite.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, JQMList.class, inj70390_JQMList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UserList.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, UserList.class, inj70387_UserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UserListPage.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(JQMPage.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFullScreen.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMContainer.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTransition.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ComplexPanel.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ForIsWidget.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IndexedPanel.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Panel.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWidgets.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Iterable.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, UserListPage.class, inj70386_UserListPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(TextBox.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(TextBoxBase.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesChangeEvents.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ValueBoxBase.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasChangeHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasName.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDirectionEstimator.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasValue.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(TakesValue.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasValueChangeHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Target.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasText.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDirection.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasKeyUpHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsEditor.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(FocusWidget.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesClickEvents.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasClickHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDoubleClickHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFocus.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Focusable.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesFocusEvents.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesKeyboardEvents.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasEnabled.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllDragAndDropHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragEndHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragEnterHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragLeaveHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragOverHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragStartHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDropHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllFocusHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFocusHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasBlurHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllGestureHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureStartHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureChangeHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureEndHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllKeyHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasKeyDownHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasKeyPressHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllMouseHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseDownHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseUpHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseOutHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseOverHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseMoveHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseWheelHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllTouchHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchStartHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchMoveHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchEndHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchCancelHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesMouseEvents.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, TextBox.class, inj70393_TextBox_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Label.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(HasDirectionalText.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasText.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDirection.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasClickHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDoubleClickHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesClickEvents.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SourcesMouseEvents.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllDragAndDropHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragEndHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragEnterHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragLeaveHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragOverHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDragStartHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDropHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllGestureHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureStartHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureChangeHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasGestureEndHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllMouseHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseDownHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseUpHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseOutHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseOverHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseMoveHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasMouseWheelHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAllTouchHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchStartHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchMoveHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchEndHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTouchCancelHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsEditor.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(LabelBase.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWordWrap.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasDirectionEstimator.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAutoHorizontalAlignment.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHorizontalAlignment.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, Label.class, inj70394_Label_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UserForm.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, UserForm.class, inj70392_UserForm_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UserFormPage.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(JQMPage.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFullScreen.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMContainer.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTransition.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ComplexPanel.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ForIsWidget.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IndexedPanel.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Panel.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWidgets.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Iterable.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, UserFormPage.class, inj70391_UserFormPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(CallerProvider.class, CallerProvider.class, inj70397_CallerProvider_creational, inj70376_CallerProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, CallerProvider.class, inj70397_CallerProvider_creational, inj70376_CallerProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(RemoteUserList.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, RemoteUserList.class, inj70396_RemoteUserList_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(RemotePage.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(JQMPage.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFullScreen.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMContainer.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTransition.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ComplexPanel.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ForIsWidget.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IndexedPanel.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Panel.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWidgets.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Iterable.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, RemotePage.class, inj70395_RemotePage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ConfirmDialog.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, ConfirmDialog.class, inj70399_ConfirmDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ConfirmDialogPage.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(JQMPage.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFullScreen.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMContainer.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTransition.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ComplexPanel.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ForIsWidget.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IndexedPanel.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Panel.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWidgets.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Iterable.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, ConfirmDialogPage.class, inj70398_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(DeleteDialog.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, DeleteDialog.class, inj70401_DeleteDialog_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(DeleteDialogPage.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(JQMPage.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasFullScreen.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTheme.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasId.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(JQMContainer.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasTransition.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ComplexPanel.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ForIsWidget.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IndexedPanel.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Panel.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasWidgets.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Iterable.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, DeleteDialogPage.class, inj70400_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Pages.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Composite.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsRenderable.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(Widget.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(EventListener.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasAttachHandlers.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasHandlers.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IsWidget.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(UIObject.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(HasVisibility.class, Pages.class, inj70385_Pages_creational, inj70384_Pages, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(App.class, App.class, inj70403_App_creational, inj70402_App, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(EventProvider.class, EventProvider.class, inj70404_EventProvider_creational, inj70374_EventProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, EventProvider.class, inj70404_EventProvider_creational, inj70374_EventProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(MessageBusProvider.class, MessageBusProvider.class, inj70405_MessageBusProvider_creational, inj70358_MessageBusProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Provider.class, MessageBusProvider.class, inj70405_MessageBusProvider_creational, inj70358_MessageBusProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(IOCBeanManagerProvider.class, IOCBeanManagerProvider.class, inj70406_IOCBeanManagerProvider_creational, inj70364_IOCBeanManagerProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Provider.class, IOCBeanManagerProvider.class, inj70406_IOCBeanManagerProvider_creational, inj70364_IOCBeanManagerProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(SenderProvider.class, SenderProvider.class, inj70407_SenderProvider_creational, inj70380_SenderProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, SenderProvider.class, inj70407_SenderProvider_creational, inj70380_SenderProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(InitBallotProvider.class, InitBallotProvider.class, inj70408_InitBallotProvider_creational, inj70372_InitBallotProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, InitBallotProvider.class, inj70408_InitBallotProvider_creational, inj70372_InitBallotProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(RootPanelProvider.class, RootPanelProvider.class, inj70409_RootPanelProvider_creational, inj70362_RootPanelProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(Provider.class, RootPanelProvider.class, inj70409_RootPanelProvider_creational, inj70362_RootPanelProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(ListWidgetProvider.class, ListWidgetProvider.class, inj70410_ListWidgetProvider_creational, inj70356_ListWidgetProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, ListWidgetProvider.class, inj70410_ListWidgetProvider_creational, inj70356_ListWidgetProvider, arrayOf_19635043Annotation_1117084415, null, false);
-    injContext.addBean(DisposerProvider.class, DisposerProvider.class, inj70411_DisposerProvider_creational, inj70378_DisposerProvider, arrayOf_19635043Annotation_1117084415, null, true);
-    injContext.addBean(ContextualTypeProvider.class, DisposerProvider.class, inj70411_DisposerProvider_creational, inj70378_DisposerProvider, arrayOf_19635043Annotation_1117084415, null, false);
+    injContext.addBean(DataBinderProvider.class, DataBinderProvider.class, inj6381_DataBinderProvider_creational, inj6368_DataBinderProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, DataBinderProvider.class, inj6381_DataBinderProvider_creational, inj6368_DataBinderProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(RequestDispatcherProvider.class, RequestDispatcherProvider.class, inj6382_RequestDispatcherProvider_creational, inj6360_RequestDispatcherProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Provider.class, RequestDispatcherProvider.class, inj6382_RequestDispatcherProvider_creational, inj6360_RequestDispatcherProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(InstanceProvider.class, InstanceProvider.class, inj6383_InstanceProvider_creational, inj6370_InstanceProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, InstanceProvider.class, inj6383_InstanceProvider_creational, inj6370_InstanceProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ErraiEntityManagerProvider.class, ErraiEntityManagerProvider.class, inj6388_ErraiEntityManagerProvider_creational, inj6366_ErraiEntityManagerProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Provider.class, ErraiEntityManagerProvider.class, inj6388_ErraiEntityManagerProvider_creational, inj6366_ErraiEntityManagerProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMList.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(HasClickHandlers.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasInset.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFilter.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMWidget.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDataRole.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Composite.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, JQMList.class, inj6390_JQMList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UserList.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, UserList.class, inj6387_UserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UserListPage.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(JQMPage.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFullScreen.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMContainer.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTransition.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ComplexPanel.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ForIsWidget.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IndexedPanel.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Panel.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWidgets.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Iterable.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, UserListPage.class, inj6386_UserListPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(TextBox.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(TextBoxBase.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesChangeEvents.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ValueBoxBase.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasChangeHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasName.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDirectionEstimator.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasValue.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(TakesValue.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasValueChangeHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Target.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasText.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDirection.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyUpHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsEditor.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(FocusWidget.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesClickEvents.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasClickHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDoubleClickHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFocus.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Focusable.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesFocusEvents.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesKeyboardEvents.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasEnabled.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllDragAndDropHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEndHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEnterHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragLeaveHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragOverHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragStartHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDropHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllFocusHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFocusHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasBlurHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllGestureHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureStartHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureChangeHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureEndHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllKeyHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyDownHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyPressHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllMouseHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseDownHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseUpHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOutHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOverHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseMoveHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseWheelHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllTouchHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchStartHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchMoveHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchEndHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchCancelHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesMouseEvents.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, TextBox.class, inj6393_TextBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ListBox.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(SourcesChangeEvents.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasChangeHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasName.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDirectionEstimator.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(FocusWidget.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesClickEvents.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasClickHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDoubleClickHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFocus.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Focusable.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesFocusEvents.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesKeyboardEvents.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasEnabled.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllDragAndDropHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEndHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEnterHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragLeaveHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragOverHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragStartHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDropHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllFocusHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFocusHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasBlurHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllGestureHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureStartHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureChangeHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureEndHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllKeyHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyUpHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyDownHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasKeyPressHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllMouseHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseDownHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseUpHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOutHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOverHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseMoveHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseWheelHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllTouchHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchStartHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchMoveHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchEndHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchCancelHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesMouseEvents.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, ListBox.class, inj6394_ListBox_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Label.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(HasDirectionalText.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasText.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDirection.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasClickHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDoubleClickHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesClickEvents.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SourcesMouseEvents.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllDragAndDropHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEndHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragEnterHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragLeaveHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragOverHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDragStartHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDropHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllGestureHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureStartHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureChangeHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasGestureEndHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllMouseHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseDownHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseUpHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOutHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseOverHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseMoveHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasMouseWheelHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAllTouchHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchStartHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchMoveHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchEndHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTouchCancelHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsEditor.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(LabelBase.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWordWrap.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasDirectionEstimator.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAutoHorizontalAlignment.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHorizontalAlignment.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, Label.class, inj6395_Label_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UserForm.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, UserForm.class, inj6392_UserForm_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UserFormPage.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(JQMPage.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFullScreen.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMContainer.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTransition.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ComplexPanel.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ForIsWidget.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IndexedPanel.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Panel.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWidgets.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Iterable.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, UserFormPage.class, inj6391_UserFormPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(CallerProvider.class, CallerProvider.class, inj6398_CallerProvider_creational, inj6376_CallerProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, CallerProvider.class, inj6398_CallerProvider_creational, inj6376_CallerProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(RemoteUserList.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, RemoteUserList.class, inj6397_RemoteUserList_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(RemotePage.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(JQMPage.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFullScreen.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMContainer.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTransition.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ComplexPanel.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ForIsWidget.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IndexedPanel.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Panel.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWidgets.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Iterable.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, RemotePage.class, inj6396_RemotePage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ConfirmDialog.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, ConfirmDialog.class, inj6400_ConfirmDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ConfirmDialogPage.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(JQMPage.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFullScreen.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMContainer.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTransition.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ComplexPanel.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ForIsWidget.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IndexedPanel.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Panel.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWidgets.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Iterable.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, ConfirmDialogPage.class, inj6399_ConfirmDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(DeleteDialog.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, DeleteDialog.class, inj6402_DeleteDialog_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(DeleteDialogPage.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(JQMPage.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasFullScreen.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTheme.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasId.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(JQMContainer.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasTransition.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ComplexPanel.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ForIsWidget.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IndexedPanel.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Panel.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(com.google.gwt.user.client.ui.HasWidgets.ForIsWidget.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasWidgets.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Iterable.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, DeleteDialogPage.class, inj6401_DeleteDialogPage_creational, null, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Pages.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Composite.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsRenderable.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(Widget.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(EventListener.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasAttachHandlers.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasHandlers.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IsWidget.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(UIObject.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(HasVisibility.class, Pages.class, inj6385_Pages_creational, inj6384_Pages, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(App.class, App.class, inj6404_App_creational, inj6403_App, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(EventProvider.class, EventProvider.class, inj6405_EventProvider_creational, inj6374_EventProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, EventProvider.class, inj6405_EventProvider_creational, inj6374_EventProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(MessageBusProvider.class, MessageBusProvider.class, inj6406_MessageBusProvider_creational, inj6358_MessageBusProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Provider.class, MessageBusProvider.class, inj6406_MessageBusProvider_creational, inj6358_MessageBusProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(IOCBeanManagerProvider.class, IOCBeanManagerProvider.class, inj6407_IOCBeanManagerProvider_creational, inj6364_IOCBeanManagerProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Provider.class, IOCBeanManagerProvider.class, inj6407_IOCBeanManagerProvider_creational, inj6364_IOCBeanManagerProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(SenderProvider.class, SenderProvider.class, inj6408_SenderProvider_creational, inj6380_SenderProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, SenderProvider.class, inj6408_SenderProvider_creational, inj6380_SenderProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(InitBallotProvider.class, InitBallotProvider.class, inj6409_InitBallotProvider_creational, inj6372_InitBallotProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, InitBallotProvider.class, inj6409_InitBallotProvider_creational, inj6372_InitBallotProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(RootPanelProvider.class, RootPanelProvider.class, inj6410_RootPanelProvider_creational, inj6362_RootPanelProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(Provider.class, RootPanelProvider.class, inj6410_RootPanelProvider_creational, inj6362_RootPanelProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(ListWidgetProvider.class, ListWidgetProvider.class, inj6411_ListWidgetProvider_creational, inj6356_ListWidgetProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, ListWidgetProvider.class, inj6411_ListWidgetProvider_creational, inj6356_ListWidgetProvider, arrayOf_19635043Annotation_862865390, null, false);
+    injContext.addBean(DisposerProvider.class, DisposerProvider.class, inj6412_DisposerProvider_creational, inj6378_DisposerProvider, arrayOf_19635043Annotation_862865390, null, true);
+    injContext.addBean(ContextualTypeProvider.class, DisposerProvider.class, inj6412_DisposerProvider_creational, inj6378_DisposerProvider, arrayOf_19635043Annotation_862865390, null, false);
   }
 
   private native static AnchorElement _$1137456521_cancel(UserForm instance) /*-{
@@ -1468,6 +1531,14 @@ public class BootstrapperImpl implements Bootstrapper {
 
   private native static void _1509202459_em(DeleteDialog instance, EntityManager value) /*-{
     instance.@com.cosbeni.demo.mobile.component.DeleteDialog::em = value;
+  }-*/;
+
+  private native static ListBox _$1137456521_group(UserForm instance) /*-{
+    return instance.@com.cosbeni.demo.mobile.component.UserForm::group;
+  }-*/;
+
+  private native static void _$1137456521_group(UserForm instance, ListBox value) /*-{
+    instance.@com.cosbeni.demo.mobile.component.UserForm::group = value;
   }-*/;
 
   private native static void _$126814394_userForm(UserFormPage instance, UserForm value) /*-{
@@ -1586,14 +1657,6 @@ public class BootstrapperImpl implements Bootstrapper {
     instance.@com.cosbeni.demo.mobile.component.UserForm::ridLabel = value;
   }-*/;
 
-  private native static JQMSelect _$1137456521_group(UserForm instance) /*-{
-    return instance.@com.cosbeni.demo.mobile.component.UserForm::group;
-  }-*/;
-
-  private native static void _$1137456521_group(UserForm instance, JQMSelect value) /*-{
-    instance.@com.cosbeni.demo.mobile.component.UserForm::group = value;
-  }-*/;
-
   private native static AnchorElement _$2100997664_confirm(ConfirmDialog instance) /*-{
     return instance.@com.cosbeni.demo.mobile.component.ConfirmDialog::confirm;
   }-*/;
@@ -1696,6 +1759,14 @@ public class BootstrapperImpl implements Bootstrapper {
 
   private native static void _$536703305_serverWin(RemoteUserList instance, AnchorElement value) /*-{
     instance.@com.cosbeni.demo.mobile.component.RemoteUserList::serverWin = value;
+  }-*/;
+
+  private native static LabelElement _$1137456521_groupLabel(UserForm instance) /*-{
+    return instance.@com.cosbeni.demo.mobile.component.UserForm::groupLabel;
+  }-*/;
+
+  private native static void _$1137456521_groupLabel(UserForm instance, LabelElement value) /*-{
+    instance.@com.cosbeni.demo.mobile.component.UserForm::groupLabel = value;
   }-*/;
 
   private native static TextBox _$1137456521_firstName(UserForm instance) /*-{
